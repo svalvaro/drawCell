@@ -40,7 +40,7 @@ It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your sp
 
 The taxonomy id for *Quercus ilex* a common tree in the south of Spain is `58334` and as an example I will use the SL code of the chloroplast: `0049`.
 
-```{r example, message=FALSE, eval=FALSE}
+```{r example, message=FALSE,   message=FALSE, cache.comments=FALSE,comment=F,error=F,message=F,warning=F}
 
 library(drawCell)
 
@@ -51,8 +51,4 @@ drawCell(taxonomy_id = '58334', sl_ids = '0049')
 
 
 
-```{r, include= FALSE, message=FALSE, cache.comments=FALSE,comment=F,error=F,message=F,warning=F}
-library(drawCell)
 
-drawCell(taxonomy_id = '58334', sl_ids = '0049')
-```
