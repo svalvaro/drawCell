@@ -8,6 +8,10 @@
 #' @examples
 drawCell <- function(taxonomy_id, sl_ids, delay = 1){
 
+    #First generate custom_element
+
+    generate_custom_element()
+
     #Determine the template
     input = system.file("Rmd_template/html_generator.Rmd", package="drawCell")
 

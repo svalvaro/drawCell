@@ -14,8 +14,9 @@ drawCell needs the package
 [webshot2](https://github.com/rstudio/webshot2), which needs to be
 installed.
 
-draCell connects to the [SwissBioPics
-API](https://www.swissbiopics.org/) to generate the images.
+To obtain the cell pictures, draCell connects to the [SwissBioPics
+API](https://www.swissbiopics.org/) so an internet connection is
+required.
 
 ``` r
 # install.packages("devtools")
@@ -54,5 +55,3 @@ drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
 ```
 
 <img src="man/figures/README-sacc-1.png" width="100%" />
-
-A

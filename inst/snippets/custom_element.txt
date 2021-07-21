@@ -1,6 +1,0 @@
-<script type="module" src="/home/alvaro/R/x86_64-pc-linux-gnu-library/4.1/drawCell/JScode/jscode.js"></script>
-<script defer>
-    if (! window.customElements.get("sib-swissbiopics-sl"))
-        window.customElements.define("sib-swissbiopics-sl", SwissBioPicsSL);
-</script>
-

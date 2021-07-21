@@ -26,7 +26,7 @@ The goal of drawCell is to easily obtain nice cell pictures in R!
 
 drawCell needs the package [webshot2](https://github.com/rstudio/webshot2), which needs to be installed. 
 
-draCell connects to the [SwissBioPics API](https://www.swissbiopics.org/) to generate the images. 
+To obtain the cell pictures, draCell connects to the [SwissBioPics API](https://www.swissbiopics.org/) so an internet connection is required.
 
 ``` r
 # install.packages("devtools")
@@ -60,7 +60,6 @@ For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` we 
 drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
 ```
 
-A
 
 
 
