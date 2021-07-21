@@ -20,9 +20,13 @@ knitr::opts_chunk$set(
 
 The goal of drawCell is to easily obtain nice cell pictures in R!
 
+
+
 ## Installation
 
-drawCell is not available at CRAN or bioconductor since it uses the package [webshot2](https://github.com/rstudio/webshot2), which needs to be installed. 
+drawCell needs the package [webshot2](https://github.com/rstudio/webshot2), which needs to be installed. 
+
+draCell connects to the [SwissBioPics API](https://www.swissbiopics.org/) to generate the images. 
 
 ``` r
 # install.packages("devtools")

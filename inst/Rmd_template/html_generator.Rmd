@@ -1,5 +1,5 @@
 ---
-title: Cell
+title: ' '
 output: html_document
 params:
     taxonomy_id: ''
