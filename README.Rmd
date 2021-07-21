@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r options, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -44,14 +44,23 @@ It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your sp
 
 The taxonomy id for *Quercus ilex* a common tree in the south of Spain is `58334` and as an example I will use the SL code of the chloroplast: `0049`.
 
-```{r example, message=FALSE,   fig.width= 9.4}
+```{r plantcell, message=FALSE}
 
 library(drawCell)
 
 drawCell(taxonomy_id = '58334', sl_ids = '0049')
 
 ```
+We can also obtain pictures of viruses, yeast, and pretty much everything that exists!
 
+For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` we will highlight the nucleus: `0191` and the vacuole: `0272`.
+
+```{r sacc, message=F}
+
+drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
+```
+
+A
 
 
 
