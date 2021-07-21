@@ -1,3 +1,11 @@
+#' Creates custom_element.txt
+#'
+#' @param ...
+#'
+#' @return Creates custom_element.txt inside inst/snippet/ with the path to the
+#' JScode, since it will be different to each user.
+#'
+#' @examples
 generate_custom_element <- function(...){
 
 

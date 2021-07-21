@@ -1,11 +1,17 @@
 Package: drawCell
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Generation of cell pictures
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Alvaro Sanchez-Villalba <sanchezvillalba.alvaro@gmail.com>
+Maintainer: Alvaro Sanchez-Villalba <sanchezvillalba.alvaro@gmail.com>
+Description: After being given the taxonomy id of an organism, and a given 
+    subcellular location id, drawCell connects to the SwissBioPics API and 
+    generates the picture of that given cell, with the subcellular location 
+    highlighted.
+License: GPL-3
 Encoding: UTF-8
-LazyData: true
+Imports: 
+    readr,
+    rmarkdown,
+    webshot2
+RoxygenNote: 7.1.1

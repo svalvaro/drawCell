@@ -1,8 +1,18 @@
-#' Creates a cell
+#' Creates a cell picture
+#'
+#' @param taxonomy_id Taxonomy id of the organism of interest. Can be found at
+#' https://www.ncbi.nlm.nih.gov/taxonomy/
+#' @param sl_ids Id of the subcellular location, can be found at
+#'  http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go
+#' @param delay Time needed to make picture of the HTML (webshot). If the
+#' picture is blank, try increasing the delay since it might take longer to
+#' render the HTML. (Units in seconds)
 #'
 #' @import rmkardown
+#' @importFrom  webshot2 webshot
 #'
-#' @return
+#' @return Generates a PNG of the requested cell by the user with highligthed
+#' subcellular elements.
 #' @export
 #'
 #' @examples
