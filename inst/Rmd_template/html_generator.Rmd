@@ -11,95 +11,7 @@ params:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
 ```
 
-```{r}
-library(htmltools)
-library(readr)
-library(rlang)
-```
 
-
-
-
-
-```{r}
-# Create comma-separated list from vectorized (or listed) items, safely escaped.
-csl <- function(items) {
-  return(paste("\"", paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), "\"", sep = ""))
-}
-
-
-
-# Create the HTML for the interactive imagery given by the parameters. Assembly
-# process is as described the documentation for 'swissbiopics-visualizer':
-#   https://www.npmjs.com/package/%40swissprot/swissbiopics-visualizer#usage
-make_html <- function(# The NCBI taxonomy ID.
-                      tax_id,
-                      
-                      # The IDs of the cellular elements to highlight.
-                      sl_ids,
-                      
-                      # The filepath to (or raw HTML text of) the templates
-                      # snippet.
-                      templates = system.file("snippets/templates.txt", package="drawCell"),
-                      
-                      # The filepath to (or raw HTML text of) the custom element
-                      # snippet.
-                      custom_element = system.file("snippets/custom_element.txt", package="drawCell"),
-                      
-                      # Further arguments to 'readr::read_file()', which might
-                      # be useful to process snippet encodings across platforms.
-                      ...) {
-  # Escape any strings supplied.
-  tax_id <- csl(tax_id[1])
-  sl_ids <- csl(sl_ids)
-  
-  
-  # Compile all the HTML snippets into a list:
-  elements <- list()
-  
-  
-  # Include the templates (as read)...
-  elements$templates <- readr::read_file(file = templates, ...)
-  
-  
-  # ...then include the line (created here) to target the right picture...
-  elements$identifier <- "<sib-swissbiopics-sl taxid=%s sls=%s></sib-swissbiopics-sl>"
-  elements$identifier <- sprintf(fmt = elements$identifier, tax_id, sl_ids)
-  
-  
-  
-  # ...and finally include the definition (as read) for the custom element.
-  elements$custom_element <- readr::read_file(file = custom_element, ...)
-  
-  # # change the jscode to the user's 
-  # 
-  # elements$jscode <- "<script type= %s src = %s ></script>"
-  # 
-  # elements$jscode <- sprintf(fmt = elements$jscode, as.character("module"), system.file("JScode/jscode.js", package="drawCell"))
-  
-  # Append these snippets together, into the full HTML code.
-  return(paste(unlist(elements), collapse = "\n"))
-}
-
-
-
-# Display the interactive imagery given by the parameters, visible in both
-# RStudio (crowded) and the R Markdown file (well laid out).
-visualize <- function(# The NCBI taxonomy ID.
-                      taxid = "9606",
-                      
-                      # A list (or vector) of the UniProtKB subcellular location
-                      # (SL) IDs for the cellular elements to highlight.
-                      sls = list("SL0073"),
-                      
-                      # Further arguments to 'make_html()'.
-                      ...
-                      ) {
-  # Embed the HTML text where this function is called.
-  pic = htmltools::HTML(make_html(tax_id = taxid, sl_ids = sls, ...))
-  return(pic)
-}
-```
 
 
 
@@ -108,6 +20,6 @@ visualize <- function(# The NCBI taxonomy ID.
 
 ```{r}
 
-visualize(taxid = params$taxonomy_id, sls = params$sl_ids)
+cell_visualizer(taxid = params$taxonomy_id, sls = params$sl_ids)
  
 ```
