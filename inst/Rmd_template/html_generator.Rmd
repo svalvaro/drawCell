@@ -69,11 +69,11 @@ make_html <- function(# The NCBI taxonomy ID.
   # ...and finally include the definition (as read) for the custom element.
   elements$custom_element <- readr::read_file(file = custom_element, ...)
   
-  # change the jscode to the user's 
-  
-  elements$jscode <- "<script type= %s src = %s ></script>"
-  
-  elements$jscode <- sprintf(fmt = elements$jscode, as.character("module"), system.file("JScode/jscode.js", package="drawCell"))
+  # # change the jscode to the user's 
+  # 
+  # elements$jscode <- "<script type= %s src = %s ></script>"
+  # 
+  # elements$jscode <- sprintf(fmt = elements$jscode, as.character("module"), system.file("JScode/jscode.js", package="drawCell"))
   
   # Append these snippets together, into the full HTML code.
   return(paste(unlist(elements), collapse = "\n"))
