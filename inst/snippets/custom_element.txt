@@ -1,0 +1,6 @@
+<script type="module" src="source_to_be_modified"></script>
+<script defer>
+    if (! window.customElements.get("sib-swissbiopics-sl"))
+        window.customElements.define("sib-swissbiopics-sl", SwissBioPicsSL);
+</script>
+
