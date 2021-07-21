@@ -13,11 +13,6 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FA
 
 
 
-
-
-
-
-
 ```{r}
 
 cell_visualizer(taxid = params$taxonomy_id, sls = params$sl_ids)
