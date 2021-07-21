@@ -2,6 +2,8 @@
 #'
 #' @param ...
 #'
+#' @importFrom readr write_file
+#'
 #' @return Creates custom_element.txt inside inst/snippet/ with the path to the
 #' JScode, since it will be different to each user.
 #'

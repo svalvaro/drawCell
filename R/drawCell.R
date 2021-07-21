@@ -8,7 +8,7 @@
 #' picture is blank, try increasing the delay since it might take longer to
 #' render the HTML. (Units in seconds)
 #'
-#' @import rmkardown
+#' @import rmarkdown
 #' @importFrom  webshot2 webshot
 #'
 #' @return Generates a PNG of the requested cell by the user with highligthed
