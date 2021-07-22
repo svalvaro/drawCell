@@ -20,7 +20,7 @@ required.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("svalvaro/MQmetrics")
+devtools::install_github("svalvaro/drawCell")
 ```
 
 ## Example

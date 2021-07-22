@@ -30,7 +30,7 @@ To obtain the cell pictures, draCell connects to the [SwissBioPics API](https://
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("svalvaro/MQmetrics")
+devtools::install_github("svalvaro/drawCell")
 ```
 
 ## Example
