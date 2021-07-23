@@ -29,9 +29,10 @@ This is a basic example which shows you how to solve a common problem:
 
 It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of
 your species of interest, and one or multiple SL codes for subcellular
-locations that will be colored. [This
-dataset](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go)
-contains the SL codes for each subcellular location.
+locations that will be colored. The SL codes for each subcellular
+location can be found at [Uniprot](https://www.uniprot.org/docs/subcell)
+and
+[uniprotkb\_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
 
 The taxonomy id for *Quercus ilex* a common tree in the south of Spain
 is `58334` and as an example I will use the SL code of the chloroplast:
