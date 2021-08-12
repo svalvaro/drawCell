@@ -2,7 +2,12 @@ Package: drawCell
 Type: Package
 Title: Generation of cell pictures
 Version: 0.1.0
-Author: Alvaro Sanchez-Villalba <sanchezvillalba.alvaro@gmail.com>
+Author: c(person(given = "Alvaro", family = "Sanchez-Villalba",
+                    email = "sanchezvillalba.alvaro@gmail.com",
+                    role = c("aut", "cre")),
+            person(given = "Greg", family = "Yannes",
+                    email = """,
+                    role = "aut")
 Maintainer: Alvaro Sanchez-Villalba <sanchezvillalba.alvaro@gmail.com>
 Description: After being given the taxonomy id of an organism, and a given 
     subcellular location id, drawCell connects to the SwissBioPics API and 
