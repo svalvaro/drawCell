@@ -53,7 +53,7 @@ For the baker’s yeast *Saccharomyces cerevisiae* whose taxonomy id is
 `4932` we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
 ``` r
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
+drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), color = 'pink')
 ```
 
 <img src="man/figures/sacc2.png" width="100%" />
