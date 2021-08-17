@@ -41,8 +41,10 @@ is `58334` and as an example I will use the SL code of the chloroplast:
 ``` r
 library(drawCell)
 
-drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'black')
+drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'lightblue', delay = 3)
 ```
+
+<img src="man/figures/plantcell2.png" width="100%" />
 
 We can also obtain pictures of viruses, yeast, and pretty much
 everything that exists!
@@ -51,5 +53,7 @@ For the baker’s yeast *Saccharomyces cerevisiae* whose taxonomy id is
 `4932` we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
 ``` r
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), color = 'lightgreen')
+drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
 ```
+
+<img src="man/figures/sacc2.png" width="100%" />
