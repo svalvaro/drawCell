@@ -17,7 +17,11 @@
 #' @export
 #'
 #' @examples
-drawCell <- function(taxonomy_id, sl_ids, size = 2000, delay = 1){
+drawCell <- function(taxonomy_id,
+                     sl_ids,
+                     color = 'blue',
+                     size = 2000,
+                     delay = 1){
 
     #First generate custom_element
 
@@ -29,6 +33,11 @@ drawCell <- function(taxonomy_id, sl_ids, size = 2000, delay = 1){
     output_dir <-  system.file("cell_pictures/", package="drawCell")
 
     name_picture <- 'cell_picture'
+
+
+    # Edit the JS code with the color of the user:
+
+    drawCell:::edit_jscode(color = color)
 
     # Create hTML picture
 
@@ -56,4 +65,9 @@ drawCell <- function(taxonomy_id, sl_ids, size = 2000, delay = 1){
                       vheight = 2000,
 
                       delay = delay)
+
+
+    # Restore the colour to the original js code
+
+    drawCell:::restore_jscode(color = color)
 }

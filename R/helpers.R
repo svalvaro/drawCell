@@ -147,7 +147,7 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
 #' @param heigth
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 edit_html <- function(size=2000){
@@ -163,6 +163,53 @@ edit_html <- function(size=2000){
 
     readr::write_file(html, html_path)
 
-
 }
 
+
+#' Title
+#'
+#' @param color
+#'
+#' @return
+#' @export
+#'
+#' @examples
+edit_jscode <- function(color = 'blue'){
+
+    js_path <- system.file('JScode/jscode.js', package = 'drawCell')
+
+    js_code <- readr::read_file(js_path)
+
+    # Substitute the lightyellow color to the chosen color.
+    # Since this modifies permantly the js code. Then it needs to be restored
+    # Otherwise gsub will not be able to change it again.
+    js_code <- gsub('fill: lightyellow', paste0('fill: ', color), js_code)
+
+
+    js_code <- gsub('background-color: lightyellow', paste0('background-color: ',color), js_code)
+
+    readr::write_file(js_code, js_path)
+}
+
+
+#' Title
+#'
+#' @param color
+#'
+#' @return
+#'
+#' @examples
+restore_jscode <- function(color = 'blue'){
+
+    # Restore the code to lightyellow
+
+    js_path <- system.file('JScode/jscode.js', package = 'drawCell')
+
+    js_code <- readr::read_file(js_path)
+
+    js_code <- gsub(paste0('fill: ', color), 'fill: lightyellow', js_code)
+    js_code <- gsub(paste0('background-color: ', color), 'background-color: lightyellow', js_code)
+
+    readr::write_file(js_code, js_path)
+
+}

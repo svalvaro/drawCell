@@ -63,7 +63,7 @@ The taxonomy id for *Quercus ilex* a common tree in the south of Spain is
 
 library(drawCell)
 
-drawCell(taxonomy_id = '58334', sl_ids = '0049')
+drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'black')
 
 ```
 We can also obtain pictures of viruses, yeast, and pretty much everything that exists!
@@ -74,7 +74,7 @@ For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` we 
 
 ```{r sacc2, message=F, results='hide'}
 
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
+drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), color = 'lightgreen')
 ```
 
 
