@@ -7,13 +7,13 @@ params:
     delay: ''
 ---
 
-```{r, echo = FALSE}
+```{r options, echo = FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
 ```
 
 
 
-```{r}
+```{r visualizer, fig.height=10, fig.width=10}
 
 cell_visualizer(taxid = params$taxonomy_id, sls = params$sl_ids)
  

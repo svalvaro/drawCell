@@ -4,12 +4,16 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r options, include = FALSE}
+```{r options1, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "100%"#,
+  # echo = FALSE, 
+  # message = FALSE,
+  # warning = FALSE,
+  # error = FALSE
 )
 ```
 
@@ -24,11 +28,14 @@ The goal of drawCell is to easily obtain nice cell pictures in R!
 
 ## Installation
 
-drawCell needs the package [webshot2](https://github.com/rstudio/webshot2), which needs to be installed. 
+drawCell needs the package [webshot2](https://github.com/rstudio/webshot2), 
+which needs to be installed. 
 
-To obtain the cell pictures, draCell connects to the [SwissBioPics API](https://www.swissbiopics.org/) so an internet connection is required.
+To obtain the cell pictures, draCell connects to the
+[SwissBioPics API](https://www.swissbiopics.org/) so an internet connection 
+is required.
 
-``` r
+``` {r installation, eval= FALSE}
 # install.packages("devtools")
 devtools::install_github("svalvaro/drawCell")
 ```
@@ -39,12 +46,20 @@ This is a basic example which shows you how to solve a common problem:
 
 
 
-It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your species of interest, and one or multiple SL codes for subcellular locations that will be colored. The SL codes for each subcellular location can be found at [Uniprot](https://www.uniprot.org/docs/subcell) and [uniprotkb_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
+It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your
+species of interest, and one or multiple SL codes for subcellular locations 
+that will be colored. The SL codes for each subcellular location can be found at
+[Uniprot](https://www.uniprot.org/docs/subcell) and
+[uniprotkb_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
 
 
-The taxonomy id for *Quercus ilex* a common tree in the south of Spain is `58334` and as an example I will use the SL code of the chloroplast: `0049`.
+The taxonomy id for *Quercus ilex* a common tree in the south of Spain is
+`58334` and as an example I will use the SL code of the chloroplast: `0049`.
 
-```{r plantcell, message=FALSE}
+
+
+
+```{r plantcell2, message=FALSE, results='hide'}
 
 library(drawCell)
 
@@ -55,7 +70,9 @@ We can also obtain pictures of viruses, yeast, and pretty much everything that e
 
 For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
-```{r sacc, message=F}
+
+
+```{r sacc2, message=F, results='hide'}
 
 drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
 ```

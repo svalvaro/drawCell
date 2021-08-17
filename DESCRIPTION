@@ -20,3 +20,6 @@ Imports:
     rmarkdown,
     webshot2
 RoxygenNote: 7.1.1
+Suggests: 
+    knitr
+VignetteBuilder: knitr

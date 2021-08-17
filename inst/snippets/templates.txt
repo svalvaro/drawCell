@@ -13,5 +13,32 @@
          <a class="subcell_name"></a> <!-- the class name is required and textContent will be set on it -->
          <span class="subcell_description"></span> <!-- the class name is required and textContent will be set on it -->
     </li>
+
+<style type="text/css">
+.main-container {
+  height: 20000px;
+  width: 100%;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
 </template>
 

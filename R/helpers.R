@@ -11,6 +11,9 @@
 generate_custom_element <- function(...){
 
 
+    # This function is necessary to change the source of the JS code module
+    # of each user.
+
     jscode_dir <- system.file("JScode/jscode.js", package="drawCell")
 
 
@@ -97,7 +100,8 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
     #
     # elements$jscode <- "<script type= %s src = %s ></script>"
     #
-    # elements$jscode <- sprintf(fmt = elements$jscode, as.character("module"), system.file("JScode/jscode.js", package="drawCell"))
+    # elements$jscode <- sprintf(fmt = elements$jscode, as.character("module"),
+    # system.file("JScode/jscode.js", package="drawCell"))
 
     # Append these snippets together, into the full HTML code.
     return(paste(unlist(elements), collapse = "\n"))
@@ -135,6 +139,19 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
     # Embed the HTML text where this function is called.
     pic = htmltools::HTML(make_html(taxonomy_id = taxid, sl_ids = sls, ...))
     return(pic)
+
+}
+
+#' Title
+#'
+#' @param heigth
+#'
+#' @return
+#' @export
+#'
+#' @examples
+edit_html <- function(heigth=2000){
+
 
 }
 

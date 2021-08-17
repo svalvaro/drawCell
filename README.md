@@ -44,7 +44,7 @@ library(drawCell)
 drawCell(taxonomy_id = '58334', sl_ids = '0049')
 ```
 
-<img src="man/figures/README-plantcell-1.png" width="100%" /> We can
+<img src="man/figures/README-plantcell2-1.png" width="100%" /> We can
 also obtain pictures of viruses, yeast, and pretty much everything that
 exists!
 
@@ -55,4 +55,4 @@ For the baker’s yeast *Saccharomyces cerevisiae* whose taxonomy id is
 drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'))
 ```
 
-<img src="man/figures/README-sacc-1.png" width="100%" />
+<img src="man/figures/README-sacc2-1.png" width="100%" />
