@@ -7,6 +7,7 @@
 #' @param delay Time needed to make picture of the HTML (webshot). If the
 #' picture is blank, try increasing the delay since it might take longer to
 #' render the HTML. (Units in seconds)
+#' @param size
 #'
 #' @import rmarkdown
 #' @importFrom  webshot2 webshot
@@ -16,7 +17,7 @@
 #' @export
 #'
 #' @examples
-drawCell <- function(taxonomy_id, sl_ids, delay = 1){
+drawCell <- function(taxonomy_id, sl_ids, size = 2000, delay = 1){
 
     #First generate custom_element
 
@@ -41,10 +42,18 @@ drawCell <- function(taxonomy_id, sl_ids, delay = 1){
     )
 
 
+    # Edit the HTML with the specified size:
+
+    drawCell:::edit_html(size = size)
+
+
     # Create webshot
 
 
     webshot2::webshot(url = paste0(output_dir,name_picture, '.html'),
                       file = 'cell_pic.png',
+                      vwidth = 2000,
+                      vheight = 2000,
+
                       delay = delay)
 }
