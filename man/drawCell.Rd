@@ -4,7 +4,7 @@
 \alias{drawCell}
 \title{Creates a cell picture}
 \usage{
-drawCell(taxonomy_id, sl_ids, delay = 1)
+drawCell(taxonomy_id, sl_ids, color = "blue", size = 2000, delay = 1)
 }
 \arguments{
 \item{taxonomy_id}{Taxonomy id of the organism of interest. Can be found at
@@ -12,6 +12,8 @@ https://www.ncbi.nlm.nih.gov/taxonomy/}
 
 \item{sl_ids}{Id of the subcellular location, can be found at
 http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
+
+\item{size}{}
 
 \item{delay}{Time needed to make picture of the HTML (webshot). If the
 picture is blank, try increasing the delay since it might take longer to

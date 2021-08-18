@@ -41,6 +41,7 @@ generate_custom_element <- function(...){
 #' @param items
 #'
 #' @return
+#' @importFrom htmltoos htmlEscape
 #'
 #' @examples
 arguments_csl <- function(items){
