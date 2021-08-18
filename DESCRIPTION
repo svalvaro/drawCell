@@ -1,7 +1,7 @@
 Package: drawCell
 Type: Package
 Title: Generation of cell pictures
-Version: 0.1.0
+Version: 0.99.0
 Authors@R: c(person(given = "Alvaro", family = "Sanchez-Villalba",
                     email = "sanchezvillalba.alvaro@gmail.com",
                     role = c("aut", "cre")),
