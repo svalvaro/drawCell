@@ -28,7 +28,7 @@ drawCell <- function(taxonomy_id,
     dir_cell_pic <- system.file('cell_pictures/', package = 'drawCell')
 
     if (base::dir.exists(dir_cell_pic) == FALSE) {
-        base::dir.create(dir_cell_pic)
+        base::dir.create(paste0(system.file(package = 'drawCell'),'/','cell_pictures'))
     }
 
 
