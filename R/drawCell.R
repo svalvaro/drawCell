@@ -56,6 +56,11 @@ drawCell <- function(taxonomy_id,
     drawCell:::edit_html(size = size)
 
 
+
+    # Restore the colour to the original js code
+
+    drawCell:::restore_jscode(color = color)
+
     # Create webshot
 
 
@@ -67,7 +72,5 @@ drawCell <- function(taxonomy_id,
                       delay = delay)
 
 
-    # Restore the colour to the original js code
 
-    drawCell:::restore_jscode(color = color)
 }

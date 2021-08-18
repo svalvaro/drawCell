@@ -56,11 +56,11 @@ that will be colored. The SL codes for each subcellular location can be found at
 The taxonomy id for *Quercus ilex* a common tree in the south of Spain is
 `58334` and as an example I will use the SL code of the chloroplast: `0049`.
 
-```{r plantcell, eval=FALSE}
+```{r plantcell,  results='hide', message=F, warning=FALSE, error=F}
 library(drawCell)
 drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'lightblue', delay = 3)
 ```
-<img src="man/figures/README-plantcell.png" width="100%" />
+
 
 
 
@@ -73,10 +73,10 @@ we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
 
 
-```{r sacc2, eval = FALSE}
+```{r sacc2, results='hide', message=F, warning=FALSE, error=F}
 drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), color = 'pink')
 ```
-<img src="man/figures/README-sacc2.png" width="100%" />
+
 
 
 
