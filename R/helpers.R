@@ -29,8 +29,8 @@ generate_custom_element <- function(...){
 
 
     readr::write_file(to_write, paste(system.file("snippets/",
-                                                  package="drawCell"),
-                                      'custom_element.txt', sep = '/') )
+                                                package="drawCell"),
+                                        'custom_element.txt', sep = '/') )
 
 
 }
@@ -48,7 +48,7 @@ generate_custom_element <- function(...){
 #' @examples
 arguments_csl <- function(items){
     return(paste("\"", paste(htmltools::htmlEscape(unlist(items)),
-                             collapse = ",", sep = ""), "\"", sep = ""))
+                            collapse = ",", sep = ""), "\"", sep = ""))
 }
 
 
@@ -70,7 +70,7 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
                   # The filepath to (or raw HTML text of) the templates snippet.
                   templates = system.file("snippets/templates.txt",
-                                          package="drawCell"),
+                                        package="drawCell"),
 
 
                   # The filepath to (or raw HTML text of) the custom element
@@ -153,7 +153,7 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
 edit_html <- function(size=2000){
 
     html_path <- system.file('cell_pictures/cell_picture.html',
-                             package = 'drawCell')
+                            package = 'drawCell')
     html <- readr::read_file(html_path)
 
 

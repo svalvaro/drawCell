@@ -24,10 +24,10 @@
 #' size = 2000,
 #' color = 'lightblue')
 drawCell <- function(taxonomy_id,
-                     sl_ids,
-                     color = 'blue',
-                     size = 2000,
-                     delay = 1){
+                    sl_ids,
+                    color = 'blue',
+                    size = 2000,
+                    delay = 1){
 
     # Generate a cell_pictures folder if it does not exist
 
@@ -58,8 +58,8 @@ drawCell <- function(taxonomy_id,
     rmarkdown::render(
         input = input,
         params = list(taxonomy_id = taxonomy_id,
-                      sl_ids = sl_ids,
-                      delay = delay),
+                    sl_ids = sl_ids,
+                    delay = delay),
         output_file = name_picture,
         output_dir = output_dir
     )
@@ -75,9 +75,8 @@ drawCell <- function(taxonomy_id,
     # Create webshot
 
     webshot2::webshot(url = paste0(output_dir,'/',name_picture, '.html'),
-                      file = 'cell_pic.png',
-                      vwidth = 2000,
-                      vheight = 2000,
-
-                      delay = delay)
+                    file = 'cell_pic.png',
+                    vwidth = 2000,
+                    vheight = 2000,
+                    delay = delay)
 }
