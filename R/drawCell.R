@@ -70,7 +70,7 @@ drawCell <- function(taxonomy_id,
     # Create webshot
 
 
-    webshot2::webshot(url = paste0(output_dir,name_picture, '.html'),
+    webshot2::webshot(url = paste0(output_dir,'/',name_picture, '.html'),
                       file = 'cell_pic.png',
                       vwidth = 2000,
                       vheight = 2000,
