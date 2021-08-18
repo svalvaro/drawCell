@@ -8,12 +8,15 @@ params:
 ---
 
 ```{r options, echo = FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE)
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      error = FALSE)
 ```
 
 
 
-```{r visualizer, fig.height=10, fig.width=10}
+```{r visualizer}
 
 cell_visualizer(taxid = params$taxonomy_id, sls = params$sl_ids)
  

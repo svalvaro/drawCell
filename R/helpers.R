@@ -14,6 +14,9 @@ generate_custom_element <- function(...){
     # This function is necessary to change the source of the JS code module
     # of each user.
 
+
+    # This can be a temporary file.
+
     jscode_dir <- system.file("JScode/jscode.js", package="drawCell")
 
 
@@ -132,6 +135,8 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
     # Further arguments to 'make_html()'.
     ...
 ){
+
+    # This to be change into a temporary file.
 
     # Display the interactive imagery given by the parameters, visible in both
     # RStudio (crowded) and the R Markdown file (well laid out).
