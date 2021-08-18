@@ -19,6 +19,10 @@
 #' @export
 #'
 #' @examples
+#' drawCell(taxonomy_id = '58334',
+#' sl_ids = '0049',
+#' size = 2000,
+#' color = 'lightblue')
 drawCell <- function(taxonomy_id,
                      sl_ids,
                      color = 'blue',

@@ -1,0 +1,5 @@
+<script type="module" src="/home/alvaro/Documents/R/drawCell/inst/JScode/jscode.js"></script>
+                           <script defer>
+                           if (! window.customElements.get("sib-swissbiopics-sl"))
+                               window.customElements.define("sib-swissbiopics-sl", SwissBioPicsSL);
+                       </script>

@@ -28,3 +28,9 @@ subcellular elements.
 \description{
 Creates a cell picture
 }
+\examples{
+drawCell(taxonomy_id = '58334',
+sl_ids = '0049',
+size = 2000,
+color = 'lightblue')
+}

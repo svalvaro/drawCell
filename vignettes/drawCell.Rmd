@@ -70,7 +70,8 @@ The size of the picture can be choosen with `size` and the color with `color`.
 
 ```{r example, results='hide', message=F, warning=FALSE, error=F}
 library(drawCell)
-drawCell(taxonomy_id = '58334', sl_ids = '0049', size = 2000, color = 'lightblue')
+drawCell(taxonomy_id = '58334', sl_ids = '0049', size = 2000,
+         color = 'lightblue')
 ```
 
 
@@ -81,7 +82,8 @@ For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932`
 we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
 ```{r sacc, results='hide', message=F, warning=FALSE, error=F}
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), size = 5500, color = 'brown')
+drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), size = 5500,
+         color = 'brown')
 ```
 
 
@@ -106,6 +108,5 @@ delay is one second, so if you increase it it will probably solve the issue.
 drawCell(taxonomy_id = '4932' , sl_ids = '0191')
 
 drawCell(taxonomy_id = '4932' , sl_ids = '0191', delay = 10)
-
 ```
 

@@ -2,17 +2,19 @@ Package: drawCell
 Type: Package
 Title: Generation of cell pictures
 Version: 0.1.0
-Author: c(person(given = "Alvaro", family = "Sanchez-Villalba",
+Authors@R: c(person(given = "Alvaro", family = "Sanchez-Villalba",
                     email = "sanchezvillalba.alvaro@gmail.com",
                     role = c("aut", "cre")),
             person(given = "Greg", family = "Yannes",
                     email = "greg.yannes@gmail.com",
-                    role = "aut")
-Maintainer: Alvaro Sanchez-Villalba <sanchezvillalba.alvaro@gmail.com>
-Description: After being given the taxonomy id of an organism, and a given 
-    subcellular location id, drawCell connects to the SwissBioPics API and 
-    generates the picture of that given cell, with the subcellular location 
-    highlighted.
+                    role = "aut"))
+Description: The package drawCell allows the user the fast generation of cell 
+                images with highlighted subcellular components. It works by 
+                providing as input the taxonomy id of an organism, and one or
+                multiple SL (Subcellular IDs). It retrieves this data from the
+                SwissBioPics API. An internet connection is required to use
+                drawCell.
+biocViews: SingleCell, Software, Infrastructure,Visualization 
 License: GPL-3
 Encoding: UTF-8
 Imports: 

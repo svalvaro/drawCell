@@ -28,7 +28,9 @@ generate_custom_element <- function(...){
                        </script>')
 
 
-    readr::write_file(to_write, paste(system.file("snippets/", package="drawCell"),'custom_element.txt', sep = '/') )
+    readr::write_file(to_write, paste(system.file("snippets/",
+                                                  package="drawCell"),
+                                      'custom_element.txt', sep = '/') )
 
 
 }
@@ -45,7 +47,8 @@ generate_custom_element <- function(...){
 #'
 #' @examples
 arguments_csl <- function(items){
-    return(paste("\"", paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), "\"", sep = ""))
+    return(paste("\"", paste(htmltools::htmlEscape(unlist(items)),
+                             collapse = ",", sep = ""), "\"", sep = ""))
 }
 
 
@@ -63,16 +66,17 @@ arguments_csl <- function(items){
 #' @examples
 make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
-                      sl_ids, #The IDs of the cellular elements to highlight.
+                  sl_ids, #The IDs of the cellular elements to highlight.
 
-                      # The filepath to (or raw HTML text of) the templates snippet.
-                      templates = system.file("snippets/templates.txt", package="drawCell"),
+                  # The filepath to (or raw HTML text of) the templates snippet.
+                  templates = system.file("snippets/templates.txt",
+                                          package="drawCell"),
 
 
-                      # The filepath to (or raw HTML text of) the custom element
-                      # snippet.
-                      custom_element = system.file("snippets/custom_element.txt",
-                                                   package="drawCell")){
+                  # The filepath to (or raw HTML text of) the custom element
+                  # snippet.
+                  custom_element = system.file("snippets/custom_element.txt",
+                                               package="drawCell")){
 
     # Escape any strings supplied.
     taxonomy_id <- arguments_csl(taxonomy_id[1])
@@ -88,7 +92,9 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
     # ...then include the line (created here) to target the right picture...
     elements$identifier <- "<sib-swissbiopics-sl taxid=%s sls=%s></sib-swissbiopics-sl>"
-    elements$identifier <- sprintf(fmt = elements$identifier, taxonomy_id, sl_ids)
+    elements$identifier <- sprintf(fmt = elements$identifier,
+                                   taxonomy_id,
+                                   sl_ids)
 
 
 
@@ -106,9 +112,6 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
     return(paste(unlist(elements), collapse = "\n"))
 
 }
-
-
-
 
 
 #' generates the html document
@@ -137,7 +140,6 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
     # Embed the HTML text where this function is called.
     pic = htmltools::HTML(make_html(taxonomy_id = taxid, sl_ids = sls))
     return(pic)
-
 }
 
 #' changes the size of the cell
@@ -183,7 +185,8 @@ edit_jscode <- function(color = 'blue'){
     js_code <- gsub('fill: lightyellow', paste0('fill: ', color), js_code)
 
 
-    js_code <- gsub('background-color: lightyellow', paste0('background-color: ',color), js_code)
+    js_code <- gsub('background-color: lightyellow',
+                    paste0('background-color: ',color), js_code)
 
     readr::write_file(js_code, js_path)
 }
@@ -205,8 +208,8 @@ restore_jscode <- function(color = 'blue'){
     js_code <- readr::read_file(js_path)
 
     js_code <- gsub(paste0('fill: ', color), 'fill: lightyellow', js_code)
-    js_code <- gsub(paste0('background-color: ', color), 'background-color: lightyellow', js_code)
+    js_code <- gsub(paste0('background-color: ', color),
+                    'background-color: lightyellow', js_code)
 
     readr::write_file(js_code, js_path)
-
 }
