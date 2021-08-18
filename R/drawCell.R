@@ -26,7 +26,7 @@ drawCell <- function(taxonomy_id,
     # Generate a cell_pictures folder
 
 
-        base::dir.create(system.file('cell_pictures', package = 'drawCell'))
+    dir.create(paste0(system.file(package = 'drawCell'),'/','cell_pictures'))
 
 
 
