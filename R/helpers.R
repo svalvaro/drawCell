@@ -57,6 +57,7 @@ arguments_csl <- function(items){
 #' @param custom_element
 #' @param ...
 #'
+#' @importFrom readr read_file
 #' @return
 #'
 #' @examples
@@ -122,6 +123,7 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 #' @param ...
 #'
 #' @return
+#' @importFrom htmltools HTML
 #'
 #' @examples
 cell_visualizer <- function(# The NCBI taxonomy ID.

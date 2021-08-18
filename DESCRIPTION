@@ -16,6 +16,7 @@ Description: After being given the taxonomy id of an organism, and a given
 License: GPL-3
 Encoding: UTF-8
 Imports: 
+    htmltools,
     readr,
     rmarkdown,
     webshot2
