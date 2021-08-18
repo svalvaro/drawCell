@@ -29,6 +29,25 @@ It uses the [SwissBioPics API](https://www.swissbiopics.org/) so an internet
 connection is required to use this package.
 
 
+
+# Installation
+
+Start by installing `webshot2` and Google Chrome (If you don't have it already).
+
+
+```{r installation1, eval = FALSE}
+remotes::install_github("rstudio/webshot2")
+```
+
+
+After installing it you can instdall `drawCell`:
+
+```{r install2, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("svalvaro/drawCell")
+```
+
+
 # How to use
 
 It is fairly simple to use `drawCell`. You just need to know the 
@@ -49,9 +68,9 @@ is `58334` and as an example I will use the SL code of the chloroplast:
 
 The size of the picture can be choosen with `size` and the color with `color`.
 
-```{r example, message=FALSE, warning=FALSE, results='hide'}
+```{r example, results='hide', message=F, warning=FALSE, error=F}
 library(drawCell)
-drawCell(taxonomy_id = '58334', sl_ids = '0049', size = 600, color = 'black')
+drawCell(taxonomy_id = '58334', sl_ids = '0049', size = 2000, color = 'lightblue')
 ```
 
 
@@ -61,8 +80,8 @@ exists!
 For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` 
 we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
-```{r sacc, message=F, results='hide'}
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), size = 2500, color = 'brown')
+```{r sacc, results='hide', message=F, warning=FALSE, error=F}
+drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), size = 5500, color = 'brown')
 ```
 
 
@@ -71,8 +90,8 @@ If one wishes to highligth the endosomes (SL:0101) of  *Homo sapiens*
 (Taxonomy id: 9606):
 
 
-```{r covid, message= FALSE, results='hide'}
-drawCell(taxonomy_id = '9606', sl_ids = '0101', size = 2000, color = 'ligthblue' )
+```{r covid, results='hide', message=F, warning=FALSE, error=F}
+drawCell(taxonomy_id = '9606', sl_ids = '0101', size = 2000, color = 'blue' )
 ```
 
 

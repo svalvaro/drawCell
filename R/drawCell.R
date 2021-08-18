@@ -23,6 +23,13 @@ drawCell <- function(taxonomy_id,
                      size = 2000,
                      delay = 1){
 
+    # Generate a cell_pictures folder
+
+
+        base::dir.create(system.file('cell_pictures', package = 'drawCell'))
+
+
+
     #First generate custom_element
 
     drawCell:::generate_custom_element()
