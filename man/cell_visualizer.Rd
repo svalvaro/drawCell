@@ -2,7 +2,7 @@
 % Please edit documentation in R/helpers.R
 \name{cell_visualizer}
 \alias{cell_visualizer}
-\title{Title}
+\title{generates the html document}
 \usage{
 cell_visualizer(taxid = "9606", sls = list("SL0073"), ...)
 }
@@ -13,5 +13,5 @@ cell_visualizer(taxid = "9606", sls = list("SL0073"), ...)
 
 }
 \description{
-Title
+generates the html document
 }

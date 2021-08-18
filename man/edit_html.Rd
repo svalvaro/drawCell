@@ -2,7 +2,7 @@
 % Please edit documentation in R/helpers.R
 \name{edit_html}
 \alias{edit_html}
-\title{Title}
+\title{changes the size of the cell}
 \usage{
 edit_html(size = 2000)
 }
@@ -13,5 +13,5 @@ edit_html(size = 2000)
 
 }
 \description{
-Title
+changes the size of the cell
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/helpers.R
 \name{edit_jscode}
 \alias{edit_jscode}
-\title{Title}
+\title{Changes the color of the cell}
 \usage{
 edit_jscode(color = "blue")
 }
@@ -13,5 +13,5 @@ edit_jscode(color = "blue")
 
 }
 \description{
-Title
+Changes the color of the cell
 }

@@ -41,7 +41,7 @@ generate_custom_element <- function(...){
 #' @param items
 #'
 #' @return
-#' @importFrom htmltoos htmlEscape
+#' @importFrom htmltools htmlEscape
 #'
 #' @examples
 arguments_csl <- function(items){
@@ -117,7 +117,7 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
 
 
-#' Title
+#' generates the html document
 #'
 #' @param taxid
 #' @param sls
@@ -150,7 +150,7 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
 
 }
 
-#' Title
+#' changes the size of the cell
 #'
 #' @param heigth
 #'
@@ -174,12 +174,11 @@ edit_html <- function(size=2000){
 }
 
 
-#' Title
+#' Changes the color of the cell
 #'
 #' @param color
 #'
 #' @return
-#' @export
 #'
 #' @examples
 edit_jscode <- function(color = 'blue'){
@@ -200,7 +199,7 @@ edit_jscode <- function(color = 'blue'){
 }
 
 
-#' Title
+#' Restores the javascript code
 #'
 #' @param color
 #'
