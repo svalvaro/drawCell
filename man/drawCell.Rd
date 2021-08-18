@@ -13,7 +13,9 @@ https://www.ncbi.nlm.nih.gov/taxonomy/}
 \item{sl_ids}{Id of the subcellular location, can be found at
 http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
 
-\item{size}{}
+\item{color}{Highlited color of the subcelullar components.}
+
+\item{size}{Size of the cell, around 2000 should work well.}
 
 \item{delay}{Time needed to make picture of the HTML (webshot). If the
 picture is blank, try increasing the delay since it might take longer to

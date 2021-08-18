@@ -22,5 +22,6 @@ Imports:
     webshot2
 RoxygenNote: 7.1.1
 Suggests: 
-    knitr
+    knitr,
+    BiocStyle
 VignetteBuilder: knitr

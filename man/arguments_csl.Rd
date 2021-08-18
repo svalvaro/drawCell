@@ -2,16 +2,16 @@
 % Please edit documentation in R/helpers.R
 \name{arguments_csl}
 \alias{arguments_csl}
-\title{Title}
+\title{argument_csl}
 \usage{
 arguments_csl(items)
 }
 \arguments{
-\item{items}{}
+\item{items}{sl_ids, tax_id}
 }
 \value{
-
+str with sl_ids and tax_id
 }
 \description{
-Title
+argument_csl
 }

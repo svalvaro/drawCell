@@ -7,10 +7,10 @@
 edit_html(size = 2000)
 }
 \arguments{
-\item{heigth}{}
+\item{size}{size of the highlited element}
 }
 \value{
-
+html modified with size
 }
 \description{
 changes the size of the cell

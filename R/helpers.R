@@ -1,6 +1,6 @@
 #' Creates custom_element.txt
 #'
-#' @param ...
+#' @param ... it doesn't need anything
 #'
 #' @importFrom readr write_file
 #'
@@ -36,11 +36,11 @@ generate_custom_element <- function(...){
 
 
 
-#' Title
+#' argument_csl
 #'
-#' @param items
+#' @param items sl_ids, tax_id
 #'
-#' @return
+#' @return str with sl_ids and tax_id
 #' @importFrom htmltools htmlEscape
 #'
 #' @examples
@@ -52,14 +52,13 @@ arguments_csl <- function(items){
 
 #' Generates the HTML document with the cell picture
 #'
-#' @param taxonomy_id
-#' @param sl_ids
-#' @param templates
-#' @param custom_element
-#' @param ...
+#' @param taxonomy_id taxonomy id
+#' @param sl_ids subcelullar ids
+#' @param templates snippets folders template.txt
+#' @param custom_element snippets folders custom.txt
 #'
 #' @importFrom readr read_file
-#' @return
+#' @return html document
 #'
 #' @examples
 make_html <- function(taxonomy_id , #The NCBI taxonomy ID
@@ -73,11 +72,7 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
                       # The filepath to (or raw HTML text of) the custom element
                       # snippet.
                       custom_element = system.file("snippets/custom_element.txt",
-                                                   package="drawCell"),
-
-                      # Further arguments to 'readr::read_file()', which might
-                      # be useful to process snippet encodings across platforms.
-                      ...){
+                                                   package="drawCell")){
 
     # Escape any strings supplied.
     taxonomy_id <- arguments_csl(taxonomy_id[1])
@@ -89,8 +84,7 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
 
     # Include the templates (as read)...
-    elements$templates <- readr::read_file(file = templates, ...)
-
+    elements$templates <- readr::read_file(file = templates)
 
     # ...then include the line (created here) to target the right picture...
     elements$identifier <- "<sib-swissbiopics-sl taxid=%s sls=%s></sib-swissbiopics-sl>"
@@ -99,7 +93,7 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
 
     # ...and finally include the definition (as read) for the custom element.
-    elements$custom_element <- readr::read_file(file = custom_element, ...)
+    elements$custom_element <- readr::read_file(file = custom_element)
 
     # # change the jscode to the user's
     #
@@ -119,11 +113,10 @@ make_html <- function(taxonomy_id , #The NCBI taxonomy ID
 
 #' generates the html document
 #'
-#' @param taxid
-#' @param sls
-#' @param ...
+#' @param taxid taxonomy id
+#' @param sls subcellular ids
 #'
-#' @return
+#' @return html document
 #' @importFrom htmltools HTML
 #'
 #' @examples
@@ -133,10 +126,7 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
 
     # A list (or vector) of the UniProtKB subcellular location
     # (SL) IDs for the cellular elements to highlight.
-    sls = list("SL0073"),
-
-    # Further arguments to 'make_html()'.
-    ...
+    sls = list("SL0073")
 ){
 
     # This to be change into a temporary file.
@@ -145,16 +135,16 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
     # RStudio (crowded) and the R Markdown file (well laid out).
 
     # Embed the HTML text where this function is called.
-    pic = htmltools::HTML(make_html(taxonomy_id = taxid, sl_ids = sls, ...))
+    pic = htmltools::HTML(make_html(taxonomy_id = taxid, sl_ids = sls))
     return(pic)
 
 }
 
 #' changes the size of the cell
 #'
-#' @param heigth
+#' @param size size of the highlited element
 #'
-#' @return
+#' @return html modified with size
 #'
 #'
 #' @examples
@@ -176,9 +166,9 @@ edit_html <- function(size=2000){
 
 #' Changes the color of the cell
 #'
-#' @param color
+#' @param color Color of the highlited element
 #'
-#' @return
+#' @return jscode modified with the color selected
 #'
 #' @examples
 edit_jscode <- function(color = 'blue'){
@@ -201,9 +191,9 @@ edit_jscode <- function(color = 'blue'){
 
 #' Restores the javascript code
 #'
-#' @param color
+#' @param color Color of the highlited element
 #'
-#' @return
+#' @return jscode restored from the color selected
 #'
 #' @examples
 restore_jscode <- function(color = 'blue'){

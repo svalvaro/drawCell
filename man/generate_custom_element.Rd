@@ -7,7 +7,7 @@
 generate_custom_element(...)
 }
 \arguments{
-\item{...}{}
+\item{...}{it doesn't need anything}
 }
 \value{
 Creates custom_element.txt inside inst/snippet/ with the path to the

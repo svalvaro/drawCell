@@ -4,13 +4,15 @@
 \alias{cell_visualizer}
 \title{generates the html document}
 \usage{
-cell_visualizer(taxid = "9606", sls = list("SL0073"), ...)
+cell_visualizer(taxid = "9606", sls = list("SL0073"))
 }
 \arguments{
-\item{...}{}
+\item{taxid}{taxonomy id}
+
+\item{sls}{subcellular ids}
 }
 \value{
-
+html document
 }
 \description{
 generates the html document

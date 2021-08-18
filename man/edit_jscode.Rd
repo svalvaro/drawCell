@@ -7,10 +7,10 @@
 edit_jscode(color = "blue")
 }
 \arguments{
-\item{color}{}
+\item{color}{Color of the highlited element}
 }
 \value{
-
+jscode modified with the color selected
 }
 \description{
 Changes the color of the cell

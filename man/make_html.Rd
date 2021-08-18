@@ -8,15 +8,20 @@ make_html(
   taxonomy_id,
   sl_ids,
   templates = system.file("snippets/templates.txt", package = "drawCell"),
-  custom_element = system.file("snippets/custom_element.txt", package = "drawCell"),
-  ...
+  custom_element = system.file("snippets/custom_element.txt", package = "drawCell")
 )
 }
 \arguments{
-\item{...}{}
+\item{taxonomy_id}{taxonomy id}
+
+\item{sl_ids}{subcelullar ids}
+
+\item{templates}{snippets folders template.txt}
+
+\item{custom_element}{snippets folders custom.txt}
 }
 \value{
-
+html document
 }
 \description{
 Generates the HTML document with the cell picture
