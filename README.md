@@ -10,11 +10,11 @@ The goal of drawCell is to easily obtain nice cell pictures in R!
 
 ## Installation
 
-drawCell needs the package
+`drawCell` needs the package
 [webshot2](https://github.com/rstudio/webshot2), which needs to be
 installed prior to the installation of **drawCell**.
 
-To obtain the cell pictures, draCell connects to the [SwissBioPics
+To obtain the cell pictures, `drawCell` connects to the [SwissBioPics
 API](https://www.swissbiopics.org/) so an internet connection is
 required.
 
@@ -23,9 +23,7 @@ required.
 devtools::install_github("svalvaro/drawCell")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Examples
 
 It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of
 your species of interest, and one or multiple SL codes for subcellular
@@ -34,13 +32,23 @@ location can be found at [Uniprot](https://www.uniprot.org/docs/subcell)
 and
 [uniprotkb\_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
 
+To generate a cell of Homo sapiens (Taxonomy id: `9606`) with
+highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets
+(SL code: `0154`):
+
+``` r
+library(drawCell)
+drawCell(taxonomy_id = '9606', sl_ids = c('0095','0154'), color = 'yellow')
+```
+
+<img src="man/figures/README-animal_cell-1.png" width="100%" />
+
 The taxonomy id for *Quercus ilex* a common tree in the south of Spain
 is `58334` and as an example I will use the SL code of the chloroplast:
 `0049`.
 
 ``` r
-library(drawCell)
-drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'lightblue', delay = 3)
+drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'lightgreen')
 ```
 
 <img src="man/figures/README-plantcell-1.png" width="100%" />
