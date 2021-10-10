@@ -50,15 +50,18 @@ function(input, output){
             return(NULL)
         }
 
+        src = paste0(system.file('cell_pictures/',
+                          package = 'drawCell'),'cell_pic.png')
 
         drawCell::drawCell(
             taxonomy_id = input$taxIdInput,
             sl_ids = subCellIdsSelected(),
             color = 'green',
-            size = input$cellSize
+            size = input$cellSize,
+            pictureName = src
         )
 
-        list(src = 'source to pic')
+        list(src = src)
 
 
 
