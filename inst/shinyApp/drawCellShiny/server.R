@@ -2,12 +2,70 @@ function(input, output){
 
 
 
-    subCellIds <- subCellIds <- read.csv(
-            base::system.file(
-                'shinyApp/drawCellShiny/www/SLids.csv',
-                package = 'drawCell'
-            )
+    subCellIds <-  readr::read_csv(base::system.file(
+        'shinyApp/drawCellShiny/www/SLids.csv',
+        package = 'drawCell')
         )
+
+
+    # taxonomyId <- eventReactive(input$drawCell, {
+    #
+    #     if (is.null(input$taxIdInput)) {
+    #         return(NULL)
+    #     }
+    #
+    #     # IF the user provides a number ( the taxonomy id itself)
+    #     if (!is.na(as.numeric(input$taxIdInput))) {
+    #         taxonomyId <- input$taxIdInput
+    #         return(taxonomyId)
+    #     }
+    #
+    #     if (is.character(input$taxIdInput)) {
+    #
+    #         taxonomyId <- taxize::get_ids(
+    #             sci_com = input$taxIdInput,
+    #             db = 'ncbi'
+    #         )
+    #
+    #         taxonomyId <- taxonomyId$ncbi[1]
+    #
+    #         return(taxonomyId)
+    #
+    #     }
+    #
+    #     message(paste0('The taxonomy is', taxonomyId))
+    #
+    #
+    # })
+
+
+
+    taxonomyId <- reactiveValues()
+
+
+    observeEvent(input$drawCell,{
+
+            # IF the user provides a number ( the taxonomy id itself)
+            if (!is.na(as.numeric(input$taxIdInput))) {
+                taxonomyId$ID <- input$taxIdInput
+                return(taxonomyId)
+            }
+
+            if (is.character(input$taxIdInput)) {
+
+                taxonomyId <- taxize::get_ids(
+                    sci_com = input$taxIdInput,
+                    db = 'ncbi'
+                )
+
+                taxonomyId$ID <- taxonomyId$ncbi[1]
+
+                return(taxonomyId)
+
+            }
+    })
+
+
 
     output$subCellSelector <- renderUI({
 
@@ -16,8 +74,15 @@ function(input, output){
                 label = "Select/deselect all options",
                 choices = subCellIds$Location,
                 options = list(
+                    style = "btn-primary",
                     `actions-box` = TRUE,
                     `live-search` = TRUE),
+
+                choicesOpt = list(
+                    subtext = paste("SL_id",
+                                    subCellIds$SubCell.Id,
+                                    sep = ": ")
+                    ),
                 multiple = TRUE
             )
         })
@@ -34,7 +99,7 @@ function(input, output){
     })
 
 
-    subCellIdsSelected <- reactive({
+    subCellIdsSelected <- eventReactive(input$drawCell,{
 
         subCellIdsSelected <- subCellIds$SubCell.Id[
             base::match(
@@ -44,26 +109,47 @@ function(input, output){
     })
 
 
-    output$cellImage <- renderImage({
-
-        if (is.null(input$taxIdInput)) {
-            return(NULL)
-        }
-
-        src = paste0(system.file('cell_pictures/',
-                          package = 'drawCell'),'cell_pic.png')
-
-        drawCell::drawCell(
-            taxonomy_id = input$taxIdInput,
-            sl_ids = subCellIdsSelected(),
-            color = 'green',
-            size = input$cellSize,
-            pictureName = src
-        )
-
-        list(src = src)
 
 
 
+
+
+
+
+
+    observeEvent(input$drawCell,{
+
+        output$cellImage <-     renderImage({
+
+            if (is.null(input$taxIdInput)) {
+                return(NULL)
+            }
+
+            # if (generateCell$value == FALSE) {
+            #     return(NULL)
+            #
+            # }
+            #generateCell$value <- FALSE
+
+            src = paste0(system.file('cell_pictures/',
+                                     package = 'drawCell'),'cell_pic.png')
+
+            drawCell::drawCell(
+                taxonomy_id = taxonomyId$ID,
+                sl_ids = subCellIdsSelected(),
+                color = 'green',
+                size = 2000,
+                pictureName = src
+            )
+
+            list(src = src, width = input$cellSize)
+        })
     })
+
+
+
+
+
+
+
 }

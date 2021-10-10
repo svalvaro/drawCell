@@ -1,0 +1,457 @@
+Id Location
+0476 A band
+0002 Acidocalcisome
+0316 Acidocalcisome lumen
+0003 Acidocalcisome membrane
+0007 Acrosome
+0004 Acrosome inner membrane
+0005 Acrosome lumen
+0006 Acrosome membrane
+0447 Acrosome outer membrane
+0008 Actin patch
+0009 Adherens junction
+0010 Aleurone grain
+0317 Aleurone grain lumen
+0011 Aleurone grain membrane
+0012 Amyloplast
+0013 Amyloplast inner membrane
+0014 Amyloplast membrane
+0015 Apical cell membrane
+0016 Apical lamina
+0017 Apicolateral cell membrane
+0018 Apicoplast
+0019 Apoplast
+0306 Archaeal flagellum
+0020 Attachment organelle
+0021 Attachment organelle membrane
+0023 Autophagosome
+0318 Autophagosome lumen
+0022 Autophagosome membrane
+0279 Axon
+0489 Bacterial extracellular vesicle
+0307 Bacterial flagellum
+0142 Bacterial flagellum basal body
+0358 Bacterial flagellum filament
+0357 Bacterial flagellum hook
+0454 Barrier septum
+0024 Basal cell membrane
+0025 Basement membrane
+0026 Basolateral cell membrane
+0472 Bleb
+0027 Bud
+0028 Bud membrane
+0029 Bud neck
+0030 Bud tip
+0075 COPI-coated vesicle
+0076 COPI-coated vesicle membrane
+0077 COPII-coated vesicle
+0078 COPII-coated vesicle membrane
+0031 Cajal body
+0032 Calyx
+0033 Capsule
+0034 Carboxysome
+0035 Caveola
+0138 Cell cortex
+0036 Cell envelope
+0037 Cell inner membrane
+0038 Cell junction
+0039 Cell membrane
+0040 Cell outer membrane
+0280 Cell projection
+0455 Cell septum
+0310 Cell surface
+0456 Cell tip
+0041 Cell wall
+0042 Cellular chromatophore membrane
+0043 Cellular thylakoid
+0044 Cellular thylakoid lumen
+0045 Cellular thylakoid membrane
+0046 Centriole
+0047 Centromere
+0048 Centrosome
+0049 Chloroplast
+0050 Chloroplast envelope
+0051 Chloroplast inner membrane
+0052 Chloroplast intermembrane space
+0053 Chloroplast membrane
+0139 Chloroplast nucleoid
+0054 Chloroplast outer membrane
+0055 Chloroplast stroma
+0056 Chloroplast thylakoid
+0057 Chloroplast thylakoid lumen
+0058 Chloroplast thylakoid membrane
+0059 Chlorosome
+0060 Chlorosome envelope
+0061 Chromaffin granule
+0349 Chromaffin granule lumen
+0062 Chromaffin granule membrane
+0063 Chromoplast
+0064 Chromoplast membrane
+0065 Chromoplast stroma
+0468 Chromosome
+0066 Cilium
+0305 Cilium membrane
+0069 Clathrin-coated pit
+0070 Clathrin-coated vesicle
+0071 Clathrin-coated vesicle membrane
+0467 Cleavage furrow
+0072 Coated pit
+0073 Contractile vacuole
+0074 Contractile vacuole membrane
+0079 Cornified envelope
+0080 Cvt vesicle
+0081 Cvt vesicle membrane
+0082 Cyanelle
+0479 Cyanelle envelope
+0480 Cyanelle inner membrane
+0481 Cyanelle intermembrane space
+0083 Cyanelle membrane
+0482 Cyanelle outer membrane
+0350 Cyanelle stroma
+0277 Cyanelle thylakoid
+0084 Cyanelle thylakoid lumen
+0085 Cyanelle thylakoid membrane
+0086 Cytoplasm
+0495 Cytoplasmic ribonucleoprotein granule
+0325 Cytoplasmic vesicle lumen
+0089 Cytoplasmic vesicle membrane
+0090 Cytoskeleton
+0091 Cytosol
+0283 Dendrite
+0284 Dendritic spine
+0285 Dendritic spine membrane
+0092 Desmosome
+0094 Early endosome
+0337 Early endosome lumen
+0093 Early endosome membrane
+0147 Endomembrane system
+0095 Endoplasmic reticulum
+0096 Endoplasmic reticulum lumen
+0097 Endoplasmic reticulum membrane
+0098 Endoplasmic reticulum-Golgi intermediate compartment
+0099 Endoplasmic reticulum-Golgi intermediate compartment membrane
+0101 Endosome
+0327 Endosome lumen
+0100 Endosome membrane
+0109 Esterosome
+0328 Esterosome lumen
+0108 Esterosome membrane
+0110 Etioplast
+0329 Etioplast membrane
+0330 Etioplast stroma
+0112 Extracellular space
+0286 Filopodium
+0287 Filopodium membrane
+0470 Filopodium tip
+0113 Fimbrium
+0116 Flagellar pocket
+0117 Flagellum
+0118 Focal adhesion
+0119 Forespore
+0124 Gap junction
+0125 Gas vesicle
+0126 Gas vesicle membrane
+0127 Gem
+0129 Glycosome
+0332 Glycosome matrix
+0128 Glycosome membrane
+0131 Glyoxysome
+0333 Glyoxysome matrix
+0130 Glyoxysome membrane
+0132 Golgi apparatus
+0133 Golgi apparatus lumen
+0134 Golgi apparatus membrane
+0135 Golgi stack
+0334 Golgi stack lumen
+0136 Golgi stack membrane
+0288 Growth cone
+0289 Growth cone membrane
+0477 H zone
+0137 Hemidesmosome
+0431 Host
+0395 Host Golgi apparatus
+0426 Host Golgi apparatus membrane
+0372 Host apical cell membrane
+0428 Host caveola
+0427 Host cell
+0421 Host cell envelope
+0373 Host cell inner membrane
+0374 Host cell junction
+0375 Host cell membrane
+0376 Host cell outer membrane
+0377 Host cell projection
+0378 Host cell surface
+0424 Host cell wall
+0429 Host cellular thylakoid
+0430 Host cellular thylakoid membrane
+0381 Host cytoplasm
+0386 Host cytoplasmic vesicle
+0387 Host cytoplasmic vesicle membrane
+0383 Host cytoskeleton
+0384 Host cytosol
+0398 Host endomembrane system
+0388 Host endoplasmic reticulum
+0389 Host endoplasmic reticulum lumen
+0390 Host endoplasmic reticulum membrane
+0391 Host endoplasmic reticulum-Golgi intermediate compartment
+0392 Host endoplasmic reticulum-Golgi intermediate compartment membrane
+0393 Host endosome
+0394 Host endosome membrane
+0425 Host extracellular space
+0379 Host filopodium
+0399 Host late endosome
+0400 Host late endosome membrane
+0401 Host lipid droplet
+0403 Host lysosome
+0404 Host lysosome membrane
+0380 Host membrane
+0405 Host microsome
+0406 Host microsome membrane
+0407 Host mitochondrion
+0408 Host mitochondrion envelope
+0409 Host mitochondrion inner membrane
+0410 Host mitochondrion membrane
+0411 Host mitochondrion outer membrane
+0453 Host multivesicular body
+0412 Host nucleolus
+0413 Host nucleoplasm
+0414 Host nucleus
+0415 Host nucleus envelope
+0419 Host nucleus inner membrane
+0416 Host nucleus lamina
+0417 Host nucleus matrix
+0418 Host nucleus membrane
+0446 Host nucleus outer membrane
+0507 Host pathogen-containing vacuole
+0508 Host pathogen-containing vacuole lumen
+0509 Host pathogen-containing vacuole membrane
+0382 Host perinuclear region
+0420 Host periplasm
+0385 Host plasmodesma
+0434 Host presynaptic cell membrane
+0422 Host rough endoplasmic reticulum
+0423 Host rough endoplasmic reticulum membrane
+0444 Host smooth endoplasmic reticulum
+0445 Host smooth endoplasmic reticulum membrane
+0435 Host synapse
+0449 Host thylakoid
+0143 Hyaline layer
+0145 Hydrogenosome
+0335 Hydrogenosome lumen
+0144 Hydrogenosome membrane
+0478 I band
+0488 Inflammasome
+0362 Inner membrane complex
+0146 Interphotoreceptor matrix
+0148 Invadopodium
+0290 Invadopodium membrane
+0149 Kinetochore
+0150 Kinetoplast
+0460 Kinocilium
+0291 Lamellipodium
+0292 Lamellipodium membrane
+0152 Late endosome
+0336 Late endosome lumen
+0151 Late endosome membrane
+0153 Lateral cell membrane
+0154 Lipid droplet
+0158 Lysosome
+0156 Lysosome lumen
+0157 Lysosome membrane
+0159 Lytic vacuole
+0315 M line
+0510 Magnetosome
+0511 Magnetosome lumen
+0512 Magnetosome membrane
+0161 Melanosome
+0338 Melanosome lumen
+0160 Melanosome membrane
+0162 Membrane
+0370 Membrane raft
+0163 Microneme
+0339 Microneme lumen
+0164 Microneme membrane
+0166 Microsome
+0165 Microsome membrane
+0293 Microvillus
+0294 Microvillus membrane
+0469 Midbody
+0490 Midbody ring
+0173 Mitochondrion
+0167 Mitochondrion envelope
+0168 Mitochondrion inner membrane
+0169 Mitochondrion intermembrane space
+0170 Mitochondrion matrix
+0171 Mitochondrion membrane
+0269 Mitochondrion nucleoid
+0172 Mitochondrion outer membrane
+0437 Mitosome
+0174 Multivesicular body
+0175 Multivesicular body membrane
+0176 Myelin membrane
+0312 Myofibril
+0177 Nematocyst
+0518 Neuron projection
+0526 Neuronal dense core vesicle
+0532 Neuronal dense core vesicle membrane
+0494 Nuclear body
+0185 Nuclear pore complex
+0187 Nucleoid
+0188 Nucleolus
+0497 Nucleolus fibrillar center
+0189 Nucleomorph
+0190 Nucleoplasm
+0191 Nucleus
+0178 Nucleus envelope
+0179 Nucleus inner membrane
+0184 Nucleus intermembrane space
+0180 Nucleus lamina
+0181 Nucleus matrix
+0182 Nucleus membrane
+0183 Nucleus outer membrane
+0186 Nucleus speckle
+0351 Organellar chromatophore
+0359 Organellar chromatophore inner membrane
+0360 Organellar chromatophore intermembrane space
+0352 Organellar chromatophore membrane
+0361 Organellar chromatophore outer membrane
+0354 Organellar chromatophore thylakoid
+0355 Organellar chromatophore thylakoid lumen
+0356 Organellar chromatophore thylakoid membrane
+0230 P-body
+0465 PML body
+0192 Paranodal septate junction
+0194 Parasitophorous vacuole
+0193 Parasitophorous vacuole membrane
+0195 Peribacteroid membrane
+0196 Peribacteroid space
+0197 Perikaryon
+0198 Perinuclear region
+0199 Perinuclear theca
+0200 Periplasm
+0201 Periplasmic flagellum
+0367 Perispore
+0204 Peroxisome
+0202 Peroxisome matrix
+0203 Peroxisome membrane
+0473 Phagocytic cup
+0206 Phagosome
+0205 Phagosome membrane
+0457 Photoreceptor inner segment
+0458 Photoreceptor outer segment
+0207 Phragmoplast
+0208 Plasmodesma
+0209 Plastid
+0210 Plastid envelope
+0211 Plastid inner membrane
+0212 Plastid intermembrane space
+0213 Plastid membrane
+0140 Plastid nucleoid
+0214 Plastid outer membrane
+0215 Plastid stroma
+0278 Plastid thylakoid
+0309 Plastid thylakoid lumen
+0216 Plastid thylakoid membrane
+0217 Plastoglobule
+0295 Podosome
+0371 Pollen coat
+0218 Porosome
+0515 Postsynapse
+0521 Postsynaptic Golgi apparatus
+0219 Postsynaptic cell membrane
+0297 Postsynaptic density
+0520 Postsynaptic density membrane
+0523 Postsynaptic early endosome
+0528 Postsynaptic endocytic zone
+0522 Postsynaptic endosome
+0524 Postsynaptic recycling endosome
+0220 Preautophagosomal structure
+0221 Preautophagosomal structure membrane
+0516 Presynapse
+0519 Presynaptic active zone
+0527 Presynaptic active zone membrane
+0222 Presynaptic cell membrane
+0529 Presynaptic endocytic zone
+0525 Presynaptic endosome
+0223 Prevacuolar compartment
+0343 Prevacuolar compartment lumen
+0224 Prevacuolar compartment membrane
+0225 Primary cell wall
+0226 Prolamellar body
+0369 Prospore
+0368 Prospore membrane
+0228 Protein storage vacuole
+0344 Protein storage vacuole lumen
+0227 Protein storage vacuole membrane
+0229 Protoplasm
+0298 Pseudopodium
+0299 Pseudopodium membrane
+0232 Recycling endosome
+0345 Recycling endosome lumen
+0231 Recycling endosome membrane
+0233 Rhoptry
+0346 Rhoptry lumen
+0234 Rhoptry membrane
+0235 Rough endoplasmic reticulum
+0236 Rough endoplasmic reticulum lumen
+0237 Rough endoplasmic reticulum membrane
+0300 Ruffle
+0301 Ruffle membrane
+0262 S-layer
+0238 Sarcolemma
+0313 Sarcomere
+0311 Sarcoplasm
+0239 Sarcoplasmic reticulum
+0240 Sarcoplasmic reticulum lumen
+0241 Sarcoplasmic reticulum membrane
+0242 Secondary cell wall
+0243 Secreted
+0244 Secretory vesicle
+0245 Secretory vesicle membrane
+0246 Septate junction
+0247 Slime layer
+0248 Smooth endoplasmic reticulum
+0249 Smooth endoplasmic reticulum lumen
+0250 Smooth endoplasmic reticulum membrane
+0251 Spindle
+0448 Spindle pole
+0252 Spindle pole body
+0530 Spine apparatus
+0366 Spore coat
+0363 Spore core membrane
+0364 Spore cortex
+0365 Spore outer membrane
+0436 Spore polar tube
+0254 Spore wall
+0302 Stereocilium
+0303 Stereocilium membrane
+0496 Stress granule
+0255 Surface film
+0256 Symbiosome
+0257 Symplast
+0258 Synapse
+0531 Synaptic cell membrane
+0517 Synaptic cleft
+0259 Synaptic vesicle
+0348 Synaptic vesicle lumen
+0260 Synaptic vesicle membrane
+0261 Synaptosome
+0505 T-tubule
+0487 Target cell
+0451 Target cell membrane
+0276 Telomere
+0450 Thylakoid
+0265 Tight junction
+0268 Trichocyst
+0141 Uropodium
+0272 Vacuole
+0270 Vacuole lumen
+0271 Vacuole membrane
+0274 Virion
+0275 Virion membrane
+0273 Virion tegument
+0314 Z line
+0067 cis-Golgi network
+0068 cis-Golgi network membrane
+0266 trans-Golgi network
+0267 trans-Golgi network membrane
