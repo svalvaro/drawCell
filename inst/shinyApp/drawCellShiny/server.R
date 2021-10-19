@@ -38,32 +38,32 @@ function(input, output){
     #
     # })
 
-
-
-    taxonomyId <- reactiveValues()
-
-
-    observeEvent(input$drawCell,{
-
-            # IF the user provides a number ( the taxonomy id itself)
-            if (!is.na(as.numeric(input$taxIdInput))) {
-                taxonomyId$ID <- input$taxIdInput
-                return(taxonomyId)
-            }
-
-            if (is.character(input$taxIdInput)) {
-
-                taxonomyId <- taxize::get_ids(
-                    sci_com = input$taxIdInput,
-                    db = 'ncbi'
-                )
-
-                taxonomyId$ID <- taxonomyId$ncbi[1]
-
-                return(taxonomyId)
-
-            }
-    })
+#
+#
+#     taxonomyId <- reactiveValues()
+#
+#
+#     observeEvent(input$drawCell,{
+#
+#             # IF the user provides a number ( the taxonomy id itself)
+#             if (!is.na(as.numeric(input$taxIdInput))) {
+#                 taxonomyId$ID <- input$taxIdInput
+#                 return(taxonomyId)
+#             }
+#
+#             if (is.character(input$taxIdInput)) {
+#
+#                 taxonomyId <- taxize::get_ids(
+#                     sci_com = input$taxIdInput,
+#                     db = 'ncbi'
+#                 )
+#
+#                 taxonomyId$ID <- taxonomyId$ncbi[1]
+#
+#                 return(taxonomyId)
+#
+#             }
+#     })
 
 
 
@@ -110,39 +110,24 @@ function(input, output){
 
 
 
-
-
-
-
-
-
-
     observeEvent(input$drawCell,{
 
-        output$cellImage <-     renderImage({
+        output$cellImage <-     renderPlot({
 
             if (is.null(input$taxIdInput)) {
                 return(NULL)
             }
 
-            # if (generateCell$value == FALSE) {
-            #     return(NULL)
-            #
-            # }
-            #generateCell$value <- FALSE
-
-            src = paste0(system.file('cell_pictures/',
-                                     package = 'drawCell'),'cell_pic.png')
-
             drawCell::drawCell(
-                taxonomy_id = taxonomyId$ID,
+                organism_identifier =  input$taxIdInput,
                 sl_ids = subCellIdsSelected(),
                 color = 'green',
                 size = 2000,
-                pictureName = src
+                delay = 2
+
             )
 
-            list(src = src, width = input$cellSize)
+
         })
     })
 

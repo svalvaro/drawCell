@@ -1,0 +1,13 @@
+name: drawCellShiny
+title: drawCellShiny
+username:
+account: svalvaro
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4855101
+bundleId: 5131617
+url: https://svalvaro.shinyapps.io/drawCellShiny/
+when: 1634059847.19808
+lastSyncTime: 1634059847.19811
+asMultiple: FALSE
+asStatic: FALSE

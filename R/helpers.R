@@ -150,10 +150,10 @@ cell_visualizer <- function(# The NCBI taxonomy ID.
 #'
 #'
 #' @examples
-edit_html <- function(size=2000){
+edit_html <- function(size=2000, html_path){
 
-    html_path <- system.file('cell_pictures/cell_picture.html',
-                            package = 'drawCell')
+    # html_path <- system.file('cell_pictures/cell_picture.html',
+    #                         package = 'drawCell')
     html <- readr::read_file(html_path)
 
 
