@@ -112,7 +112,7 @@ function(input, output){
 
     observeEvent(input$drawCell,{
 
-        output$cellImage <-     renderPlot({
+        output$cellImage <-     renderPlot(width = input$cellSize,{
 
             if (is.null(input$taxIdInput)) {
                 return(NULL)
@@ -122,7 +122,7 @@ function(input, output){
                 organism_identifier =  input$taxIdInput,
                 sl_ids = subCellIdsSelected(),
                 color = 'green',
-                size = 2000,
+                size = input$cellSize,
                 delay = 2
 
             )
