@@ -54,12 +54,12 @@ drawCell <- function(organism_identifier,
 
     # Generate a cell_pictures folder if it does not exist
 
-    dir_cell_pic <- system.file('cell_pictures/', package = 'drawCell')
-
-    if (base::dir.exists(dir_cell_pic) == FALSE) {
-        base::dir.create(paste0(system.file(package = 'drawCell'),
-                                '/','cell_pictures'))
-    }
+    # dir_cell_pic <- system.file('cell_pictures/', package = 'drawCell')
+    #
+    # if (base::dir.exists(dir_cell_pic) == FALSE) {
+    #     base::dir.create(paste0(system.file(package = 'drawCell'),
+    #                             '/','cell_pictures'))
+    # }
 
 
     #First generate custom_element
