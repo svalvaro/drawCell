@@ -22,7 +22,8 @@ Imports:
     readr,
     rmarkdown,
     taxize,
-    webshot2
+    webshot2,
+    Rcpp
 RoxygenNote: 7.1.1
 Suggests: 
     knitr,

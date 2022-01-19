@@ -1,9 +1,10 @@
 function(input, output){
 
-    subCellIds <-  utils::read.csv(base::system.file(
+    subCellIds <-  readr::read_csv(base::system.file(
         'shinyApp/drawCellShiny/www/SLids.csv',
         package = 'drawCell')
     )
+
     output$subCellSelector <- renderUI({
 
         shinyWidgets::pickerInput(
