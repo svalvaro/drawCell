@@ -5,9 +5,9 @@ account: svalvaro
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5467604
-bundleId: 5484646
+bundleId: 5484661
 url: https://svalvaro.shinyapps.io/drawCell/
-when: 1642592481.38619
-lastSyncTime: 1642592481.38623
+when: 1642592813.1714
+lastSyncTime: 1642592813.17141
 asMultiple: FALSE
 asStatic: FALSE
