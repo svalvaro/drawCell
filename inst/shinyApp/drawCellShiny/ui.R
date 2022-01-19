@@ -11,11 +11,14 @@ dashboardPage(
                 ),
                 tags$title("drawCell")
             )
-        )
-
+        ),
+        tags$li(a(
+            href = 'https://github.com/svalvaro/drawCell',
+            icon("power-off"),
+            title = "Close drawCell"),
+            class = "dropdown")
     ),
     dashboardSidebar(width = 300,
-
 
         textInput(
             inputId = 'taxIdInput',
