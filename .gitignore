@@ -9,3 +9,5 @@ html_generator.R
 inst/doc
 /doc/
 /Meta/
+/rsconnect/
+.dcf
