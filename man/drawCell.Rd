@@ -4,12 +4,16 @@
 \alias{drawCell}
 \title{Creates a cell picture}
 \usage{
-drawCell(taxonomy_id, sl_ids, color = "blue", size = 2000, delay = 1)
+drawCell(
+  organism_identifier,
+  sl_ids,
+  color = "blue",
+  size = 2000,
+  delay = 1,
+  returnPlot = TRUE
+)
 }
 \arguments{
-\item{taxonomy_id}{Taxonomy id of the organism of interest. Can be found at
-https://www.ncbi.nlm.nih.gov/taxonomy/}
-
 \item{sl_ids}{Id of the subcellular location, can be found at
 http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
 
@@ -20,6 +24,9 @@ http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
 \item{delay}{Time needed to make picture of the HTML (webshot). If the
 picture is blank, try increasing the delay since it might take longer to
 render the HTML. (Units in seconds)}
+
+\item{taxonomy_id}{Taxonomy id of the organism of interest. Can be found at
+https://www.ncbi.nlm.nih.gov/taxonomy/}
 }
 \value{
 Generates a PNG of the requested cell by the user with highligthed

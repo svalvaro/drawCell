@@ -4,7 +4,7 @@
 \alias{edit_html}
 \title{changes the size of the cell}
 \usage{
-edit_html(size = 2000)
+edit_html(size = 2000, html_path)
 }
 \arguments{
 \item{size}{size of the highlited element}
