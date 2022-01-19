@@ -1,103 +1,30 @@
 function(input, output){
 
-
-
     subCellIds <-  readr::read_csv(base::system.file(
         'shinyApp/drawCellShiny/www/SLids.csv',
         package = 'drawCell')
-        )
-
-
-    # taxonomyId <- eventReactive(input$drawCell, {
-    #
-    #     if (is.null(input$taxIdInput)) {
-    #         return(NULL)
-    #     }
-    #
-    #     # IF the user provides a number ( the taxonomy id itself)
-    #     if (!is.na(as.numeric(input$taxIdInput))) {
-    #         taxonomyId <- input$taxIdInput
-    #         return(taxonomyId)
-    #     }
-    #
-    #     if (is.character(input$taxIdInput)) {
-    #
-    #         taxonomyId <- taxize::get_ids(
-    #             sci_com = input$taxIdInput,
-    #             db = 'ncbi'
-    #         )
-    #
-    #         taxonomyId <- taxonomyId$ncbi[1]
-    #
-    #         return(taxonomyId)
-    #
-    #     }
-    #
-    #     message(paste0('The taxonomy is', taxonomyId))
-    #
-    #
-    # })
-
-#
-#
-#     taxonomyId <- reactiveValues()
-#
-#
-#     observeEvent(input$drawCell,{
-#
-#             # IF the user provides a number ( the taxonomy id itself)
-#             if (!is.na(as.numeric(input$taxIdInput))) {
-#                 taxonomyId$ID <- input$taxIdInput
-#                 return(taxonomyId)
-#             }
-#
-#             if (is.character(input$taxIdInput)) {
-#
-#                 taxonomyId <- taxize::get_ids(
-#                     sci_com = input$taxIdInput,
-#                     db = 'ncbi'
-#                 )
-#
-#                 taxonomyId$ID <- taxonomyId$ncbi[1]
-#
-#                 return(taxonomyId)
-#
-#             }
-#     })
-
-
+    )
 
     output$subCellSelector <- renderUI({
 
         shinyWidgets::pickerInput(
-                inputId = "subIdsSelected",
-                label = "Select/deselect all options",
-                choices = subCellIds$Location,
-                options = list(
-                    style = "btn-primary",
-                    `actions-box` = TRUE,
-                    `live-search` = TRUE),
+            inputId = "subIdsSelected",
+            label = h3("Select the subcellular locations"),
+            choices = subCellIds$Location,
+            options = list(
+                style = "btn-primary",
+                `actions-box` = TRUE,
+                `live-search` = TRUE),
 
-                choicesOpt = list(
-                    subtext = paste("SL_id",
-                                    subCellIds$SubCell.Id,
-                                    sep = ": ")
-                    ),
-                multiple = TRUE
-            )
-        })
-
-    output$imageSize <- renderUI({
-
-        shiny::sliderInput(
-            inputId = 'cellSize',
-            label = 'Size of the cell',
-            min = 1,
-            max = 5000,
-            value = 2000
+            choicesOpt = list(
+                subtext = paste("SL_id",
+                                subCellIds$SubCell.Id,
+                                sep = ": ")
+            ),
+            multiple = TRUE
         )
-    })
 
+    })
 
     subCellIdsSelected <- eventReactive(input$drawCell,{
 
@@ -108,33 +35,39 @@ function(input, output){
 
     })
 
-
+    pathToCellFile <- reactiveValues(path = NULL)
 
     observeEvent(input$drawCell,{
 
-        output$cellImage <-     renderPlot(width = input$cellSize,{
-
-            if (is.null(input$taxIdInput)) {
-                return(NULL)
-            }
-
-            drawCell::drawCell(
+        pathToCellFile$path <- drawCell::drawCell(
                 organism_identifier =  input$taxIdInput,
                 sl_ids = subCellIdsSelected(),
-                color = 'green',
+                color = input$colourInput,
                 size = input$cellSize,
-                delay = 2
-
+                delay = 2,
+                returnPlot = FALSE
             )
 
-
-        })
+        print(paste0('The path to the file is:', pathToCellFile$path))
     })
 
+    observeEvent(input$drawCell,{
 
+        if (is.null(pathToCellFile$path)) {
+            return(NULL)
+        }
 
+        output$cellImage <- renderPlot(width = input$cellSize, height = 1500,{
 
+            cellPNG <- png::readPNG(source = pathToCellFile$path)
 
+            message('Cell picture created: ', !is.null(cellPNG))
+
+            return(
+                grid::grid.raster(cellPNG)
+            )
+        })
+    })
 
 
 }

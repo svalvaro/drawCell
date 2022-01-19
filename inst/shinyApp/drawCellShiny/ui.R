@@ -1,31 +1,47 @@
 dashboardPage(
     dashboardHeader(
-        title = h3('drawCell')
+        title =  titlePanel(
+            title = h2('drawCell'),
+
+            windowTitle = tags$head(
+                tags$link(
+                    rel = "icon",
+                    type = "image/png",
+                    href = "favicon.ico"
+                ),
+                tags$title("drawCell")
+            )
+        )
+
     ),
     dashboardSidebar(width = 300,
 
 
         textInput(
             inputId = 'taxIdInput',
-            label = 'Introduce the taxonomy ID',
+            label = h3('Introduce the species name or Taxonomy ID'),
             value = "",
-            placeholder = "6096"
+            placeholder = "Homo sapiens / 6096"
         ),
-
-        # shinyWidgets::searchInput(
-        #     inputId = "taxIdInput",
-        #     label = "Introduce the taxonomy ID or Species name",
-        #     placeholder = "6096 or Homo sapiens",
-        #     btnSearch = icon("search"),
-        #     btnReset = icon("remove"),
-        #     width = "100%"
-        # ),
-
-
 
         uiOutput('subCellSelector'),
 
-        uiOutput('imageSize'),
+        colourpicker::colourInput(inputId = "colourInput",
+                                  h3("Select colour:"),
+                                  '#56B4E9',
+                                  palette = "square",
+                                  returnName = TRUE,
+                                  showColour = c("background")),
+
+        shiny::sliderInput(
+            inputId = 'cellSize',
+            label = h3('Size of the cell'),
+            min = 1,
+            max = 5000,
+            value = 2000
+        ),
+
+        br(),
 
         actionBttn(
             inputId = 'drawCell',
@@ -37,11 +53,8 @@ dashboardPage(
             block = FALSE,
             no_outline = TRUE
         )
+        ),
 
-
-
-
-    ),
     dashboardBody(
         box(
             imageOutput('cellImage')

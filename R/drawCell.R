@@ -28,7 +28,8 @@ drawCell <- function(organism_identifier,
                     sl_ids,
                     color = 'blue',
                     size = 2000,
-                    delay = 1
+                    delay = 1,
+                    returnPlot = TRUE
                     ){
 
     # Organism can be provided the taxonomy id or the name of the species.
@@ -113,15 +114,21 @@ drawCell <- function(organism_identifier,
                     vheight = 2000,
                     delay = delay)
 
-    # Lastly render the picture as a plot
-
-    cellPNG <- png::readPNG(source = destFile)
-
-    message('Cell picture created: ', !is.null(cellPNG))
 
 
+    if (returnPlot == TRUE) {
+        # Lastly render the picture as a plot
 
-    return(
-        grid::grid.raster(cellPNG)
-    )
+        cellPNG <- png::readPNG(source = destFile)
+
+        message('Cell picture created: ', !is.null(cellPNG))
+
+        return(
+            grid::grid.raster(cellPNG)
+        )
+    }else{
+        return(destFile)
+    }
+
+
 }
