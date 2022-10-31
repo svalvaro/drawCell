@@ -27,8 +27,6 @@ dashboardPage(
             placeholder = "Homo sapiens / 6096"
         ),
 
-        uiOutput('subCellSelector'),
-
         colourpicker::colourInput(inputId = "colourInput",
                                   h3("Select colour:"),
                                   '#56B4E9',
@@ -36,31 +34,16 @@ dashboardPage(
                                   returnName = TRUE,
                                   showColour = c("background")),
 
-        shiny::sliderInput(
-            inputId = 'cellSize',
-            label = h3('Size of the cell'),
-            min = 1,
-            max = 5000,
-            value = 2000
-        ),
-
-        br(),
-
-        actionBttn(
-            inputId = 'drawCell',
-            label = 'Draw the cell!',
-            icon = NULL,
-            style = "unite",
-            color = "default",
-            size = 'md',
-            block = FALSE,
-            no_outline = TRUE
-        )
+        selectInput("cell_type",
+                    h3("Type of cell:"),
+                    choices = c("",unique(data$Image.name))
+                    )
         ),
 
     dashboardBody(
-        box(
-            imageOutput('cellImage')
-        )
+      drawCell::drawCellOutput("cell_output"),
+      wellPanel(
+        textOutput("cell_s_output")
+      )
     )
 )
