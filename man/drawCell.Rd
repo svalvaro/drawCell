@@ -7,26 +7,26 @@
 drawCell(
   organism_identifier,
   sl_ids,
-  color = "blue",
-  size = 2000,
-  delay = 1,
-  returnPlot = TRUE
+  inputId = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
 )
 }
 \arguments{
 \item{sl_ids}{Id of the subcellular location, can be found at
 http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
 
-\item{color}{Highlited color of the subcelullar components.}
-
-\item{size}{Size of the cell, around 2000 should work well.}
+\item{taxonomy_id}{Taxonomy id of the organism of interest. Can be found at
+https://www.ncbi.nlm.nih.gov/taxonomy/}
 
 \item{delay}{Time needed to make picture of the HTML (webshot). If the
 picture is blank, try increasing the delay since it might take longer to
 render the HTML. (Units in seconds)}
 
-\item{taxonomy_id}{Taxonomy id of the organism of interest. Can be found at
-https://www.ncbi.nlm.nih.gov/taxonomy/}
+\item{size}{Size of the cell, around 2000 should work well.}
+
+\item{color}{Highlited color of the subcelullar components.}
 }
 \value{
 Generates a PNG of the requested cell by the user with highligthed
@@ -40,4 +40,7 @@ drawCell(taxonomy_id = '58334',
 sl_ids = '0049',
 size = 2000,
 color = 'lightblue')
+<Add Title>
+
+<Add Description>
 }

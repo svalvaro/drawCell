@@ -1,0 +1,6 @@
+dependencies:
+ - name: swissbiopics-visualizer
+   version: 0.0.29
+   src: htmlwidgets/lib/node_modules/@swissprot/swissbiopics-visualizer
+   script: swissbiopics.js
+   stylesheet: styles.css

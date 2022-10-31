@@ -1,0 +1,562 @@
+Subcellular location ID	Name	Category	Gene Ontologies	Is a
+SL-0002	Acidocalcisome	Cellular component	GO:0020022:acidocalcisome	
+SL-0003	Acidocalcisome membrane	Cellular component	GO:0033102:acidocalcisome membrane	SL-0162; Membrane; LOCATION
+SL-0004	Acrosome inner membrane	Cellular component	GO:0002079:inner acrosomal membrane	
+SL-0005	Acrosome lumen	Cellular component	GO:0043160:acrosomal lumen	SL-0347; Secretory vesicle lumen; LOCATION
+SL-0006	Acrosome membrane	Cellular component	GO:0002080:acrosomal membrane	SL-0245; Secretory vesicle membrane; LOCATION
+SL-0007	Acrosome	Cellular component	GO:0001669:acrosomal vesicle	SL-0244; Secretory vesicle; LOCATION
+SL-0008	Actin patch	Cellular component	GO:0030479:actin cortical patch	
+SL-0009	Adherens junction	Cellular component	GO:0005912:adherens junction	SL-0038; Cell junction; LOCATION
+SL-0010	Aleurone grain	Cellular component	GO:0033095:aleurone grain	SL-0272; Vacuole; LOCATION
+SL-0011	Aleurone grain membrane	Cellular component	GO:0032578:aleurone grain membrane	SL-0271; Vacuole membrane; LOCATION
+SL-0012	Amyloplast	Cellular component	GO:0009501:amyloplast	SL-0209; Plastid; LOCATION
+SL-0013	Amyloplast inner membrane	Cellular component	GO:0033098:amyloplast inner membrane	SL-0014; Amyloplast membrane; LOCATION, SL-0211; Plastid inner membrane; LOCATION
+SL-0014	Amyloplast membrane	Cellular component	GO:0033097:amyloplast membrane	SL-0213; Plastid membrane; LOCATION
+SL-0015	Apical cell membrane	Cellular component	GO:0016324:apical plasma membrane	
+SL-0016	Apical lamina	Cellular component	GO:0032579:apical lamina of hyaline layer	SL-0111; Extracellular matrix; LOCATION
+SL-0017	Apicolateral cell membrane	Cellular component	GO:0016327:apicolateral plasma membrane	
+SL-0018	Apicoplast	Cellular component	GO:0020011:apicoplast	SL-0209; Plastid; LOCATION
+SL-0019	Apoplast	Cellular component	GO:0048046:apoplast	SL-0112; Extracellular space; LOCATION
+SL-0020	Attachment organelle	Cellular component	GO:0033099:attachment organelle	SL-0280; Cell projection; LOCATION
+SL-0021	Attachment organelle membrane	Cellular component	GO:0033111:attachment organelle membrane	
+SL-0022	Autophagosome membrane	Cellular component	GO:0000421:autophagosome membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0023	Autophagosome	Cellular component	GO:0005776:autophagosome	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0024	Basal cell membrane	Cellular component	GO:0009925:basal plasma membrane	
+SL-0025	Basement membrane	Cellular component	GO:0005604:basement membrane	SL-0111; Extracellular matrix; LOCATION
+SL-0026	Basolateral cell membrane	Cellular component	GO:0016323:basolateral plasma membrane	
+SL-0027	Bud	Cellular component	GO:0005933:cellular bud	
+SL-0028	Bud membrane	Cellular component	GO:0033101:cellular bud membrane	
+SL-0029	Bud neck	Cellular component	GO:0005935:cellular bud neck	
+SL-0030	Bud tip	Cellular component	GO:0005934:cellular bud tip	
+SL-0031	Cajal body	Cellular component	GO:0015030:Cajal body	SL-0494; Nuclear body; LOCATION
+SL-0032	Calyx	Cellular component	GO:0033150:cytoskeletal calyx	
+SL-0033	Capsule	Cellular component	GO:0042603:capsule	
+SL-0034	Carboxysome	Cellular component	GO:0031470:carboxysome	SL-0544; Bacterial microcompartment; LOCATION
+SL-0035	Caveola	Cellular component	GO:0005901:caveola	
+SL-0036	Cell envelope	Cellular component	GO:0031975:envelope	
+SL-0037	Cell inner membrane	Cellular component	GO:0005886:plasma membrane	SL-0039; Cell membrane; LOCATION
+SL-0038	Cell junction	Cellular component	GO:0030054:cell junction	
+SL-0039	Cell membrane	Cellular component	GO:0005886:plasma membrane	SL-0162; Membrane; LOCATION
+SL-0040	Cell outer membrane	Cellular component	GO:0009279:cell outer membrane	SL-0162; Membrane; LOCATION
+SL-0041	Cell wall	Cellular component	GO:0005618:cell wall	
+SL-0042	Cellular chromatophore membrane	Cellular component	GO:0042717:plasma membrane-derived chromatophore membrane	SL-0162; Membrane; LOCATION
+SL-0043	Cellular thylakoid	Cellular component	GO:0009579:thylakoid	SL-0450; Thylakoid; LOCATION
+SL-0044	Cellular thylakoid lumen	Cellular component	GO:0031977:thylakoid lumen	
+SL-0045	Cellular thylakoid membrane	Cellular component	GO:0042651:thylakoid membrane	SL-0162; Membrane; LOCATION
+SL-0046	Centriole	Cellular component	GO:0005814:centriole	
+SL-0047	Centromere	Cellular component	GO:0000775:chromosome, centromeric region	
+SL-0048	Centrosome	Cellular component	GO:0005815:microtubule organizing center	
+SL-0049	Chloroplast	Cellular component	GO:0009507:chloroplast	SL-0209; Plastid; LOCATION
+SL-0050	Chloroplast envelope	Cellular component	GO:0009941:chloroplast envelope	SL-0210; Plastid envelope; LOCATION
+SL-0051	Chloroplast inner membrane	Cellular component	GO:0009706:chloroplast inner membrane	SL-0053; Chloroplast membrane; LOCATION, SL-0211; Plastid inner membrane; LOCATION
+SL-0052	Chloroplast intermembrane space	Cellular component	GO:0031972:chloroplast intermembrane space	SL-0212; Plastid intermembrane space; LOCATION
+SL-0053	Chloroplast membrane	Cellular component	GO:0031969:chloroplast membrane	SL-0213; Plastid membrane; LOCATION
+SL-0054	Chloroplast outer membrane	Cellular component	GO:0009707:chloroplast outer membrane	SL-0053; Chloroplast membrane; LOCATION, SL-0214; Plastid outer membrane; LOCATION
+SL-0055	Chloroplast stroma	Cellular component	GO:0009570:chloroplast stroma	SL-0215; Plastid stroma; LOCATION
+SL-0056	Chloroplast thylakoid	Cellular component	GO:0009534:chloroplast thylakoid	SL-0278; Plastid thylakoid; LOCATION
+SL-0057	Chloroplast thylakoid lumen	Cellular component	GO:0009543:chloroplast thylakoid lumen	SL-0309; Plastid thylakoid lumen; LOCATION
+SL-0058	Chloroplast thylakoid membrane	Cellular component	GO:0009535:chloroplast thylakoid membrane	SL-0216; Plastid thylakoid membrane; LOCATION
+SL-0059	Chlorosome	Cellular component	GO:0046858:chlorosome	
+SL-0060	Chlorosome envelope	Cellular component	GO:0033105:chlorosome envelope	
+SL-0061	Chromaffin granule	Cellular component	GO:0042583:chromaffin granule	SL-0244; Secretory vesicle; LOCATION
+SL-0062	Chromaffin granule membrane	Cellular component	GO:0042584:chromaffin granule membrane	SL-0245; Secretory vesicle membrane; LOCATION
+SL-0063	Chromoplast	Cellular component	GO:0009509:chromoplast	SL-0209; Plastid; LOCATION
+SL-0064	Chromoplast membrane	Cellular component	GO:0046862:chromoplast membrane	SL-0213; Plastid membrane; LOCATION
+SL-0065	Chromoplast stroma	Cellular component	GO:0009575:chromoplast stroma	
+SL-0066	Cilium	Cellular component	GO:0005929:cilium	SL-0280; Cell projection; LOCATION
+SL-0067	cis-Golgi network	Cellular component	GO:0005801:cis-Golgi network	
+SL-0068	cis-Golgi network membrane	Cellular component	GO:0033106:cis-Golgi network membrane	SL-0134; Golgi apparatus membrane; LOCATION
+SL-0069	Clathrin-coated pit	Cellular component	GO:0005905:clathrin-coated pit	SL-0072; Coated pit; LOCATION
+SL-0070	Clathrin-coated vesicle	Cellular component	GO:0030136:clathrin-coated vesicle	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0071	Clathrin-coated vesicle membrane	Cellular component	GO:0030665:clathrin-coated vesicle membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0072	Coated pit	Cellular component	GO:0005905:clathrin-coated pit	
+SL-0073	Contractile vacuole	Cellular component	GO:0000331:contractile vacuole	SL-0272; Vacuole; LOCATION
+SL-0074	Contractile vacuole membrane	Cellular component	GO:0031164:contractile vacuolar membrane	SL-0271; Vacuole membrane; LOCATION
+SL-0075	COPI-coated vesicle	Cellular component	GO:0030137:COPI-coated vesicle	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0076	COPI-coated vesicle membrane	Cellular component	GO:0030663:COPI-coated vesicle membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0077	COPII-coated vesicle	Cellular component	GO:0030134:COPII-coated ER to Golgi transport vesicle	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0078	COPII-coated vesicle membrane	Cellular component	GO:0012507:ER to Golgi transport vesicle membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0079	Cornified envelope	Cellular component	GO:0001533:cornified envelope	
+SL-0080	Cvt vesicle	Cellular component	GO:0033107:Cvt vesicle	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0081	Cvt vesicle membrane	Cellular component	GO:0033110:Cvt vesicle membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0082	Cyanelle	Cellular component	GO:0009842:cyanelle	SL-0209; Plastid; LOCATION
+SL-0083	Cyanelle membrane	Cellular component	GO:0033113:cyanelle membrane	SL-0213; Plastid membrane; LOCATION
+SL-0084	Cyanelle thylakoid lumen	Cellular component	GO:0033114:cyanelle thylakoid lumen	SL-0309; Plastid thylakoid lumen; LOCATION
+SL-0085	Cyanelle thylakoid membrane	Cellular component	GO:0033115:cyanelle thylakoid membrane	SL-0216; Plastid thylakoid membrane; LOCATION
+SL-0086	Cytoplasm	Cellular component	GO:0005737:cytoplasm	
+SL-0087	Cilium basal body	Cellular component		
+SL-0088	Cytoplasmic vesicle	Cellular component		SL-0498; Vesicle; LOCATION
+SL-0089	Cytoplasmic vesicle membrane	Cellular component	GO:0030659:cytoplasmic vesicle membrane	SL-0162; Membrane; LOCATION
+SL-0090	Cytoskeleton	Cellular component	GO:0005856:cytoskeleton	
+SL-0091	Cytosol	Cellular component	GO:0005829:cytosol	
+SL-0092	Desmosome	Cellular component	GO:0030057:desmosome	SL-0038; Cell junction; LOCATION
+SL-0093	Early endosome membrane	Cellular component	GO:0031901:early endosome membrane	SL-0100; Endosome membrane; LOCATION
+SL-0094	Early endosome	Cellular component	GO:0005769:early endosome	
+SL-0095	Endoplasmic reticulum	Cellular component	GO:0005783:endoplasmic reticulum	
+SL-0096	Endoplasmic reticulum lumen	Cellular component	GO:0005788:endoplasmic reticulum lumen	
+SL-0097	Endoplasmic reticulum membrane	Cellular component	GO:0005789:endoplasmic reticulum membrane	SL-0162; Membrane; LOCATION
+SL-0098	Endoplasmic reticulum-Golgi intermediate compartment	Cellular component	GO:0005793:endoplasmic reticulum-Golgi intermediate compartment	
+SL-0099	Endoplasmic reticulum-Golgi intermediate compartment membrane	Cellular component	GO:0033116:endoplasmic reticulum-Golgi intermediate compartment membrane	SL-0162; Membrane; LOCATION
+SL-0100	Endosome membrane	Cellular component	GO:0010008:endosome membrane	SL-0162; Membrane; LOCATION
+SL-0101	Endosome	Cellular component	GO:0005768:endosome	
+SL-0108	Esterosome membrane	Cellular component	GO:0033118:esterosome membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0109	Esterosome	Cellular component	GO:0033117:esterosome	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0110	Etioplast	Cellular component	GO:0009513:etioplast	SL-0209; Plastid; LOCATION
+SL-0111	Extracellular matrix	Cellular component		
+SL-0112	Extracellular space	Cellular component	GO:0005615:extracellular space	
+SL-0113	Fimbrium	Cellular component	GO:0009289:pilus	
+SL-0114	Flagellum axoneme	Cellular component		SL-0304; Cilium axoneme; LOCATION
+SL-0115	Flagellum membrane	Cellular component		SL-0305; Cilium membrane; LOCATION
+SL-0116	Flagellar pocket	Cellular component	GO:0020016:ciliary pocket	
+SL-0117	Flagellum	Cellular component	GO:0031514:motile cilium	SL-0066; Cilium; LOCATION
+SL-0118	Focal adhesion	Cellular component	GO:0005925:focal adhesion	SL-0038; Cell junction; LOCATION
+SL-0119	Forespore	Cellular component	GO:0042763:intracellular immature spore	
+SL-0120	Forespore inner membrane	Cellular component		SL-0122; Forespore membrane; LOCATION
+SL-0121	Forespore intermembrane space	Cellular component		
+SL-0122	Forespore membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0123	Forespore outer membrane	Cellular component		SL-0122; Forespore membrane; LOCATION
+SL-0124	Gap junction	Cellular component	GO:0005921:gap junction	SL-0038; Cell junction; LOCATION
+SL-0125	Gas vesicle	Cellular component	GO:0031411:gas vesicle	SL-0272; Vacuole; LOCATION
+SL-0126	Gas vesicle membrane	Cellular component	GO:0033172:gas vesicle shell	SL-0271; Vacuole membrane; LOCATION
+SL-0127	Gem	Cellular component	GO:0097504:Gemini of coiled bodies	SL-0494; Nuclear body; LOCATION
+SL-0128	Glycosome membrane	Cellular component	GO:0046860:glycosome membrane	SL-0203; Peroxisome membrane; LOCATION
+SL-0129	Glycosome	Cellular component	GO:0020015:glycosome	SL-0204; Peroxisome; LOCATION
+SL-0130	Glyoxysome membrane	Cellular component	GO:0046861:glyoxysomal membrane	SL-0203; Peroxisome membrane; LOCATION
+SL-0131	Glyoxysome	Cellular component	GO:0009514:glyoxysome	SL-0204; Peroxisome; LOCATION
+SL-0132	Golgi apparatus	Cellular component	GO:0005794:Golgi apparatus	
+SL-0133	Golgi apparatus lumen	Cellular component	GO:0005796:Golgi lumen	
+SL-0134	Golgi apparatus membrane	Cellular component	GO:0000139:Golgi membrane	SL-0162; Membrane; LOCATION
+SL-0135	Golgi stack	Cellular component	GO:0005795:Golgi stack	
+SL-0136	Golgi stack membrane	Cellular component	GO:0032580:Golgi cisterna membrane	SL-0134; Golgi apparatus membrane; LOCATION
+SL-0137	Hemidesmosome	Cellular component	GO:0030056:hemidesmosome	SL-0038; Cell junction; LOCATION
+SL-0138	Cell cortex	Cellular component	GO:0005938:cell cortex	
+SL-0139	Chloroplast nucleoid	Cellular component	GO:0042644:chloroplast nucleoid	
+SL-0140	Plastid nucleoid	Cellular component	GO:0042646:plastid nucleoid	
+SL-0141	Uropodium	Cellular component	GO:0001931:uropod	SL-0280; Cell projection; LOCATION
+SL-0142	Bacterial flagellum basal body	Cellular component	GO:0009425:bacterial-type flagellum basal body	
+SL-0143	Hyaline layer	Cellular component	GO:0033166:hyaline layer	SL-0111; Extracellular matrix; LOCATION
+SL-0144	Hydrogenosome membrane	Cellular component	GO:0046859:hydrogenosomal membrane	SL-0162; Membrane; LOCATION
+SL-0145	Hydrogenosome	Cellular component	GO:0042566:hydrogenosome	
+SL-0146	Interphotoreceptor matrix	Cellular component	GO:0033165:interphotoreceptor matrix	SL-0111; Extracellular matrix; LOCATION
+SL-0147	Endomembrane system	Cellular component	GO:0012505:endomembrane system	SL-0162; Membrane; LOCATION
+SL-0148	Invadopodium	Cellular component	GO:0071437:invadopodium	SL-0038; Cell junction; LOCATION, SL-0280; Cell projection; LOCATION
+SL-0149	Kinetochore	Cellular component	GO:0000777:condensed chromosome kinetochore	
+SL-0150	Kinetoplast	Cellular component	GO:0020023:kinetoplast	
+SL-0151	Late endosome membrane	Cellular component	GO:0031902:late endosome membrane	SL-0100; Endosome membrane; LOCATION
+SL-0152	Late endosome	Cellular component	GO:0005770:late endosome	
+SL-0153	Lateral cell membrane	Cellular component	GO:0016328:lateral plasma membrane	
+SL-0154	Lipid droplet	Cellular component	GO:0005811:lipid droplet	
+SL-0156	Lysosome lumen	Cellular component	GO:0043202:lysosomal lumen	
+SL-0157	Lysosome membrane	Cellular component	GO:0005765:lysosomal membrane	SL-0162; Membrane; LOCATION
+SL-0158	Lysosome	Cellular component	GO:0005764:lysosome	
+SL-0159	Lytic vacuole	Cellular component	GO:0000323:lytic vacuole	SL-0272; Vacuole; LOCATION
+SL-0160	Melanosome membrane	Cellular component	GO:0033162:melanosome membrane	SL-0162; Membrane; LOCATION
+SL-0161	Melanosome	Cellular component	GO:0042470:melanosome	
+SL-0162	Membrane	Cellular component	GO:0016020:membrane	
+SL-0163	Microneme	Cellular component	GO:0020009:microneme	SL-0244; Secretory vesicle; LOCATION
+SL-0164	Microneme membrane	Cellular component	GO:0033163:microneme membrane	SL-0245; Secretory vesicle membrane; LOCATION
+SL-0165	Microsome membrane	Cellular component	GO:0031090:organelle membrane	SL-0162; Membrane; LOCATION
+SL-0166	Microsome	Cellular component	GO:0043231:intracellular membrane-bounded organelle	
+SL-0167	Mitochondrion envelope	Cellular component	GO:0005740:mitochondrial envelope	
+SL-0168	Mitochondrion inner membrane	Cellular component	GO:0005743:mitochondrial inner membrane	SL-0171; Mitochondrion membrane; LOCATION
+SL-0169	Mitochondrion intermembrane space	Cellular component	GO:0005758:mitochondrial intermembrane space	
+SL-0170	Mitochondrion matrix	Cellular component	GO:0005759:mitochondrial matrix	
+SL-0171	Mitochondrion membrane	Cellular component	GO:0031966:mitochondrial membrane	SL-0162; Membrane; LOCATION
+SL-0172	Mitochondrion outer membrane	Cellular component	GO:0005741:mitochondrial outer membrane	SL-0171; Mitochondrion membrane; LOCATION
+SL-0173	Mitochondrion	Cellular component	GO:0005739:mitochondrion	
+SL-0174	Multivesicular body	Cellular component	GO:0005771:multivesicular body	SL-0152; Late endosome; LOCATION
+SL-0175	Multivesicular body membrane	Cellular component	GO:0032585:multivesicular body membrane	SL-0100; Endosome membrane; LOCATION
+SL-0176	Myelin membrane	Cellular component	GO:0043209:myelin sheath	SL-0039; Cell membrane; LOCATION
+SL-0177	Nematocyst	Cellular component	GO:0042151:nematocyst	
+SL-0178	Nucleus envelope	Cellular component	GO:0005635:nuclear envelope	
+SL-0179	Nucleus inner membrane	Cellular component	GO:0005637:nuclear inner membrane	SL-0182; Nucleus membrane; LOCATION
+SL-0180	Nucleus lamina	Cellular component	GO:0005652:nuclear lamina	
+SL-0181	Nucleus matrix	Cellular component	GO:0016363:nuclear matrix	
+SL-0182	Nucleus membrane	Cellular component	GO:0031965:nuclear membrane	SL-0162; Membrane; LOCATION
+SL-0183	Nucleus outer membrane	Cellular component	GO:0005640:nuclear outer membrane	SL-0182; Nucleus membrane; LOCATION
+SL-0184	Nucleus intermembrane space	Cellular component	GO:0005641:nuclear envelope lumen	
+SL-0185	Nuclear pore complex	Cellular component	GO:0005643:nuclear pore	
+SL-0186	Nucleus speckle	Cellular component	GO:0016607:nuclear speck	SL-0494; Nuclear body; LOCATION
+SL-0187	Nucleoid	Cellular component	GO:0009295:nucleoid	
+SL-0188	Nucleolus	Cellular component	GO:0005730:nucleolus	
+SL-0189	Nucleomorph	Cellular component	GO:0033009:nucleomorph	
+SL-0190	Nucleoplasm	Cellular component	GO:0005654:nucleoplasm	
+SL-0191	Nucleus	Cellular component	GO:0005634:nucleus	
+SL-0192	Paranodal septate junction	Cellular component	GO:0033010:paranodal junction	SL-0038; Cell junction; LOCATION
+SL-0193	Parasitophorous vacuole membrane	Cellular component	GO:0020005:symbiont-containing vacuole membrane	SL-0162; Membrane; LOCATION
+SL-0194	Parasitophorous vacuole	Cellular component	GO:0020003:symbiont-containing vacuole	
+SL-0195	Peribacteroid membrane	Cellular component	GO:0043661:peribacteroid membrane	SL-0162; Membrane; LOCATION
+SL-0196	Peribacteroid space	Cellular component	GO:0043662:peribacteroid fluid	
+SL-0197	Perikaryon	Cellular component	GO:0043204:perikaryon	
+SL-0198	Perinuclear region	Cellular component	GO:0048471:perinuclear region of cytoplasm	
+SL-0199	Perinuclear theca	Cellular component	GO:0033011:perinuclear theca	
+SL-0200	Periplasm	Cellular component	GO:0042597:periplasmic space	
+SL-0201	Periplasmic flagellum	Cellular component	GO:0055040:periplasmic flagellum	SL-0307; Bacterial flagellum; LOCATION
+SL-0202	Peroxisome matrix	Cellular component	GO:0005782:peroxisomal matrix	
+SL-0203	Peroxisome membrane	Cellular component	GO:0005778:peroxisomal membrane	SL-0162; Membrane; LOCATION
+SL-0204	Peroxisome	Cellular component	GO:0005777:peroxisome	
+SL-0205	Phagosome membrane	Cellular component	GO:0030670:phagocytic vesicle membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0206	Phagosome	Cellular component	GO:0045335:phagocytic vesicle	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0207	Phragmoplast	Cellular component	GO:0009524:phragmoplast	
+SL-0208	Plasmodesma	Cellular component	GO:0009506:plasmodesma	SL-0038; Cell junction; LOCATION
+SL-0209	Plastid	Cellular component	GO:0009536:plastid	
+SL-0210	Plastid envelope	Cellular component	GO:0009526:plastid envelope	
+SL-0211	Plastid inner membrane	Cellular component	GO:0009528:plastid inner membrane	SL-0213; Plastid membrane; LOCATION
+SL-0212	Plastid intermembrane space	Cellular component	GO:0009529:plastid intermembrane space	
+SL-0213	Plastid membrane	Cellular component	GO:0042170:plastid membrane	SL-0162; Membrane; LOCATION
+SL-0214	Plastid outer membrane	Cellular component	GO:0009527:plastid outer membrane	SL-0213; Plastid membrane; LOCATION
+SL-0215	Plastid stroma	Cellular component	GO:0009532:plastid stroma	
+SL-0216	Plastid thylakoid membrane	Cellular component	GO:0055035:plastid thylakoid membrane	SL-0162; Membrane; LOCATION
+SL-0217	Plastoglobule	Cellular component	GO:0010287:plastoglobule	
+SL-0218	Porosome	Cellular component	GO:0033012:porosome	
+SL-0219	Postsynaptic cell membrane	Cellular component	GO:0045211:postsynaptic membrane	SL-0531; Synaptic cell membrane; LOCATION
+SL-0220	Preautophagosomal structure	Cellular component	GO:0000407:phagophore assembly site	
+SL-0221	Preautophagosomal structure membrane	Cellular component	GO:0034045:phagophore assembly site membrane	SL-0162; Membrane; LOCATION
+SL-0222	Presynaptic cell membrane	Cellular component	GO:0042734:presynaptic membrane	SL-0531; Synaptic cell membrane; LOCATION
+SL-0223	Prevacuolar compartment	Cellular component	GO:0005770:late endosome	
+SL-0224	Prevacuolar compartment membrane	Cellular component	GO:0031902:late endosome membrane	SL-0162; Membrane; LOCATION
+SL-0225	Primary cell wall	Cellular component	GO:0009530:primary cell wall	SL-0041; Cell wall; LOCATION
+SL-0226	Prolamellar body	Cellular component	GO:0009541:etioplast prolamellar body	
+SL-0227	Protein storage vacuole membrane	Cellular component	GO:0032586:protein storage vacuole membrane	SL-0271; Vacuole membrane; LOCATION
+SL-0228	Protein storage vacuole	Cellular component	GO:0000326:protein storage vacuole	SL-0272; Vacuole; LOCATION
+SL-0229	Protoplasm	Cellular component	GO:0005622:intracellular anatomical structure	
+SL-0230	P-body	Cellular component	GO:0000932:P-body	SL-0495; Cytoplasmic ribonucleoprotein granule; LOCATION
+SL-0231	Recycling endosome membrane	Cellular component	GO:0055038:recycling endosome membrane	SL-0100; Endosome membrane; LOCATION
+SL-0232	Recycling endosome	Cellular component	GO:0055037:recycling endosome	
+SL-0233	Rhoptry	Cellular component	GO:0020008:rhoptry	SL-0244; Secretory vesicle; LOCATION
+SL-0234	Rhoptry membrane	Cellular component	GO:0033016:rhoptry membrane	SL-0245; Secretory vesicle membrane; LOCATION
+SL-0235	Rough endoplasmic reticulum	Cellular component	GO:0005791:rough endoplasmic reticulum	
+SL-0236	Rough endoplasmic reticulum lumen	Cellular component	GO:0048237:rough endoplasmic reticulum lumen	SL-0096; Endoplasmic reticulum lumen; LOCATION
+SL-0237	Rough endoplasmic reticulum membrane	Cellular component	GO:0030867:rough endoplasmic reticulum membrane	SL-0097; Endoplasmic reticulum membrane; LOCATION
+SL-0238	Sarcolemma	Cellular component	GO:0042383:sarcolemma	SL-0039; Cell membrane; LOCATION
+SL-0239	Sarcoplasmic reticulum	Cellular component	GO:0016529:sarcoplasmic reticulum	
+SL-0240	Sarcoplasmic reticulum lumen	Cellular component	GO:0033018:sarcoplasmic reticulum lumen	
+SL-0241	Sarcoplasmic reticulum membrane	Cellular component	GO:0033017:sarcoplasmic reticulum membrane	SL-0162; Membrane; LOCATION
+SL-0242	Secondary cell wall	Cellular component	GO:0009531:secondary cell wall	SL-0041; Cell wall; LOCATION
+SL-0243	Secreted	Cellular component	GO:0005576:extracellular region	
+SL-0244	Secretory vesicle	Cellular component	GO:0030133:transport vesicle	SL-0088; Cytoplasmic vesicle; LOCATION
+SL-0245	Secretory vesicle membrane	Cellular component	GO:0030658:transport vesicle membrane	SL-0089; Cytoplasmic vesicle membrane; LOCATION
+SL-0246	Septate junction	Cellular component	GO:0005918:septate junction	SL-0038; Cell junction; LOCATION
+SL-0247	Slime layer	Cellular component	GO:0030114:slime layer	
+SL-0248	Smooth endoplasmic reticulum	Cellular component	GO:0005790:smooth endoplasmic reticulum	
+SL-0249	Smooth endoplasmic reticulum lumen	Cellular component	GO:0048238:smooth endoplasmic reticulum lumen	SL-0096; Endoplasmic reticulum lumen; LOCATION
+SL-0250	Smooth endoplasmic reticulum membrane	Cellular component	GO:0030868:smooth endoplasmic reticulum membrane	SL-0097; Endoplasmic reticulum membrane; LOCATION
+SL-0251	Spindle	Cellular component	GO:0005819:spindle	
+SL-0252	Spindle pole body	Cellular component	GO:0005816:spindle pole body	
+SL-0253	Spore core	Cellular component		
+SL-0254	Spore wall	Cellular component	GO:0031160:spore wall	
+SL-0255	Surface film	Cellular component	GO:0005615:extracellular space	
+SL-0256	Symbiosome	Cellular component	GO:0043659:symbiosome	
+SL-0257	Symplast	Cellular component	GO:0055044:symplast	
+SL-0258	Synapse	Cellular component	GO:0045202:synapse	SL-0038; Cell junction; LOCATION
+SL-0259	Synaptic vesicle	Cellular component	GO:0008021:synaptic vesicle	SL-0244; Secretory vesicle; LOCATION
+SL-0260	Synaptic vesicle membrane	Cellular component	GO:0030672:synaptic vesicle membrane	SL-0245; Secretory vesicle membrane; LOCATION
+SL-0261	Synaptosome	Cellular component	GO:0043005:neuron projection	
+SL-0262	S-layer	Cellular component	GO:0030115:S-layer	
+SL-0263	Tegument	Cellular component		
+SL-0264	Tegument membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0265	Tight junction	Cellular component	GO:0005923:bicellular tight junction	SL-0038; Cell junction; LOCATION
+SL-0266	trans-Golgi network	Cellular component	GO:0005802:trans-Golgi network	
+SL-0267	trans-Golgi network membrane	Cellular component	GO:0032588:trans-Golgi network membrane	SL-0134; Golgi apparatus membrane; LOCATION
+SL-0268	Trichocyst	Cellular component	GO:0055039:trichocyst	
+SL-0269	Mitochondrion nucleoid	Cellular component	GO:0042645:mitochondrial nucleoid	
+SL-0270	Vacuole lumen	Cellular component	GO:0005775:vacuolar lumen	
+SL-0271	Vacuole membrane	Cellular component	GO:0005774:vacuolar membrane	SL-0162; Membrane; LOCATION
+SL-0272	Vacuole	Cellular component	GO:0005773:vacuole	
+SL-0273	Virion tegument	Cellular component	GO:0019033:viral tegument	
+SL-0274	Virion	Cellular component	GO:0019012:virion	
+SL-0275	Virion membrane	Cellular component	GO:0055036:virion membrane	SL-0162; Membrane; LOCATION
+SL-0276	Telomere	Cellular component	GO:0000781:chromosome, telomeric region	
+SL-0277	Cyanelle thylakoid	Cellular component	GO:0009843:cyanelle thylakoid	SL-0278; Plastid thylakoid; LOCATION
+SL-0278	Plastid thylakoid	Cellular component	GO:0031976:plastid thylakoid	SL-0450; Thylakoid; LOCATION
+SL-0279	Axon	Cellular component	GO:0030424:axon	SL-0518; Neuron projection; LOCATION
+SL-0280	Cell projection	Cellular component	GO:0042995:cell projection	
+SL-0281	Cytoplasmic granule	Cellular component		
+SL-0282	Cytoplasmic granule membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0283	Dendrite	Cellular component	GO:0030425:dendrite	SL-0518; Neuron projection; LOCATION
+SL-0284	Dendritic spine	Cellular component	GO:0043197:dendritic spine	SL-0515; Postsynapse; LOCATION
+SL-0285	Dendritic spine membrane	Cellular component	GO:0032591:dendritic spine membrane	SL-0219; Postsynaptic cell membrane; LOCATION
+SL-0286	Filopodium	Cellular component	GO:0030175:filopodium	SL-0280; Cell projection; LOCATION
+SL-0287	Filopodium membrane	Cellular component	GO:0031527:filopodium membrane	
+SL-0288	Growth cone	Cellular component	GO:0030426:growth cone	SL-0518; Neuron projection; LOCATION
+SL-0289	Growth cone membrane	Cellular component	GO:0032584:growth cone membrane	
+SL-0290	Invadopodium membrane	Cellular component	GO:0071438:invadopodium membrane	
+SL-0291	Lamellipodium	Cellular component	GO:0030027:lamellipodium	SL-0280; Cell projection; LOCATION
+SL-0292	Lamellipodium membrane	Cellular component	GO:0031258:lamellipodium membrane	
+SL-0293	Microvillus	Cellular component	GO:0005902:microvillus	SL-0280; Cell projection; LOCATION
+SL-0294	Microvillus membrane	Cellular component	GO:0031528:microvillus membrane	
+SL-0295	Podosome	Cellular component	GO:0002102:podosome	SL-0038; Cell junction; LOCATION, SL-0280; Cell projection; LOCATION
+SL-0296	Podosome membrane	Cellular component		
+SL-0297	Postsynaptic density	Cellular component	GO:0014069:postsynaptic density	
+SL-0298	Pseudopodium	Cellular component	GO:0031143:pseudopodium	SL-0280; Cell projection; LOCATION
+SL-0299	Pseudopodium membrane	Cellular component	GO:0031260:pseudopodium membrane	
+SL-0300	Ruffle	Cellular component	GO:0001726:ruffle	SL-0280; Cell projection; LOCATION
+SL-0301	Ruffle membrane	Cellular component	GO:0032587:ruffle membrane	
+SL-0302	Stereocilium	Cellular component	GO:0032420:stereocilium	SL-0280; Cell projection; LOCATION
+SL-0303	Stereocilium membrane	Cellular component	GO:0060171:stereocilium membrane	
+SL-0304	Cilium axoneme	Cellular component		
+SL-0305	Cilium membrane	Cellular component	GO:0060170:ciliary membrane	
+SL-0306	Archaeal flagellum	Cellular component	GO:0009288:bacterial-type flagellum	
+SL-0307	Bacterial flagellum	Cellular component	GO:0009288:bacterial-type flagellum	
+SL-0308	Flagellum basal body	Cellular component		SL-0087; Cilium basal body; LOCATION
+SL-0309	Plastid thylakoid lumen	Cellular component	GO:0031978:plastid thylakoid lumen	
+SL-0310	Cell surface	Cellular component	GO:0009986:cell surface	
+SL-0311	Sarcoplasm	Cellular component	GO:0016528:sarcoplasm	SL-0086; Cytoplasm; LOCATION
+SL-0312	Myofibril	Cellular component	GO:0030016:myofibril	SL-0311; Sarcoplasm; LOCATION
+SL-0313	Sarcomere	Cellular component	GO:0030017:sarcomere	
+SL-0314	Z line	Cellular component	GO:0030018:Z disc	
+SL-0315	M line	Cellular component	GO:0031430:M band	
+SL-0316	Acidocalcisome lumen	Cellular component	GO:0033985:acidocalcisome lumen	
+SL-0317	Aleurone grain lumen	Cellular component	GO:0034422:aleurone grain lumen	SL-0270; Vacuole lumen; LOCATION
+SL-0318	Autophagosome lumen	Cellular component	GO:0034423:autophagosome lumen	SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0319	Clathrin-coated vesicle lumen	Cellular component		SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0320	Contractile vacuole lumen	Cellular component		SL-0270; Vacuole lumen; LOCATION
+SL-0321	COPI-coated vesicle lumen	Cellular component		SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0322	COPII-coated vesicle lumen	Cellular component		SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0323	Cvt vesicle lumen	Cellular component		SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0324	Cytoplasmic granule lumen	Cellular component		
+SL-0325	Cytoplasmic vesicle lumen	Cellular component	GO:0060205:cytoplasmic vesicle lumen	
+SL-0326	Endoplasmic reticulum-Golgi intermediate compartment lumen	Cellular component		
+SL-0327	Endosome lumen	Cellular component	GO:0031904:endosome lumen	
+SL-0328	Esterosome lumen	Cellular component	GO:0034467:esterosome lumen	SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0329	Etioplast membrane	Cellular component	GO:0034426:etioplast membrane	SL-0213; Plastid membrane; LOCATION
+SL-0330	Etioplast stroma	Cellular component	GO:0009578:etioplast stroma	SL-0215; Plastid stroma; LOCATION
+SL-0331	Gas vesicle lumen	Cellular component		SL-0270; Vacuole lumen; LOCATION
+SL-0332	Glycosome matrix	Cellular component	GO:0034468:glycosome lumen	SL-0202; Peroxisome matrix; LOCATION
+SL-0333	Glyoxysome matrix	Cellular component	GO:0031908:glyoxysomal lumen	SL-0202; Peroxisome matrix; LOCATION
+SL-0334	Golgi stack lumen	Cellular component	GO:0034469:Golgi stack lumen	SL-0133; Golgi apparatus lumen; LOCATION
+SL-0335	Hydrogenosome lumen	Cellular component	GO:0034492:hydrogenosome lumen	
+SL-0336	Late endosome lumen	Cellular component	GO:0031906:late endosome lumen	SL-0327; Endosome lumen; LOCATION
+SL-0337	Early endosome lumen	Cellular component	GO:0031905:early endosome lumen	SL-0327; Endosome lumen; LOCATION
+SL-0338	Melanosome lumen	Cellular component	GO:0034493:melanosome lumen	
+SL-0339	Microneme lumen	Cellular component	GO:0034494:microneme lumen	SL-0347; Secretory vesicle lumen; LOCATION
+SL-0340	Multivesicular body lumen	Cellular component		SL-0327; Endosome lumen; LOCATION
+SL-0341	Parasitophorous vacuole lumen	Cellular component		
+SL-0342	Phagosome lumen	Cellular component		SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0343	Prevacuolar compartment lumen	Cellular component	GO:0031906:late endosome lumen	
+SL-0344	Protein storage vacuole lumen	Cellular component	GO:0034495:protein storage vacuole lumen	SL-0270; Vacuole lumen; LOCATION
+SL-0345	Recycling endosome lumen	Cellular component	GO:0034777:recycling endosome lumen	SL-0327; Endosome lumen; LOCATION
+SL-0346	Rhoptry lumen	Cellular component	GO:0034591:rhoptry lumen	SL-0347; Secretory vesicle lumen; LOCATION
+SL-0347	Secretory vesicle lumen	Cellular component		SL-0325; Cytoplasmic vesicle lumen; LOCATION
+SL-0348	Synaptic vesicle lumen	Cellular component	GO:0034592:synaptic vesicle lumen	SL-0347; Secretory vesicle lumen; LOCATION
+SL-0349	Chromaffin granule lumen	Cellular component	GO:0034466:chromaffin granule lumen	SL-0347; Secretory vesicle lumen; LOCATION
+SL-0350	Cyanelle stroma	Cellular component	GO:0034060:cyanelle stroma	SL-0215; Plastid stroma; LOCATION
+SL-0351	Organellar chromatophore	Cellular component	GO:0070111:organellar chromatophore	SL-0209; Plastid; LOCATION
+SL-0352	Organellar chromatophore membrane	Cellular component	GO:0070112:organellar chromatophore membrane	SL-0213; Plastid membrane; LOCATION
+SL-0353	Organellar chromatophore stroma	Cellular component		SL-0215; Plastid stroma; LOCATION
+SL-0354	Organellar chromatophore thylakoid	Cellular component	GO:0070116:organellar chromatophore thylakoid	SL-0278; Plastid thylakoid; LOCATION
+SL-0355	Organellar chromatophore thylakoid lumen	Cellular component	GO:0070117:organellar chromatophore thylakoid lumen	SL-0309; Plastid thylakoid lumen; LOCATION
+SL-0356	Organellar chromatophore thylakoid membrane	Cellular component	GO:0070118:organellar chromatophore thylakoid membrane	SL-0216; Plastid thylakoid membrane; LOCATION
+SL-0357	Bacterial flagellum hook	Cellular component	GO:0009424:bacterial-type flagellum hook	
+SL-0358	Bacterial flagellum filament	Cellular component	GO:0009420:bacterial-type flagellum filament	
+SL-0359	Organellar chromatophore inner membrane	Cellular component	GO:0070113:organellar chromatophore inner membrane	SL-0211; Plastid inner membrane; LOCATION, SL-0352; Organellar chromatophore membrane; LOCATION
+SL-0360	Organellar chromatophore intermembrane space	Cellular component	GO:0070115:organellar chromatophore intermembrane space	SL-0212; Plastid intermembrane space; LOCATION
+SL-0361	Organellar chromatophore outer membrane	Cellular component	GO:0070114:organellar chromatophore outer membrane	SL-0214; Plastid outer membrane; LOCATION, SL-0352; Organellar chromatophore membrane; LOCATION
+SL-0362	Inner membrane complex	Cellular component	GO:0070258:inner membrane pellicle complex	
+SL-0363	Spore membrane	Cellular component	GO:0140549:spore inner membrane	SL-0162; Membrane; LOCATION
+SL-0364	Spore cortex	Cellular component	GO:0043595:endospore cortex	
+SL-0365	Spore outer membrane	Cellular component	GO:0043594:outer endospore membrane	SL-0162; Membrane; LOCATION
+SL-0366	Spore coat	Cellular component	GO:0031160:spore wall	
+SL-0367	Perispore	Cellular component	GO:0031160:spore wall	
+SL-0368	Prospore membrane	Cellular component	GO:0005628:prospore membrane	SL-0162; Membrane; LOCATION
+SL-0369	Prospore	Cellular component	GO:0042763:intracellular immature spore	
+SL-0370	Membrane raft	Cellular component	GO:0045121:membrane raft	
+SL-0371	Pollen coat	Cellular component	GO:0070505:pollen coat	SL-0111; Extracellular matrix; LOCATION
+SL-0372	Host apical cell membrane	Cellular component	GO:0020002:host cell plasma membrane	
+SL-0373	Host cell inner membrane	Cellular component	GO:0020002:host cell plasma membrane	SL-0375; Host cell membrane; LOCATION
+SL-0374	Host cell junction	Cellular component	GO:0044156:host cell junction	
+SL-0375	Host cell membrane	Cellular component	GO:0020002:host cell plasma membrane	SL-0380; Host membrane; LOCATION
+SL-0376	Host cell outer membrane	Cellular component	GO:0020002:host cell plasma membrane	SL-0380; Host membrane; LOCATION
+SL-0377	Host cell projection	Cellular component	GO:0044157:host cell projection	
+SL-0378	Host cell surface	Cellular component	GO:0044228:host cell surface	
+SL-0379	Host filopodium	Cellular component	GO:0044176:host cell filopodium	SL-0377; Host cell projection; LOCATION
+SL-0380	Host membrane	Cellular component	GO:0033644:host cell membrane	SL-0162; Membrane; LOCATION
+SL-0381	Host cytoplasm	Cellular component	GO:0030430:host cell cytoplasm	
+SL-0382	Host perinuclear region	Cellular component	GO:0044220:host cell perinuclear region of cytoplasm	
+SL-0383	Host cytoskeleton	Cellular component	GO:0044163:host cytoskeleton	
+SL-0384	Host cytosol	Cellular component	GO:0044164:host cell cytosol	
+SL-0385	Host plasmodesma	Cellular component	GO:0044219:host cell plasmodesma	SL-0374; Host cell junction; LOCATION
+SL-0386	Host cytoplasmic vesicle	Cellular component	GO:0044161:host cell cytoplasmic vesicle	
+SL-0387	Host cytoplasmic vesicle membrane	Cellular component	GO:0044162:host cell cytoplasmic vesicle membrane	SL-0380; Host membrane; LOCATION
+SL-0388	Host endoplasmic reticulum	Cellular component	GO:0044165:host cell endoplasmic reticulum	
+SL-0389	Host endoplasmic reticulum lumen	Cellular component	GO:0044166:host cell endoplasmic reticulum lumen	
+SL-0390	Host endoplasmic reticulum membrane	Cellular component	GO:0044167:host cell endoplasmic reticulum membrane	SL-0380; Host membrane; LOCATION
+SL-0391	Host endoplasmic reticulum-Golgi intermediate compartment	Cellular component	GO:0044172:host cell endoplasmic reticulum-Golgi intermediate compartment	
+SL-0392	Host endoplasmic reticulum-Golgi intermediate compartment membrane	Cellular component	GO:0044173:host cell endoplasmic reticulum-Golgi intermediate compartment membrane	SL-0380; Host membrane; LOCATION
+SL-0393	Host endosome	Cellular component	GO:0044174:host cell endosome	
+SL-0394	Host endosome membrane	Cellular component	GO:0044175:host cell endosome membrane	SL-0380; Host membrane; LOCATION
+SL-0395	Host Golgi apparatus	Cellular component	GO:0044177:host cell Golgi apparatus	
+SL-0396	Host cis-Golgi network	Cellular component		
+SL-0397	Host cis-Golgi network membrane	Cellular component		SL-0426; Host Golgi apparatus membrane; LOCATION
+SL-0398	Host endomembrane system	Cellular component	GO:0033645:host cell endomembrane system	SL-0380; Host membrane; LOCATION
+SL-0399	Host late endosome	Cellular component	GO:0044184:host cell late endosome	
+SL-0400	Host late endosome membrane	Cellular component	GO:0044185:host cell late endosome membrane	SL-0394; Host endosome membrane; LOCATION
+SL-0401	Host lipid droplet	Cellular component	GO:0044186:host cell lipid droplet	
+SL-0403	Host lysosome	Cellular component	GO:0044187:host cell lysosome	
+SL-0404	Host lysosome membrane	Cellular component	GO:0044188:host cell lysosomal membrane	SL-0380; Host membrane; LOCATION
+SL-0405	Host microsome	Cellular component	GO:0033648:host intracellular membrane-bounded organelle	
+SL-0406	Host microsome membrane	Cellular component	GO:0033648:host intracellular membrane-bounded organelle	SL-0380; Host membrane; LOCATION
+SL-0407	Host mitochondrion	Cellular component	GO:0033650:host cell mitochondrion	
+SL-0408	Host mitochondrion envelope	Cellular component	GO:0044190:host cell mitochondrial envelope	
+SL-0409	Host mitochondrion inner membrane	Cellular component	GO:0044192:host cell mitochondrial inner membrane	SL-0410; Host mitochondrion membrane; LOCATION
+SL-0410	Host mitochondrion membrane	Cellular component	GO:0044191:host cell mitochondrial membrane	SL-0380; Host membrane; LOCATION
+SL-0411	Host mitochondrion outer membrane	Cellular component	GO:0044193:host cell mitochondrial outer membrane	SL-0410; Host mitochondrion membrane; LOCATION
+SL-0412	Host nucleolus	Cellular component	GO:0044196:host cell nucleolus	
+SL-0413	Host nucleoplasm	Cellular component	GO:0044095:host cell nucleoplasm	
+SL-0414	Host nucleus	Cellular component	GO:0042025:host cell nucleus	
+SL-0415	Host nucleus envelope	Cellular component	GO:0044199:host cell nuclear envelope	
+SL-0416	Host nucleus lamina	Cellular component	GO:0044203:host cell nuclear lamina	
+SL-0417	Host nucleus matrix	Cellular component	GO:0044204:host cell nuclear matrix	
+SL-0418	Host nucleus membrane	Cellular component	GO:0044200:host cell nuclear membrane	SL-0380; Host membrane; LOCATION
+SL-0419	Host nucleus inner membrane	Cellular component	GO:0044201:host cell nuclear inner membrane	SL-0418; Host nucleus membrane; LOCATION
+SL-0420	Host periplasm	Cellular component	GO:0044229:host cell periplasmic space	
+SL-0421	Host cell envelope	Cellular component	GO:0044230:host cell envelope	
+SL-0422	Host rough endoplasmic reticulum	Cellular component	GO:0044168:host cell rough endoplasmic reticulum	
+SL-0423	Host rough endoplasmic reticulum membrane	Cellular component	GO:0044169:host cell rough endoplasmic reticulum membrane	SL-0390; Host endoplasmic reticulum membrane; LOCATION
+SL-0424	Host cell wall	Cellular component	GO:0044158:host cell wall	
+SL-0425	Host extracellular space	Cellular component	GO:0043655:host extracellular space	
+SL-0426	Host Golgi apparatus membrane	Cellular component	GO:0044178:host cell Golgi membrane	SL-0380; Host membrane; LOCATION
+SL-0427	Host cell	Cellular component	GO:0043657:host cell	
+SL-0428	Host caveola	Cellular component	GO:0044155:host caveola	
+SL-0429	Host cellular thylakoid	Cellular component	GO:0044159:host thylakoid	SL-0449; Host thylakoid; LOCATION
+SL-0430	Host cellular thylakoid membrane	Cellular component	GO:0044160:host thylakoid membrane	SL-0380; Host membrane; LOCATION
+SL-0431	Host	Cellular component	GO:0018995:host cellular component	
+SL-0432	Host phagosome	Cellular component		SL-0386; Host cytoplasmic vesicle; LOCATION
+SL-0433	Host phagosome membrane	Cellular component		SL-0387; Host cytoplasmic vesicle membrane; LOCATION
+SL-0434	Host presynaptic cell membrane	Cellular component	GO:0044231:host cell presynaptic membrane	
+SL-0435	Host synapse	Cellular component	GO:0044221:host cell synapse	SL-0374; Host cell junction; LOCATION
+SL-0436	Spore polar tube	Cellular component	GO:0044099:polar tube	
+SL-0437	Mitosome	Cellular component	GO:0032047:mitosome	
+SL-0438	Mitosome envelope	Cellular component		
+SL-0439	Mitosome inner membrane	Cellular component		SL-0442; Mitosome membrane; LOCATION
+SL-0440	Mitosome intermembrane space	Cellular component		
+SL-0441	Mitosome matrix	Cellular component		
+SL-0442	Mitosome membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0443	Mitosome outer membrane	Cellular component		SL-0442; Mitosome membrane; LOCATION
+SL-0444	Host smooth endoplasmic reticulum	Cellular component	GO:0044170:host cell smooth endoplasmic reticulum	
+SL-0445	Host smooth endoplasmic reticulum membrane	Cellular component	GO:0044171:host cell smooth endoplasmic reticulum membrane	SL-0390; Host endoplasmic reticulum membrane; LOCATION
+SL-0446	Host nucleus outer membrane	Cellular component	GO:0044202:host cell nuclear outer membrane	SL-0418; Host nucleus membrane; LOCATION
+SL-0447	Acrosome outer membrane	Cellular component	GO:0002081:outer acrosomal membrane	
+SL-0448	Spindle pole	Cellular component	GO:0000922:spindle pole	
+SL-0449	Host thylakoid	Cellular component	GO:0044159:host thylakoid	
+SL-0450	Thylakoid	Cellular component	GO:0009579:thylakoid	
+SL-0451	Target cell membrane	Cellular component	GO:0044218:other organism cell membrane	SL-0452; Target membrane; LOCATION
+SL-0452	Target membrane	Cellular component		SL-0162; Membrane; LOCATION, SL-0487; Target cell; LOCATION
+SL-0453	Host multivesicular body	Cellular component	GO:0072494:host multivesicular body	
+SL-0454	Barrier septum	Cellular component	GO:0000935:division septum	SL-0455; Cell septum; LOCATION
+SL-0455	Cell septum	Cellular component	GO:0030428:cell septum	
+SL-0456	Cell tip	Cellular component	GO:0051286:cell tip	
+SL-0457	Photoreceptor inner segment	Cellular component	GO:0001917:photoreceptor inner segment	
+SL-0458	Photoreceptor outer segment	Cellular component	GO:0001750:photoreceptor outer segment	SL-0066; Cilium; LOCATION
+SL-0459	Host basolateral cell membrane	Cellular component		
+SL-0460	Kinocilium	Cellular component	GO:0060091:kinocilium	SL-0066; Cilium; LOCATION
+SL-0461	Host early endosome	Cellular component		
+SL-0462	Host early endosome membrane	Cellular component		SL-0394; Host endosome membrane; LOCATION
+SL-0463	Host trans-Golgi network	Cellular component		
+SL-0464	Host trans-Golgi network membrane	Cellular component		SL-0426; Host Golgi apparatus membrane; LOCATION
+SL-0465	PML body	Cellular component	GO:0016605:PML body	SL-0494; Nuclear body; LOCATION
+SL-0466	Extracellular exosome	Cellular component		
+SL-0467	Cleavage furrow	Cellular component	GO:0032154:cleavage furrow	
+SL-0468	Chromosome	Cellular component	GO:0005694:chromosome	
+SL-0469	Midbody	Cellular component	GO:0030496:midbody	
+SL-0470	Filopodium tip	Cellular component	GO:0032433:filopodium tip	
+SL-0471	Pseudopodium tip	Cellular component		
+SL-0472	Bleb	Cellular component	GO:0032059:bleb	SL-0280; Cell projection; LOCATION
+SL-0473	Phagocytic cup	Cellular component	GO:0001891:phagocytic cup	SL-0280; Cell projection; LOCATION
+SL-0474	Host glyoxysome	Cellular component		SL-0475; Host peroxisome; LOCATION
+SL-0475	Host peroxisome	Cellular component		
+SL-0476	A band	Cellular component	GO:0031672:A band	
+SL-0477	H zone	Cellular component	GO:0031673:H zone	
+SL-0478	I band	Cellular component	GO:0031674:I band	
+SL-0479	Cyanelle envelope	Cellular component	GO:0033112:cyanelle envelope	SL-0210; Plastid envelope; LOCATION
+SL-0480	Cyanelle inner membrane	Cellular component	GO:0036012:cyanelle inner membrane	SL-0083; Cyanelle membrane; LOCATION, SL-0211; Plastid inner membrane; LOCATION
+SL-0481	Cyanelle intermembrane space	Cellular component	GO:0036014:cyanelle intermembrane space	SL-0212; Plastid intermembrane space; LOCATION
+SL-0482	Cyanelle outer membrane	Cellular component	GO:0036013:cyanelle outer membrane	SL-0083; Cyanelle membrane; LOCATION, SL-0214; Plastid outer membrane; LOCATION
+SL-0483	Host chloroplast envelope	Cellular component		
+SL-0484	Microtubule organizing center	Cellular component		
+SL-0485	Centriolar satellite	Cellular component		
+SL-0486	Target cell cytoplasm	Cellular component		SL-0487; Target cell; LOCATION
+SL-0487	Target cell	Cellular component	GO:0044216:other organism cell	
+SL-0488	Inflammasome	Cellular component	GO:0061702:inflammasome complex	
+SL-0489	Bacterial extracellular vesicle	Cellular component	GO:0097691:bacterial extracellular vesicle	SL-0499; Extracellular vesicle; LOCATION
+SL-0490	Midbody ring	Cellular component	GO:0090543:Flemming body	SL-0469; Midbody; LOCATION
+SL-0491	Anammoxosome	Cellular component		
+SL-0492	Anammoxosome membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0494	Nuclear body	Cellular component	GO:0016604:nuclear body	
+SL-0495	Cytoplasmic ribonucleoprotein granule	Cellular component	GO:0036464:cytoplasmic ribonucleoprotein granule	
+SL-0496	Stress granule	Cellular component	GO:0010494:cytoplasmic stress granule	SL-0495; Cytoplasmic ribonucleoprotein granule; LOCATION
+SL-0497	Nucleolus fibrillar center	Cellular component	GO:0001650:fibrillar center	
+SL-0498	Vesicle	Cellular component		
+SL-0499	Extracellular vesicle	Cellular component		SL-0498; Vesicle; LOCATION
+SL-0500	Extracellular vesicle membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0501	Stress fiber	Cellular component		
+SL-0502	Host synaptic vesicle	Cellular component		SL-0504; Host secretory vesicle; LOCATION
+SL-0503	Host synaptic vesicle membrane	Cellular component		
+SL-0504	Host secretory vesicle	Cellular component		SL-0386; Host cytoplasmic vesicle; LOCATION
+SL-0505	T-tubule	Cellular component	GO:0030315:T-tubule	
+SL-0506	Host vacuole	Cellular component		
+SL-0507	Host pathogen-containing vacuole	Cellular component	GO:0140220:pathogen-containing vacuole	
+SL-0508	Host pathogen-containing vacuole lumen	Cellular component	GO:0140222:pathogen-containing vacuole lumen	SL-0507; Host pathogen-containing vacuole; LOCATION
+SL-0509	Host pathogen-containing vacuole membrane	Cellular component	GO:0140221:pathogen-containing vacuole membrane	SL-0380; Host membrane; LOCATION
+SL-0510	Magnetosome	Cellular component	GO:0110143:magnetosome	
+SL-0511	Magnetosome lumen	Cellular component	GO:0110145:magnetosome lumen	
+SL-0512	Magnetosome membrane	Cellular component	GO:0110146:magnetosome membrane	SL-0162; Membrane; LOCATION
+SL-0513	Photoreceptor outer segment membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0514	Photoreceptor inner segment membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0515	Postsynapse	Cellular component	GO:0098794:postsynapse	
+SL-0516	Presynapse	Cellular component	GO:0098793:presynapse	
+SL-0517	Synaptic cleft	Cellular component	GO:0043083:synaptic cleft	
+SL-0518	Neuron projection	Cellular component	GO:0043005:neuron projection	SL-0280; Cell projection; LOCATION
+SL-0519	Presynaptic active zone	Cellular component	GO:0048786:presynaptic active zone	
+SL-0520	Postsynaptic density membrane	Cellular component	GO:0098839:postsynaptic density membrane	
+SL-0521	Golgi outpost	Cellular component	GO:0150051:postsynaptic Golgi apparatus	SL-0132; Golgi apparatus; LOCATION
+SL-0522	Postsynaptic endosome	Cellular component	GO:0098845:postsynaptic endosome	SL-0101; Endosome; LOCATION
+SL-0523	Postsynaptic early endosome	Cellular component	GO:0098842:postsynaptic early endosome	SL-0094; Early endosome; LOCATION
+SL-0524	Postsynaptic recycling endosome	Cellular component	GO:0098837:postsynaptic recycling endosome	SL-0232; Recycling endosome; LOCATION, SL-0522; Postsynaptic endosome; LOCATION
+SL-0525	Presynaptic endosome	Cellular component	GO:0098830:presynaptic endosome	SL-0101; Endosome; LOCATION
+SL-0526	Neuronal dense core vesicle	Cellular component	GO:0098992:neuronal dense core vesicle	SL-0244; Secretory vesicle; LOCATION
+SL-0527	Presynaptic active zone membrane	Cellular component	GO:0048787:presynaptic active zone membrane	
+SL-0528	Postsynaptic endocytic zone	Cellular component	GO:0098843:postsynaptic endocytic zone	
+SL-0529	Presynaptic endocytic zone	Cellular component	GO:0098833:presynaptic endocytic zone	
+SL-0530	Spine apparatus	Cellular component	GO:0097444:spine apparatus	SL-0095; Endoplasmic reticulum; LOCATION
+SL-0531	Synaptic cell membrane	Cellular component	GO:0097060:synaptic membrane	SL-0039; Cell membrane; LOCATION
+SL-0532	Neuronal dense core vesicle membrane	Cellular component	GO:0099012:neuronal dense core vesicle membrane	SL-0245; Secretory vesicle membrane; LOCATION
+SL-0533	Postsynaptic recycling endosome membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0534	Postsynaptic early endosome membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0535	Autolysosome	Cellular component		SL-0023; Autophagosome; LOCATION, SL-0158; Lysosome; LOCATION
+SL-0536	Autolysosome membrane	Cellular component		SL-0162; Membrane; LOCATION
+SL-0537	Autolysosome lumen	Cellular component		
+SL-0538	Ascus epiplasm	Cellular component		
+SL-0539	Spore	Cellular component		
+SL-0540	Zona pellucida	Cellular component		
+SL-0541	Cortical granule	Cellular component		SL-0244; Secretory vesicle; LOCATION
+SL-0542	Dynein axonemal particle	Cellular component		
+SL-0543	Cytolytic granule	Cellular component		
+SL-0544	Bacterial microcompartment	Cellular component		
+SL-0545	Zymogen granule	Cellular component		SL-0244; Secretory vesicle; LOCATION
+SL-0546	Cytolytic granule lumen	Cellular component		SL-0156; Lysosome lumen; LOCATION
+SL-0547	Cytolytic granule membrane	Cellular component		SL-0157; Lysosome membrane; LOCATION
+SL-0548	Zymogen granule lumen	Cellular component		SL-0347; Secretory vesicle lumen; LOCATION
+SL-0549	Zymogen granule membrane	Cellular component		SL-0245; Secretory vesicle membrane; LOCATION
+SL-0550	Encapsulin nanocompartment	Cellular component		
+SL-9900	Peptidoglycan-anchor	Topology		
+SL-9901	Lipid-anchor	Topology		
+SL-9902	GPI-anchor	Topology		SL-9901; Lipid-anchor; TOPOLOGY
+SL-9903	Peripheral membrane protein	Topology		SL-0162; Membrane; LOCATION
+SL-9904	Single-pass membrane protein	Topology		SL-0162; Membrane; LOCATION
+SL-9905	Single-pass type I membrane protein	Topology		SL-9904; Single-pass membrane protein; TOPOLOGY
+SL-9906	Single-pass type II membrane protein	Topology		SL-9904; Single-pass membrane protein; TOPOLOGY
+SL-9907	Single-pass type III membrane protein	Topology		SL-9904; Single-pass membrane protein; TOPOLOGY
+SL-9908	Single-pass type IV membrane protein	Topology		SL-9904; Single-pass membrane protein; TOPOLOGY
+SL-9909	Multi-pass membrane protein	Topology		SL-0162; Membrane; LOCATION
+SL-9910	Cytoplasmic side	Orientation		
+SL-9911	Extracellular side	Orientation		
+SL-9912	Intermembrane side	Orientation		
+SL-9913	Matrix side	Orientation		
+SL-9914	Lumenal side	Orientation		
+SL-9915	Nucleoplasmic side	Orientation		
+SL-9916	Periplasmic side	Orientation		
+SL-9917	Stromal side	Orientation		
+SL-9918	Extravirionic side	Orientation		
+SL-9919	Intravirionic side	Orientation		
+SL-9920	GPI-like-anchor	Topology		SL-9901; Lipid-anchor; TOPOLOGY
