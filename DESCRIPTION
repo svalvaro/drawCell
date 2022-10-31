@@ -27,5 +27,8 @@ Imports:
 RoxygenNote: 7.2.1
 Suggests: 
     knitr,
-    BiocStyle
+    BiocStyle,
+    lintr,
+    rcmdcheck,
+    spelling
 VignetteBuilder: knitr
