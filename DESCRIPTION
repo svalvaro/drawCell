@@ -30,5 +30,6 @@ Suggests:
     BiocStyle,
     lintr,
     rcmdcheck,
+    testthat,
     spelling
 VignetteBuilder: knitr
