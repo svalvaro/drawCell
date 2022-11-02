@@ -21,7 +21,11 @@ Suggests:
     knitr,
     readr,
     rmarkdown,
-    testthat
+    testthat,
+    rcmdcheck,
+    lintr,
+    testthat,
+    spelling
 VignetteBuilder: 
     knitr
 biocViews: SingleCell, Software, Infrastructure,Visualization
