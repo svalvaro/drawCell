@@ -6,9 +6,6 @@
 \usage{
 drawCellShiny()
 }
-\value{
-
-}
 \description{
 Run Shiny app for the drawCell Package
 }
