@@ -49,4 +49,18 @@ function(input, output) {
   output$selected_cell_name <- renderText({
     input$selected_cell
   })
+
+  output$cell_sl_color <-
+    DT::renderDataTable({
+      req(sc_id_to_select() > 0)
+
+      selected_sc <-
+        uniprot$Name[uniprot$Subcellular.location.ID %in% paste0("SL-", sc_id_to_select())]
+
+      data.frame(
+        `Subcellular Location` = selected_sc,
+        Color = colours_vector()
+      )
+      semantic_DT()
+    })
 }

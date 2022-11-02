@@ -36,41 +36,39 @@ semanticPage(
             selected = "Animal cell",
             type = "big search clearable selection"
           )
-        ),
-        # segment(
-        #   class = "padded",
-        #   selectInput(
-        #     inputId = "selected_sub_cell",
-        #     label = label("Select Cell Subsstructure (ID)", class = "teal pointing below"),
-        #     choices = sort(sub_cell_ids$location_id),
-        #     selected = "Nucleus (0191)",
-        #     type = "clearable multiple search selection"
-        #   )
-        # ),
-        segment(
-          class = "padded",
-          colourpicker::colourInput(
-            inputId = "selected_sub_cell_color",
-            label = label("Select color", class = "teal pointing below"),
-            "#56B4E9",
-            palette = "square",
-            returnName = TRUE,
-            showColour = c("background")
-          )
         )
       )
     ),
     segment(
       class = "raised very padded container",
       label(textOutput("selected_cell_name"), class = "big teal top left attached"),
-      drawCellOutput("cell_output", height = "auto", width = "auto"),
-      semantic_DTOutput("cell_sl_color"),
-      absolutePanel(
-        div(
-          class = "ui stackable basic icon huge buttons",
-          downloadButton(outputId = "download", label = "", class = "ui button", icon = icon("download"))
+      div(
+        class = "ui horizontal stackable segments",
+        segment(
+          class = "padded",
+          drawCellOutput("cell_output", height = "auto", width = "auto")
         ),
-        top = 10, right = 10
+        segment(
+          class = "padded",
+          div(
+            class = "ui vertical segments",
+            segment(
+              class = "padded",
+              colourpicker::colourInput(
+                inputId = "selected_sub_cell_color",
+                label = label(
+                  class = "teal pointing below",
+                  "Select color then cell subsstructure to highlight"
+                ),
+                "#56B4E9",
+                palette = "square",
+                returnName = TRUE,
+                showColour = c("background")
+              )
+            ),
+            semantic_DTOutput("cell_sl_color")
+          )
+        )
       )
     )
   )
