@@ -41,7 +41,7 @@ dashboardPage(
         ),
 
     dashboardBody(
-      drawCell::drawCellOutput("cell_output"),
+      drawCell:::drawCellOutput("cell_output"),
       wellPanel(
         textOutput("cell_s_output")
       )
