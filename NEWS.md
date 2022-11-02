@@ -1,4 +1,4 @@
-# drawCell 0.99.0
+# drawCell (development version)
 
-
+* Returns cell as interactive `svg`.
 * Submission to Bioconductor 3.14
