@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@swissprot/swissbiopics-visualizer": "^0.0.29"
+  }
+}

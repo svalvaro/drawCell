@@ -1,73 +1,54 @@
 function(input, output){
-
-    subCellIds <-  readr::read_csv(base::system.file(
-        'shinyApp/drawCellShiny/www/SLids.csv',
-        package = 'drawCell')
-    )
-
-    output$subCellSelector <- renderUI({
-
-        shinyWidgets::pickerInput(
-            inputId = "subIdsSelected",
-            label = h3("Select the subcellular locations"),
-            choices = subCellIds$Location,
-            options = list(
-                style = "btn-primary",
-                `actions-box` = TRUE,
-                `live-search` = TRUE),
-
-            choicesOpt = list(
-                subtext = paste("SL_id",
-                                subCellIds$SubCell.Id,
-                                sep = ": ")
-            ),
-            multiple = TRUE
+  
+  taxonomy_id <- reactive({
+    if (input$cell_type == "") {
+      
+      if (is.na(as.numeric(input$taxIdInput))) {
+        
+        taxonomy_id <- taxize::get_ids(
+          sci_com = input$taxIdInput,
+          db = 'ncbi'
         )
+        
+        taxonomy_id <- as.numeric(taxonomy_id$ncbi[1])
+      }else{
+        taxonomy_id <- as.numeric(input$taxIdInput)
+      }
+    } else {
+      taxonomy_id <- data[which(data$Image.name == input$cell_type), ]$TaxID
+    }
+    return(taxonomy_id)
+  })
+  
+  sc_id = reactiveVal()
+  sc_id_to_select = reactiveVal()
+  colours_vector = reactiveVal("#56B4E9")
+  
+  output$cell_output = drawCell::renderDrawCell({
+    
+    drawCell(taxonomy_id(),
+             sc_id_to_select(),
+             inputId = "cell",
+             colour_sl = colours_vector())
+  })
 
-    })
-
-    subCellIdsSelected <- eventReactive(input$drawCell,{
-
-        subCellIdsSelected <- subCellIds$SubCell.Id[
-            base::match(
-                x = input$subIdsSelected,
-                table = subCellIds$Location)]
-
-    })
-
-    pathToCellFile <- reactiveValues(path = NULL)
-
-    observeEvent(input$drawCell,{
-
-        pathToCellFile$path <- drawCell::drawCell(
-                organism_identifier =  input$taxIdInput,
-                sl_ids = subCellIdsSelected(),
-                color = input$colourInput,
-                size = input$cellSize,
-                delay = 2,
-                returnPlot = FALSE
-            )
-
-        print(paste0('The path to the file is:', pathToCellFile$path))
-    })
-
-    observeEvent(input$drawCell,{
-
-        if (is.null(pathToCellFile$path)) {
-            return(NULL)
-        }
-
-        output$cellImage <- renderPlot(width = input$cellSize, height = 1500,{
-
-            cellPNG <- png::readPNG(source = pathToCellFile$path)
-
-            message('Cell picture created: ', !is.null(cellPNG))
-
-            return(
-                grid::grid.raster(cellPNG)
-            )
-        })
-    })
-
-
+  observeEvent(input$cell_click,{
+    sc_id(substr(input$cell_click, 3, 6))
+    sc_id_to_select(c(sc_id_to_select(), input$cell_click))
+    colours_vector(c(colours_vector(), input$colourInput))
+  })
+  
+  observeEvent(input$cell_type, {
+    sc_id(NULL)
+    sc_id_to_select('SL0000')
+  })
+  
+  output$cell_s_output <- renderText({
+    sc_id_value = sc_id()
+    if (!is.null(sc_id_value)) {
+      find_sc(sc_id_value)
+    } else {
+      ""
+    }
+  })
 }
