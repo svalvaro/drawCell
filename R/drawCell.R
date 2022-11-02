@@ -1,19 +1,16 @@
 #' Creates a cell picture
 #'
-#' @param taxonomy_id Taxonomy id of the organism of interest. Can be found at
+#' @param organism_identifier Taxonomy id of the organism of interest. Can be found at
 #' https://www.ncbi.nlm.nih.gov/taxonomy/
-#' @param sl_ids Id of the subcellular location, can be found at
-#'  http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go
-#' @param delay Time needed to make picture of the HTML (webshot). If the
-#' picture is blank, try increasing the delay since it might take longer to
-#' render the HTML. (Units in seconds)
-#' @param size Size of the cell, around 2000 should work well.
-#'
-#' @param color Highlited color of the subcelullar components.
+#' @param list_sl_colors Named list. The name is the id of the subcellular location, can be found at
+#'  http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour that
+#'  each subcellular location should have
+#'  @param width  Width of the resulting image
+#'  @param height Heigth of the resulting image
 #'
 #' @import htmlwidgets
 #'
-#' @return Generates a PNG of the requested cell by the user with highligthed
+#' @return Generates a vector image of the requested cell by the user with coloured
 #' subcellular elements.
 #' @export
 #'
@@ -30,8 +27,8 @@ drawCell <- function(organism_identifier, list_sl_colors,  width = NULL, height 
   x = list(
     input_id = "cell",
     organism_identifier = organism_identifier,
-    sl_ids = csl(names(list_sl_colors)),
-    colour_sl = csl(list_sl_colors)
+    sl_ids = drawCell:::csl(names(list_sl_colors)),
+    colour_sl = drawCell:::csl(list_sl_colors)
   )
   # create widget
   htmlwidgets::createWidget(

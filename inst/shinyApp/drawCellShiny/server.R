@@ -24,7 +24,7 @@ function(input, output){
 
   subcelular_colours <- reactiveVal(list("SL0000" = "#56B4E9"))
 
-  output$cell_output = drawCell::renderDrawCell({
+  output$cell_output = drawCell:::renderDrawCell({
     
     drawCell(organism_identifier = taxonomy_id(),
              list_sl_colors = subcelular_colours())
@@ -51,7 +51,7 @@ function(input, output){
   output$cell_s_output <- renderText({
     sc_id_value = sc_id()
     if (!is.null(sc_id_value)) {
-      find_sc(sc_id_value)
+      drawCell:::find_sc(sc_id_value)
     } else {
       ""
     }

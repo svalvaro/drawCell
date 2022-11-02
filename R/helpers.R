@@ -14,24 +14,20 @@
 #'
 #' @name drawCell-shiny
 #'
-#' @export
 drawCellOutput <- function(outputId, width = '100%', height = '400px'){
   htmlwidgets::shinyWidgetOutput(outputId, 'drawCell', width, height, package = 'drawCell')
 }
 
 #' @rdname drawCell-shiny
-#' @export
 renderDrawCell <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
   htmlwidgets::shinyRenderWidget(expr, drawCellOutput, env, quoted = TRUE)
 }
 
-#' @export
 csl <- function(items) {
   return(paste(paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), sep = ""))
 }
 
-#' @export
 find_sc = function(id) {
   uniprot[which(uniport_sc_ids == id), ]$Name
 }
