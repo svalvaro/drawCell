@@ -32,15 +32,3 @@
 .ui.input > label {
   margin: 0 0 0.28571429rem 0;
 }
-
-svg {
-  max-width: 1vw;
-  max-height: 0.5vw;
-}
-
-#swissbiopic {
-  display: block !important;
-  margin: auto !important;
-  width: 50% !important;
-  height: auto !important;
-}
