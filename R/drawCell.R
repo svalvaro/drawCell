@@ -18,22 +18,20 @@
 #' @export
 #'
 #' @examples
-#' drawCell(taxonomy_id = '58334',
-#' sl_ids = '0049',
-#' size = 2000,
-#' color = 'lightblue')
-#' <Add Title>
-#'
-#' <Add Description>
-drawCell <- function(organism_identifier, sl_ids, inputId = NULL, width = NULL, height = NULL, elementId = NULL, colour_sl = NULL) {
+#' drawCell(
+#'    organism_identifier = '9606',
+#'    list_sl_colors = list(
+#'    'SL0095' = 'green',
+#'    'SL0154'='red')
+#'  )
+drawCell <- function(organism_identifier, list_sl_colors,  width = NULL, height = NULL) {
 
-  
   # forward options using x
   x = list(
-    input_id = inputId,
+    input_id = "cell",
     organism_identifier = organism_identifier,
-    sl_ids = csl(sl_ids),
-    colour_sl = csl(colour_sl)
+    sl_ids = csl(names(list_sl_colors)),
+    colour_sl = csl(list_sl_colors)
   )
   # create widget
   htmlwidgets::createWidget(
@@ -42,6 +40,6 @@ drawCell <- function(organism_identifier, sl_ids, inputId = NULL, width = NULL, 
     width = width,
     height = height,
     package = 'drawCell',
-    elementId = elementId
+    elementId = NULL
   )
 }
