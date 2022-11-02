@@ -1,9 +1,11 @@
 linters:
   linters_with_defaults(
-    line_length_linter = line_length_linter(100)
+    line_length_linter = line_length_linter(100),
+    object_name_linter = object_name_linter(styles = c("snake_case", "symbols", "camelCase"))
   )
 exclusions:
-  c(
+  list(
+    "vignettes/drawCell.Rmd" = 46L,
     "inst/rstudio",
     "inst/templates"
   )
