@@ -1,7 +1,6 @@
 library(drawCell)
 library(shiny)
 library(shiny.semantic)
-library(glue)
 
 path = system.file("extdata", "swissbiopics_mapping.csv", package = "drawCell")
 data = read.csv2(path, sep = ";")
