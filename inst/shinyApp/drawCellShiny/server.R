@@ -21,26 +21,31 @@ function(input, output){
   })
   
   sc_id = reactiveVal()
-  sc_id_to_select = reactiveVal()
-  colours_vector = reactiveVal("#56B4E9")
-  
+
+  subcelular_colours <- reactiveVal(list("SL0000" = "#56B4E9"))
+
   output$cell_output = drawCell::renderDrawCell({
     
-    drawCell(taxonomy_id(),
-             sc_id_to_select(),
-             inputId = "cell",
-             colour_sl = colours_vector())
+    drawCell(organism_identifier = taxonomy_id(),
+             list_sl_colors = subcelular_colours())
   })
 
   observeEvent(input$cell_click,{
     sc_id(substr(input$cell_click, 3, 6))
-    sc_id_to_select(c(sc_id_to_select(), input$cell_click))
-    colours_vector(c(colours_vector(), input$colourInput))
+    
+    list_named_colours <- c(subcelular_colours(), input$colourInput)
+    names(list_named_colours)[length(list_named_colours)] <- input$cell_click
+    subcelular_colours(list_named_colours)
   })
   
+  observeEvent(input$colourInput,{
+    list_named_colours <- subcelular_colours()
+    list_named_colours[length(list_named_colours)] <- input$colourInput
+    subcelular_colours(list_named_colours)
+  })
+
   observeEvent(input$cell_type, {
     sc_id(NULL)
-    sc_id_to_select('SL0000')
   })
   
   output$cell_s_output <- renderText({
