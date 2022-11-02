@@ -32,15 +32,7 @@ connection is required to use this package.
 
 # Installation
 
-Start by installing `webshot2` and Google Chrome (If you don't have it already).
-
-
-```{r installation1, eval = FALSE}
-remotes::install_github("rstudio/webshot2")
-```
-
-
-After installing it you can instdall `drawCell`:
+Install dev version of `drawCell`:
 
 ```{r install2, eval = FALSE}
 # install.packages("devtools")
@@ -51,9 +43,9 @@ devtools::install_github("svalvaro/drawCell")
 # How to use
 
 It is fairly simple to use `drawCell`. You just need to know the 
-[taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of
+[`organism_identifier`](https://www.ncbi.nlm.nih.gov/taxonomy/) of
 your species of interest, and one or multiple SL codes for subcellular
-locations that will be colour_sled. The SL codes for each subcellular
+locations that will be colored. The SL codes for each subcellular
 location can be found at [Uniprot](https://www.uniprot.org/docs/subcell)
 and
 [uniprotkb\_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
@@ -62,11 +54,11 @@ and
 
 # Examples
 
-The taxonomy id for *Quercus ilex* a common tree in the south of Spain
+The organism_identifier for *Quercus ilex* a common tree in the south of Spain
 is `58334` and as an example I will use the SL code of the chloroplast:
 `0049`.
 
-The size of the picture can be choosen with `size` and the colour_sl with `colour_sl`.
+The size of the picture can be chosen with `size` and the colour_sl with `colour_sl`.
 
 ```{r example, results='hide', message=F, warning=FALSE, error=F}
 library(drawCell)
@@ -77,7 +69,7 @@ drawCell(organism_identifier = "58334", sl_ids = "0049",  colour_sl = "lightblue
 We can also obtain pictures of viruses, yeast, and pretty much everything that 
 exists!
 
-For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` 
+For the baker's yeast *Saccharomyces cerevisiae* whose organism_identifier is `4932` 
 we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
 ```{r sacc, results='hide', message=F, warning=FALSE, error=F}
@@ -87,8 +79,8 @@ drawCell(
 
 
 
-If one wishes to highligth the endosomes (SL:0101) of  *Homo sapiens* 
-(Taxonomy id: 9606):
+If one wishes to highlight the endosomes (SL:0101) of  *Homo sapiens* 
+(organism_identifier: 9606):
 
 
 ```{r covid, results='hide', message=F, warning=FALSE, error=F}
