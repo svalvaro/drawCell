@@ -37,7 +37,7 @@ function(input, output) {
 
   observeEvent(input$cell_click, {
     sc_id(substr(input$cell_click, 3, 6))
-    sc_id_to_select(c(sc_id_to_select(),  input$cell_click))
+    sc_id_to_select(c(sc_id_to_select(), input$cell_click))
     colours_vector(c(colours_vector(), input$selected_sub_cell_color))
   })
 
@@ -54,13 +54,31 @@ function(input, output) {
     DT::renderDataTable({
       req(sc_id_to_select() > 0)
 
-      selected_sc <-
-        uniprot$Name[uniprot$Subcellular.location.ID %in% paste0("SL-", sc_id_to_select())]
+      # selected_sc <-
+      #   uniprot$Name[
+      #     uniprot$Subcellular.location.ID %in%
+      #       gsub("SL", "SL-", sc_id_to_select())
+      #   ]
 
       data.frame(
-        `Subcellular Location` = selected_sc,
-        Color = colours_vector()
-      )
-      semantic_DT()
+        `Subcellular Location` = sc_id_to_select(),
+        Color = glue::glue(
+          "<i class='square icon' style='visibility: visible; color: {colours_vector()}'></i>"
+        )
+      ) |>
+        semantic_DT(
+          escape = FALSE,
+          options = list(
+            searching = FALSE,
+            paging = FALSE,
+            info = FALSE,
+            columnDefs = list(
+              list(
+                className = "dt-center",
+                targets = "_all"
+              )
+            )
+          )
+        )
     })
 }

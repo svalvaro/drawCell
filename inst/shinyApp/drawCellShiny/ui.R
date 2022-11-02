@@ -66,7 +66,10 @@ semanticPage(
                 showColour = c("background")
               )
             ),
-            semantic_DTOutput("cell_sl_color")
+            segment(
+              class = "padded",
+              semantic_DTOutput("cell_sl_color")
+            )
           )
         )
       )
