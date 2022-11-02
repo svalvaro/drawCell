@@ -25,23 +25,30 @@
 #' <Add Title>
 #'
 #' <Add Description>
-drawCell <- function(organism_identifier, sl_ids, inputId = NULL, width = NULL, height = NULL, elementId = NULL, colour_sl = NULL) {
-
-  
-  # forward options using x
-  x = list(
-    input_id = inputId,
-    organism_identifier = organism_identifier,
-    sl_ids = csl(sl_ids),
-    colour_sl = csl(colour_sl)
-  )
-  # create widget
-  htmlwidgets::createWidget(
-    name = 'drawCell',
-    x,
-    width = width,
-    height = height,
-    package = 'drawCell',
-    elementId = elementId
-  )
-}
+drawCell <-
+  function(
+    organism_identifier,
+    sl_ids,
+    inputId = NULL,
+    width = NULL,
+    height = NULL,
+    elementId = NULL,
+    colour_sl = NULL
+  ) {
+    # forward options using x
+    x <- list(
+      input_id = inputId,
+      organism_identifier = organism_identifier,
+      sl_ids = csl(sl_ids),
+      colour_sl = csl(colour_sl)
+    )
+    # create widget
+    htmlwidgets::createWidget(
+      name = "drawCell",
+      x,
+      width = width,
+      height = height,
+      package = "drawCell",
+      elementId = elementId
+    )
+  }

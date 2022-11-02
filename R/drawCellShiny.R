@@ -4,7 +4,8 @@
 #' @export
 #'
 #' @examples
-drawCellShiny <- function(){
-    shiny::shinyAppDir(appDir = base::system.file('shinyApp/drawCellShiny',
-                                                  package = 'drawCell'))
+drawCellShiny <- function() {
+  shiny::shinyAppDir(appDir = base::system.file("shinyApp/drawCellShiny",
+    package = "drawCell"
+  ))
 }

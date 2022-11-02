@@ -10,11 +10,11 @@ vignette: >
   
 ```{r options2, include = FALSE}
 knitr::opts_chunk$set(
-    collapse = TRUE,
-    comment = "#>",
-    message = FALSE,
-    warning = FALSE,
-    purl = FALSE
+  collapse = TRUE,
+  comment = "#>",
+  message = FALSE,
+  warning = FALSE,
+  purl = FALSE
 )
 ```
 
@@ -53,7 +53,7 @@ devtools::install_github("svalvaro/drawCell")
 It is fairly simple to use `drawCell`. You just need to know the 
 [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of
 your species of interest, and one or multiple SL codes for subcellular
-locations that will be colored. The SL codes for each subcellular
+locations that will be colour_sled. The SL codes for each subcellular
 location can be found at [Uniprot](https://www.uniprot.org/docs/subcell)
 and
 [uniprotkb\_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
@@ -66,12 +66,11 @@ The taxonomy id for *Quercus ilex* a common tree in the south of Spain
 is `58334` and as an example I will use the SL code of the chloroplast:
 `0049`.
 
-The size of the picture can be choosen with `size` and the color with `color`.
+The size of the picture can be choosen with `size` and the colour_sl with `colour_sl`.
 
 ```{r example, results='hide', message=F, warning=FALSE, error=F}
 library(drawCell)
-drawCell(taxonomy_id = '58334', sl_ids = '0049', size = 2000,
-         color = 'lightblue')
+drawCell(organism_identifier = "58334", sl_ids = "0049",  colour_sl = "lightblue")
 ```
 
 
@@ -82,8 +81,8 @@ For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932`
 we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
 ```{r sacc, results='hide', message=F, warning=FALSE, error=F}
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), size = 5500,
-         color = 'brown')
+drawCell(
+  organism_identifier = "4932", sl_ids = c("0191", "0272"),  colour_sl = "brown")
 ```
 
 
@@ -93,7 +92,7 @@ If one wishes to highligth the endosomes (SL:0101) of  *Homo sapiens*
 
 
 ```{r covid, results='hide', message=F, warning=FALSE, error=F}
-drawCell(taxonomy_id = '9606', sl_ids = '0101', size = 2000, color = 'blue' )
+drawCell(organism_identifier = "9606", sl_ids = "0101", colour_sl = "blue")
 ```
 
 
@@ -105,8 +104,7 @@ be because the rendering process of that image takes longer. By default, the
 delay is one second, so if you increase it it will probably solve the issue.
 ```{r trouble, eval = FALSE}
 # If it returns an empty image, increase the delay
-drawCell(taxonomy_id = '4932' , sl_ids = '0191')
+drawCell(organism_identifier = "4932", sl_ids = "0191")
 
-drawCell(taxonomy_id = '4932' , sl_ids = '0191', delay = 10)
+drawCell(organism_identifier = "4932", sl_ids = "0191")
 ```
-
