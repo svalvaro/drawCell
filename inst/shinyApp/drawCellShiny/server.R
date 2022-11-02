@@ -46,23 +46,7 @@ function(input, output) {
     sc_id_to_select("SL0000")
   })
 
-  output$cell_sl_name <- renderText({
-    sc_id_value <- sc_id()
-    if (!is.null(sc_id_value)) {
-      find_sc(sc_id_value)
-    } else {
-      ""
-    }
+  output$selected_cell_name <- renderText({
+    input$selected_cell
   })
-
-  output$download <- downloadHandler(
-    filename = function() {
-      paste("cell-", taxonomy_id(), ".png")
-    },
-    content = function(file) {
-      jpeg(file, quality = 100, width = 800, height = 800)
-      rendered_cell_svg()
-      dev.off()
-    }
-  )
 }

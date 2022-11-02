@@ -62,7 +62,7 @@ semanticPage(
     ),
     segment(
       class = "raised very padded container",
-      label(textOutput("cell_sl_name"), class = "big teal top left attached"),
+      label(textOutput("selected_cell_name"), class = "big teal top left attached"),
       drawCellOutput("cell_output", height = "auto", width = "auto"),
       semantic_DTOutput("cell_sl_color"),
       absolutePanel(
