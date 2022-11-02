@@ -52,21 +52,24 @@ function(input, output) {
 
   output$cell_sl_color <-
     DT::renderDataTable({
-      req(sc_id_to_select() > 0)
+      req(sc_id_to_select() > 1)
 
-      # selected_sc <-
-      #   uniprot$Name[
-      #     uniprot$Subcellular.location.ID %in%
-      #       gsub("SL", "SL-", sc_id_to_select())
-      #   ]
+      if (sc_id_to_select() == "SL0000") {
+        selected_sc <- data.frame(
 
-      data.frame(
-        `Subcellular Location` = sc_id_to_select(),
-        Color = glue::glue(
+        )
+      } else {
+        selected_sc <- uniprot[
+          uniprot$Subcellular.location.ID %in% gsub("SL", "SL-", sc_id_to_select()),
+          c("Subcellular.location.ID", "Name")
+        ]
+
+        selected_sc$Color <- glue::glue(
           "<i class='square icon' style='visibility: visible; color: {colours_vector()}'></i>"
         )
-      ) |>
+      }
         semantic_DT(
+          selected_sc,
           escape = FALSE,
           options = list(
             searching = FALSE,
