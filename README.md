@@ -10,10 +10,6 @@ The goal of drawCell is to easily obtain nice cell pictures in R!
 
 ## Installation
 
-`drawCell` needs the package
-[webshot2](https://github.com/rstudio/webshot2), which needs to be
-installed prior to the installation of **drawCell**.
-
 To obtain the cell pictures, `drawCell` connects to the [SwissBioPics
 API](https://www.swissbiopics.org/) so an internet connection is
 required.
@@ -25,42 +21,39 @@ devtools::install_github("svalvaro/drawCell")
 
 ## Examples
 
-It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of
-your species of interest, and one or multiple SL codes for subcellular
+It requires the
+[`organism_identifier`](https://www.ncbi.nlm.nih.gov/taxonomy/) of your
+species of interest, and one or multiple SL codes for subcellular
 locations that will be colored. The SL codes for each subcellular
 location can be found at [Uniprot](https://www.uniprot.org/docs/subcell)
 and
-[uniprotkb\_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
+[uniprotkb_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
 
-To generate a cell of Homo sapiens (Taxonomy id: `9606`) with
+To generate a cell of Homo sapiens (`organism_identifier`: `9606`) with
 highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets
 (SL code: `0154`):
 
 ``` r
 library(drawCell)
-drawCell(taxonomy_id = '9606', sl_ids = c('0095','0154'), color = 'yellow')
+drawCell(organism_identifier = '9606', sl_ids = c('0095','0154'), colour_sl = 'yellow')
 ```
 
-<img src="man/figures/README-animal_cell-1.png" width="100%" />
-
-The taxonomy id for *Quercus ilex* a common tree in the south of Spain
-is `58334` and as an example I will use the SL code of the chloroplast:
-`0049`.
+The `organism_identifier` for *Quercus ilex* a common tree in the south
+of Spain is `58334` and as an example I will use the SL code of the
+chloroplast: `0049`.
 
 ``` r
-drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'lightgreen')
-```
 
-<img src="man/figures/README-plantcell-1.png" width="100%" />
+drawCell(organism_identifier = '58334', sl_ids = '0049', colour_sl = 'lightgreen')
+```
 
 We can also obtain pictures of viruses, yeast, and pretty much
 everything that exists!
 
-For the baker’s yeast *Saccharomyces cerevisiae* whose taxonomy id is
-`4932` we will highlight the nucleus: `0191` and the vacuole: `0272`.
+For the baker’s yeast *Saccharomyces cerevisiae* whose
+`organism_identifier` is `4932` we will highlight the nucleus: `0191`
+and the vacuole: `0272`.
 
 ``` r
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), color = 'pink')
+drawCell(organism_identifier = '4932', sl_ids = c('0191', '0272'), colour_sl = 'pink')
 ```
-
-<img src="man/figures/README-sacc2-1.png" width="100%" />
