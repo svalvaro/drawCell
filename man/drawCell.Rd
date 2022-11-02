@@ -10,37 +10,35 @@ drawCell(
   inputId = NULL,
   width = NULL,
   height = NULL,
-  elementId = NULL
+  elementId = NULL,
+  colour_sl = NULL
 )
 }
 \arguments{
+\item{organism_identifier}{Taxonomy id of the organism of interest.
+Can be found at https://www.ncbi.nlm.nih.gov/taxonomy/}
+
 \item{sl_ids}{Id of the subcellular location, can be found at
 http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
 
-\item{taxonomy_id}{Taxonomy id of the organism of interest. Can be found at
-https://www.ncbi.nlm.nih.gov/taxonomy/}
+\item{inputId}{input id of cell' defaults to `NULL`}
 
-\item{delay}{Time needed to make picture of the HTML (webshot). If the
-picture is blank, try increasing the delay since it might take longer to
-render the HTML. (Units in seconds)}
+\item{width}{width of cell; defaults to `NULL`}
 
-\item{size}{Size of the cell, around 2000 should work well.}
+\item{height}{height of cell; defaults to `NULL`}
 
-\item{color}{Highlited color of the subcelullar components.}
+\item{elementId}{id of cell, defaults to `NULL`}
+
+\item{colour_sl}{Highlighted color of the subcelullar components}
 }
 \value{
-Generates a PNG of the requested cell by the user with highligthed
+Generates a PNG of the requested cell by the user with highlighted
 subcellular elements.
 }
 \description{
 Creates a cell picture
 }
 \examples{
-drawCell(taxonomy_id = '58334',
-sl_ids = '0049',
-size = 2000,
-color = 'lightblue')
-<Add Title>
+drawCell(organism_identifier = '58334', sl_ids = '0049', color = 'lightblue')
 
-<Add Description>
 }
