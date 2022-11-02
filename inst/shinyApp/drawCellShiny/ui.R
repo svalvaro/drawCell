@@ -41,7 +41,7 @@ semanticPage(
     ),
     segment(
       class = "raised very padded container",
-      label(textOutput("selected_cell_name"), class = "big teal top left attached"),
+      label(textOutput("selected_cell_name"), class = "big teal top attached"),
       div(
         class = "ui horizontal stackable segments",
         segment(
@@ -49,11 +49,11 @@ semanticPage(
           drawCellOutput("cell_output", height = "auto", width = "auto")
         ),
         segment(
-          class = "padded",
+          class = "compact padded",
           div(
             class = "ui vertical segments",
             segment(
-              class = "padded",
+              class = "compact padded",
               colourpicker::colourInput(
                 inputId = "selected_sub_cell_color",
                 label = label(
@@ -67,8 +67,8 @@ semanticPage(
               )
             ),
             segment(
-              class = "padded",
-              semantic_DTOutput("cell_sl_color")
+              class = "compact padded",
+              semantic_DTOutput("cell_sl_color", width = "50%")
             )
           )
         )

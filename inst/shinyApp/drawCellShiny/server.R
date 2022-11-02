@@ -54,22 +54,29 @@ function(input, output) {
     DT::renderDataTable({
       req(sc_id_to_select() > 1)
 
-      if (sc_id_to_select() == "SL0000") {
-        selected_sc <- data.frame(
-
-        )
+      if (length(sc_id_to_select()) == 1 && sc_id_to_select() == "SL0000") {
+        selected_sc <- data.frame()
       } else {
         selected_sc <- uniprot[
           uniprot$Subcellular.location.ID %in% gsub("SL", "SL-", sc_id_to_select()),
           c("Subcellular.location.ID", "Name")
         ]
 
-        selected_sc$Color <- glue::glue(
-          "<i class='square icon' style='visibility: visible; color: {colours_vector()}'></i>"
-        )
+        sc_colors <-
+          # By default, SL0000 will have the first default color, so this must be removed
+          # since SL0000 does not need to and will not be displayed in the table anyway.
+          glue::glue(
+            "<i class='square icon' style='visibility: visible; color: {colours_vector()[-1]}'></i>"
+          )
+
+        names(sc_colors) <- gsub("SL", "SL-", sc_id_to_select())[-1]
+
+        selected_sc$Colors <- sc_colors[selected_sc$Subcellular.location.ID]
       }
+
         semantic_DT(
           selected_sc,
+          colnames = c("Subcellular Location ID", "Subcellular Name", "Color"),
           escape = FALSE,
           options = list(
             searching = FALSE,
