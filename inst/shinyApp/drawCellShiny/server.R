@@ -20,19 +20,14 @@ function(input, output) {
   sc_id <- reactiveVal()
   sc_id_to_select <- reactiveVal()
   colours_vector <- reactiveVal("#56B4E9")
-  rendered_cell_svg <- reactiveVal()
 
   output$cell_output <- renderDrawCell({
-    drawn_cell <- drawCell(
+    drawCell(
       organism_identifier = taxonomy_id(),
       sl_ids = sc_id_to_select(),
       inputId = "cell",
       colour_sl = colours_vector()
     )
-
-    rendered_cell_svg(drawn_cell)
-
-    drawn_cell
   })
 
   observeEvent(input$cell_click, {
