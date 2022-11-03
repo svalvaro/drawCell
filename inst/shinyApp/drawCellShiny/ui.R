@@ -2,15 +2,18 @@ semanticPage(
   includeCSS("www/styles.css"),
   # Application title
   titlePanel(
-    title = a(
-      class = "ui huge teal label",
+    title = div(
+      class = "ui massive fluid teal right icon label",
       "drawCell",
-      href = "https://github.com/svalvaro/drawCell",
-      target = "_blank"
+      a(
+        icon(class = "big github square"),
+        href = "https://github.com/svalvaro/drawCell",
+        target = "_blank"
+      )
     )
   ),
   div(
-    class = "ui segments",
+    class = "ui attached segments",
     segment(
       class = "padded",
       div(
@@ -47,38 +50,38 @@ semanticPage(
         segment(
           class = "compact padded",
           div(
-            class = "ui vertical segments",
-            segment(
-              class = "compact padded",
-              div(
-                class = "ui action input",
-                colourpicker::colourInput(
-                  inputId = "colourInput",
-                  label = label(
-                    class = "teal pointing below",
-                    "Select subcellular location to highlight then select color"
-                  ),
-                  "#56B4E9",
-                  palette = "square",
-                  returnName = TRUE,
-                  showColour = c("background")
-                ),
-                button(
-                  input_id = "clear_color",
-                  class = "basic",
-                  label = "Clear Colors"
-                )
-              )
+            class = "ui action input",
+            colourpicker::colourInput(
+              inputId = "colourInput",
+              label = label(
+                class = "teal pointing below",
+                "Select subcellular location to highlight then select color"
+              ),
+              "#56B4E9",
+              palette = "square",
+              returnName = TRUE,
+              showColour = c("background")
             ),
-            segment(
-              class = "compact padded",
-              semantic_DTOutput("cell_sl_color", width = "50%")
+            button(
+              input_id = "clear_color",
+              class = "basic",
+              label = "Clear Colors"
             )
           )
         ),
         segment(
-          class = "padded",
-          drawCell:::drawCellOutput("cell_output", height = "auto", width = "auto")
+          class = "compact padded",
+          div(
+            class = "ui horizontal stackable segments",
+            segment(
+              class = "padded",
+              drawCell:::drawCellOutput("cell_output", height = "auto", width = "auto")
+            ),
+            segment(
+              class = "compact padded",
+              semantic_DTOutput("cell_sl_color")
+            )
+          )
         )
       )
     )
