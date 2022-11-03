@@ -74,21 +74,21 @@ function(input, output) {
         selected_sc$Colors <- sc_colors[selected_sc$Subcellular.location.ID]
       }
 
-        semantic_DT(
-          selected_sc,
-          colnames = c("Subcellular Location ID", "Subcellular Name", "Color"),
-          escape = FALSE,
-          options = list(
-            searching = FALSE,
-            paging = FALSE,
-            info = FALSE,
-            columnDefs = list(
-              list(
-                className = "dt-center",
-                targets = "_all"
-              )
+      semantic_DT(
+        selected_sc,
+        colnames = c("Subcellular Location ID", "Subcellular Name", "Color"),
+        escape = FALSE,
+        options = list(
+          searching = FALSE,
+          paging = FALSE,
+          info = FALSE,
+          columnDefs = list(
+            list(
+              className = "dt-center",
+              targets = "_all"
             )
           )
         )
+      )
     })
 }
