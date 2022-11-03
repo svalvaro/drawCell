@@ -19,14 +19,14 @@ function(input, output) {
 
   sc_id <- reactiveVal()
 
-  subcelular_colours <- reactiveVal(list("SL0000" = "#56B4E9"))
+  subcellular_colours <- reactiveVal(list("SL0000" = "#56B4E9"))
 
   colors_table <- reactiveVal()
 
   output$cell_output <- drawCell:::renderDrawCell({
     drawCell(
       organism_identifier = taxonomy_id(),
-      list_sl_colors = subcelular_colours()
+      list_sl_colors = subcellular_colours()
     )
   })
 
@@ -36,18 +36,18 @@ function(input, output) {
 
     sc_id(substr(input$cell_click, 3, 6))
 
-    list_named_colours <- subcelular_colours()
+    list_named_colours <- subcellular_colours()
     list_named_colours[[input$cell_click]] <- input$colourInput
-    subcelular_colours(list_named_colours)
+    subcellular_colours(list_named_colours)
   })
 
   observeEvent(input$colourInput, {
     req(input$cell_click)
     req(input$colourInput)
 
-    list_named_colours <- subcelular_colours()
+    list_named_colours <- subcellular_colours()
     list_named_colours[[input$cell_click]] <- input$colourInput
-    subcelular_colours(list_named_colours)
+    subcellular_colours(list_named_colours)
   })
 
   observeEvent(input$cell_type, {
@@ -62,18 +62,18 @@ function(input, output) {
     {
       input$colourInput
       input$cell_click
-      subcelular_colours()
+      subcellular_colours()
     },
     {
       req(input$colourInput)
       req(input$cell_click)
-      req(subcelular_colours())
+      req(subcellular_colours())
 
-      if (length(subcelular_colours()) == 1 && names(subcelular_colours()) == "SL0000") {
+      if (length(subcellular_colours()) == 1 && names(subcellular_colours()) == "SL0000") {
         selected_sc <- data.frame()
       } else {
         selected_sc <- uniprot[
-          uniprot$Subcellular.location.ID %in% gsub("SL", "SL-", names(subcelular_colours())),
+          uniprot$Subcellular.location.ID %in% gsub("SL", "SL-", names(subcellular_colours())),
           c("Subcellular.location.ID", "Name")
         ]
 
@@ -82,12 +82,12 @@ function(input, output) {
             "<div class='ui label'
             style='visibility: visible;
             color: white;
-            background-color: {subcelular_colours()}'>
-            {subcelular_colours()}
+            background-color: {subcellular_colours()}'>
+            {subcellular_colours()}
             </div>"
           )
 
-        names(sc_colors) <- gsub("SL", "SL-", names(subcelular_colours()))
+        names(sc_colors) <- gsub("SL", "SL-", names(subcellular_colours()))
         selected_sc$Color <- sc_colors[selected_sc$Subcellular.location.ID]
         selected_sc <- selected_sc[, c("Name", "Color")]
       }
@@ -118,7 +118,7 @@ function(input, output) {
     input$clear_color,
     {
       sc_id(NULL)
-      subcelular_colours(list("SL0000" = "#56B4E9"))
+      subcellular_colours(list("SL0000" = "#56B4E9"))
       output$cell_sl_color <-
         DT::renderDataTable({
           semantic_DT(
