@@ -21,6 +21,8 @@ function(input, output) {
 
   subcelular_colours <- reactiveVal(list("SL0000" = "#56B4E9"))
 
+  colors_table <- reactiveVal()
+
   output$cell_output <- drawCell:::renderDrawCell({
     drawCell(
       organism_identifier = taxonomy_id(),
@@ -29,16 +31,22 @@ function(input, output) {
   })
 
   observeEvent(input$cell_click, {
+    req(input$cell_click)
+    req(input$colourInput)
+
     sc_id(substr(input$cell_click, 3, 6))
 
-    list_named_colours <- c(subcelular_colours(), input$colourInput)
-    names(list_named_colours)[length(list_named_colours)] <- input$cell_click
+    list_named_colours <- subcelular_colours()
+    list_named_colours[[input$cell_click]] <- input$colourInput
     subcelular_colours(list_named_colours)
   })
 
   observeEvent(input$colourInput, {
+    req(input$cell_click)
+    req(input$colourInput)
+
     list_named_colours <- subcelular_colours()
-    list_named_colours[length(list_named_colours)] <- input$colourInput
+    list_named_colours[[input$cell_click]] <- input$colourInput
     subcelular_colours(list_named_colours)
   })
 
@@ -51,9 +59,15 @@ function(input, output) {
   })
 
   observeEvent(
-    subcelular_colours(),
     {
-      req(length(subcelular_colours()) > 1)
+      input$colourInput
+      input$cell_click
+      subcelular_colours()
+    },
+    {
+      req(input$colourInput)
+      req(input$cell_click)
+      req(subcelular_colours())
 
       if (length(subcelular_colours()) == 1 && names(subcelular_colours()) == "SL0000") {
         selected_sc <- data.frame()
