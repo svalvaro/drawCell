@@ -14,8 +14,8 @@
 #'
 #' @name drawCell-shiny
 #'
-drawCellOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'drawCell', width, height, package = 'drawCell')
+drawCellOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "drawCell", width, height, package = "drawCell")
 }
 
 #' @rdname drawCell-shiny
@@ -30,6 +30,6 @@ csl <- function(items) {
   return(paste(paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), sep = ""))
 }
 
-find_sc = function(id) {
+find_sc <- function(id) {
   uniprot[which(uniport_sc_ids == id), ]$Name
 }

@@ -6,7 +6,8 @@
 #' @import shiny.semantic
 #' @import htmltools
 #' @import glue
-drawCellShiny <- function(){
-    shiny::shinyAppDir(appDir = base::system.file('shinyApp/drawCellShiny',
-                                                  package = 'drawCell'))
+drawCellShiny <- function() {
+  shiny::shinyAppDir(appDir = base::system.file("shinyApp/drawCellShiny",
+    package = "drawCell"
+  ))
 }
