@@ -24,7 +24,7 @@ semanticPage(
             input_id = "taxIdInput",
             label = label(
               class = "teal pointing below",
-              "Introduce the species name or Taxonomy ID"
+              "Introduce the species name or Taxonomy ID (Leave blank when selecting cell type)"
             ),
             value = "",
             placeholder = "Homo sapiens / 6096"
@@ -38,7 +38,10 @@ semanticPage(
           class = "padded",
           selectInput(
             inputId = "cell_type",
-            label = label(class = "teal pointing below", "Select Cell"),
+            label = label(
+              class = "teal pointing below",
+              "Select Cell Type (Leave blank when using species name or taxonomy ID)"
+            ),
             choices = c("", sort(cell_name)),
             selected = "Animal cell",
             type = "big search clearable selection"
