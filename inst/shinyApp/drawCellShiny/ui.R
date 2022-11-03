@@ -55,37 +55,37 @@ semanticPage(
       div(
         class = "ui horizontal stackable segments",
         segment(
-          class = "compact padded",
-          colourpicker::colourInput(
-            inputId = "colourInput",
-            label = label(
-              class = "teal pointing below",
-              "Select subcellular location to highlight then select color"
-            ),
-            "#56B4E9",
-            palette = "square",
-            returnName = TRUE,
-            showColour = c("background")
-          ),
-          button(
-            input_id = "clear_color",
-            class = "basic",
-            label = "Clear Colors"
-          )
-        ),
-        segment(
-          class = "padded",
+          class = "padded compact",
           div(
-            class = "ui horizontal stackable segments",
+            class = "ui vertical compact segments",
             segment(
-              class = "circular",
-              drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
+              class = "compact padded",
+              colourpicker::colourInput(
+                inputId = "colourInput",
+                label = label(
+                  class = "teal pointing below",
+                  "Select subcellular location to highlight then select color"
+                ),
+                "#56B4E9",
+                palette = "square",
+                returnName = TRUE,
+                showColour = c("background")
+              ),
+              button(
+                input_id = "clear_color",
+                class = "basic",
+                label = "Clear Colors"
+              )
             ),
             segment(
               class = "compact padded",
               semantic_DTOutput("cell_sl_color")
             )
           )
+        ),
+        segment(
+          class = "padded",
+          drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
         )
       )
     )
