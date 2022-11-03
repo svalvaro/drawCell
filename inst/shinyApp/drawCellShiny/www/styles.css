@@ -4,7 +4,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-#selected_sub_cell_color {
+#colourInput {
   width: 100%;
 }
 
@@ -15,6 +15,12 @@
 }
 
 .ui.horizontal.segments > .ui.segment {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.ui.vertical.segments > .ui.segment {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none !important;
