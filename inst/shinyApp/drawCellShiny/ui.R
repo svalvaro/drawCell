@@ -19,7 +19,7 @@ semanticPage(
       div(
         class = "ui horizontal stackable segments",
         segment(
-          class = "padded",
+          class = "compact padded",
           text_input(
             input_id = "taxIdInput",
             label = label(
@@ -35,7 +35,7 @@ semanticPage(
           div(class = "ui vertical divider", "OR")
         ),
         segment(
-          class = "padded",
+          class = "compact padded",
           selectInput(
             inputId = "cell_type",
             label = label(
@@ -56,24 +56,21 @@ semanticPage(
         class = "ui horizontal stackable segments",
         segment(
           class = "compact padded",
-          div(
-            class = "ui action input",
-            colourpicker::colourInput(
-              inputId = "colourInput",
-              label = label(
-                class = "teal pointing below",
-                "Select subcellular location to highlight then select color"
-              ),
-              "#56B4E9",
-              palette = "square",
-              returnName = TRUE,
-              showColour = c("background")
+          colourpicker::colourInput(
+            inputId = "colourInput",
+            label = label(
+              class = "teal pointing below",
+              "Select subcellular location to highlight then select color"
             ),
-            button(
-              input_id = "clear_color",
-              class = "basic",
-              label = "Clear Colors"
-            )
+            "#56B4E9",
+            palette = "square",
+            returnName = TRUE,
+            showColour = c("background")
+          ),
+          button(
+            input_id = "clear_color",
+            class = "basic",
+            label = "Clear Colors"
           )
         ),
         segment(
@@ -81,7 +78,7 @@ semanticPage(
           div(
             class = "ui horizontal stackable segments",
             segment(
-              class = "compact padded",
+              class = "circular",
               drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
             ),
             segment(
