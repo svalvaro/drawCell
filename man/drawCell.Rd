@@ -4,41 +4,30 @@
 \alias{drawCell}
 \title{Creates a cell picture}
 \usage{
-drawCell(
-  organism_identifier,
-  sl_ids,
-  inputId = NULL,
-  width = NULL,
-  height = NULL,
-  elementId = NULL,
-  colour_sl = NULL
-)
+drawCell(organism_identifier, list_sl_colors, width = NULL, height = NULL)
 }
 \arguments{
-\item{organism_identifier}{Taxonomy id of the organism of interest.
-Can be found at https://www.ncbi.nlm.nih.gov/taxonomy/}
+\item{organism_identifier}{Taxonomy id of the organism of interest. Can be found at
+https://www.ncbi.nlm.nih.gov/taxonomy/}
 
-\item{sl_ids}{Id of the subcellular location, can be found at
-http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go}
-
-\item{inputId}{input id of cell' defaults to `NULL`}
-
-\item{width}{width of cell; defaults to `NULL`}
-
-\item{height}{height of cell; defaults to `NULL`}
-
-\item{elementId}{id of cell, defaults to `NULL`}
-
-\item{colour_sl}{Highlighted color of the subcelullar components}
+\item{list_sl_colors}{Named list. The name is the id of the subcellular location, can be found at
+http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour that
+each subcellular location should have
+@param width  Width of the resulting image
+@param height Heigth of the resulting image}
 }
 \value{
-Generates a PNG of the requested cell by the user with highlighted
+Generates a vector image of the requested cell by the user with coloured
 subcellular elements.
 }
 \description{
 Creates a cell picture
 }
 \examples{
-drawCell(organism_identifier = '58334', sl_ids = '0049', color = 'lightblue')
-
+drawCell(
+   organism_identifier = '9606',
+   list_sl_colors = list(
+   'SL0095' = 'green',
+   'SL0154'='red')
+ )
 }

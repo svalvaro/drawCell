@@ -8,24 +8,22 @@ Authors@R: c(
   )
 Description: The package drawCell allows the user the fast generation of
     cell images with highlighted subcellular components. It works by
-    providing as input the organism_identifier of an organism, and one or
-    multiple SL (Subcellular IDs). It retrieves this data from the
-    SwissBioPics API. An internet connection is required to use drawCell.
+    providing as input the taxonomy id of an organism, and one or multiple
+    SL (Subcellular IDs). It retrieves this data from the SwissBioPics
+    API. An internet connection is required to use drawCell.
 License: GPL-3
 Imports: 
+    glue,
     htmltools,
     htmlwidgets,
-    shiny
+    shiny,
+    shiny.semantic
 Suggests: 
     BiocStyle,
     knitr,
     readr,
     rmarkdown,
-    testthat,
-    rcmdcheck,
-    lintr,
-    testthat,
-    spelling
+    testthat
 VignetteBuilder: 
     knitr
 biocViews: SingleCell, Software, Infrastructure,Visualization
