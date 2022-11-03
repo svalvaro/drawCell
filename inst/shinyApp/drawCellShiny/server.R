@@ -50,8 +50,9 @@ function(input, output) {
     input$cell_type
   })
 
-  output$cell_sl_color <-
-    DT::renderDataTable({
+  observeEvent(
+    subcelular_colours(),
+    {
       req(length(subcelular_colours()) > 1)
 
       if (length(subcelular_colours()) == 1 && names(subcelular_colours()) == "SL0000") {
@@ -73,26 +74,43 @@ function(input, output) {
           )
 
         names(sc_colors) <- gsub("SL", "SL-", names(subcelular_colours()))
-
         selected_sc$Color <- sc_colors[selected_sc$Subcellular.location.ID]
+        selected_sc <- selected_sc[, c("Name", "Color")]
       }
 
-      semantic_DT(
-        selected_sc[, c("Name", "Color")],
-        colnames = c("Subcellular Name", "Color"),
-        escape = FALSE,
-        options = list(
-          searching = FALSE,
-          scrollX = TRUE,
-          paging = FALSE,
-          info = FALSE,
-          columnDefs = list(
-            list(
-              className = "dt-center",
-              targets = "_all"
+      output$cell_sl_color <-
+        DT::renderDataTable({
+          semantic_DT(
+            selected_sc,
+            colnames = c("Subcellular Name", "Color"),
+            escape = FALSE,
+            options = list(
+              searching = FALSE,
+              paging = FALSE,
+              info = FALSE,
+              columnDefs = list(
+                list(
+                  className = "dt-center",
+                  targets = "_all"
+                )
+              )
             )
           )
-        )
-      )
-    })
+        })
+    }
+  )
+
+  observeEvent(
+    input$clear_color,
+    {
+      sc_id(NULL)
+      subcelular_colours(list("SL0000" = "#56B4E9"))
+      output$cell_sl_color <-
+        DT::renderDataTable({
+          semantic_DT(
+            data.frame()
+          )
+        })
+    }
+  )
 }

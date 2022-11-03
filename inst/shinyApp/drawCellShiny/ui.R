@@ -18,7 +18,7 @@ semanticPage(
         segment(
           class = "padded",
           text_input(
-            input_id = "cell_taxonomy_id",
+            input_id = "taxIdInput",
             label = label(
               class = "teal pointing below",
               "Introduce the species name or Taxonomy ID"
@@ -30,7 +30,7 @@ semanticPage(
         segment(
           class = "padded",
           selectInput(
-            inputId = "selected_cell",
+            inputId = "cell_type",
             label = label(class = "teal pointing below", "Select Cell"),
             choices = c("", sort(cell_name)),
             selected = "Animal cell",
@@ -45,25 +45,29 @@ semanticPage(
       div(
         class = "ui horizontal stackable segments",
         segment(
-          class = "padded",
-          drawCellOutput("cell_output", height = "auto", width = "auto")
-        ),
-        segment(
           class = "compact padded",
           div(
             class = "ui vertical segments",
             segment(
               class = "compact padded",
-              colourpicker::colourInput(
-                inputId = "selected_sub_cell_color",
-                label = label(
-                  class = "teal pointing below",
-                  "Select color then cell subsstructure to highlight"
+              div(
+                class = "ui action input",
+                colourpicker::colourInput(
+                  inputId = "colourInput",
+                  label = label(
+                    class = "teal pointing below",
+                    "Select subcellular location to highlight then select color"
+                  ),
+                  "#56B4E9",
+                  palette = "square",
+                  returnName = TRUE,
+                  showColour = c("background")
                 ),
-                "#56B4E9",
-                palette = "square",
-                returnName = TRUE,
-                showColour = c("background")
+                button(
+                  input_id = "clear_color",
+                  class = "basic",
+                  label = "Clear Colors"
+                )
               )
             ),
             segment(
@@ -71,6 +75,10 @@ semanticPage(
               semantic_DTOutput("cell_sl_color", width = "50%")
             )
           )
+        ),
+        segment(
+          class = "padded",
+          drawCell:::drawCellOutput("cell_output", height = "auto", width = "auto")
         )
       )
     )
