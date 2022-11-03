@@ -23,7 +23,10 @@ Suggests:
     knitr,
     readr,
     rmarkdown,
-    testthat
+    testthat,
+    lintr,
+    rcmdcheck,
+    spelling
 VignetteBuilder: 
     knitr
 biocViews: SingleCell, Software, Infrastructure,Visualization
