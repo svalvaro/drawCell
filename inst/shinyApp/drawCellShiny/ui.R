@@ -42,7 +42,7 @@ semanticPage(
               class = "teal pointing below",
               "Select Cell Type (Leave blank when using species name or taxonomy ID)"
             ),
-            choices = c("", sort(cell_name)),
+            choices = c("", sort(unique(data$Image.name))),
             selected = "Animal cell",
             type = "big search clearable selection"
           )
@@ -81,8 +81,8 @@ semanticPage(
           div(
             class = "ui horizontal stackable segments",
             segment(
-              class = "padded",
-              drawCell:::drawCellOutput("cell_output", height = "auto", width = "auto")
+              class = "compact padded",
+              drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
             ),
             segment(
               class = "compact padded",
