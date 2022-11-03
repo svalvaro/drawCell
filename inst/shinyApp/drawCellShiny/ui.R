@@ -31,6 +31,10 @@ semanticPage(
           )
         ),
         segment(
+          class = "compact",
+          div(class = "ui vertical divider", "OR")
+        ),
+        segment(
           class = "padded",
           selectInput(
             inputId = "cell_type",
@@ -70,7 +74,7 @@ semanticPage(
           )
         ),
         segment(
-          class = "compact padded",
+          class = "padded",
           div(
             class = "ui horizontal stackable segments",
             segment(
