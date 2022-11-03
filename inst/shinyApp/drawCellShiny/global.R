@@ -1,12 +1,6 @@
-library(shiny)
-library(shinydashboard)
-library(shinyWidgets)
-library(readr)
-library(png)
-library(grid)
-
 library(drawCell)
-library(glue)
+library(shiny)
+library(shiny.semantic)
 
 path = system.file("extdata", "swissbiopics_mapping.csv", package = "drawCell")
 data = read.csv2(path, sep = ";")
