@@ -12,9 +12,11 @@ https://www.ncbi.nlm.nih.gov/taxonomy/}
 
 \item{list_sl_colors}{Named list. The name is the id of the subcellular location, can be found at
 http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour that
-each subcellular location should have
-@param width  Width of the resulting image
-@param height Heigth of the resulting image}
+each subcellular location should have}
+
+\item{width}{Width of the resulting image}
+
+\item{height}{Height of the resulting image}
 }
 \value{
 Generates a vector image of the requested cell by the user with coloured

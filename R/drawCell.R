@@ -1,12 +1,12 @@
 #' Creates a cell picture
 #'
 #' @param organism_identifier Taxonomy id of the organism of interest. Can be found at
-#' https://www.ncbi.nlm.nih.gov/taxonomy/
+#'   https://www.ncbi.nlm.nih.gov/taxonomy/
 #' @param list_sl_colors Named list. The name is the id of the subcellular location, can be found at
-#'  http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour that
-#'  each subcellular location should have
-#'  @param width  Width of the resulting image
-#'  @param height Heigth of the resulting image
+#'   http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour that
+#'   each subcellular location should have
+#' @param width  Width of the resulting image
+#' @param height Height of the resulting image
 #'
 #' @import htmlwidgets
 #'
