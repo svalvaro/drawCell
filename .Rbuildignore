@@ -9,5 +9,4 @@
 ^\.lintr$
 ^pkgdown$
 ^README\.md$
-^vignettes$
 inst/htmlwidgets/lib/node_modules/.package-lock.json
