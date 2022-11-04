@@ -26,9 +26,6 @@ The goal of drawCell is to easily obtain nice cell pictures in R!
 
 ## Installation
 
-`drawCell` needs the package [webshot2](https://github.com/rstudio/webshot2), 
-which needs to be installed prior to the installation of **drawCell**.
-
 To obtain the cell pictures, `drawCell` connects to the
 [SwissBioPics API](https://www.swissbiopics.org/) so an internet connection 
 is required.
@@ -54,7 +51,7 @@ highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets
 
 library(drawCell)
 
-drawCell(organism_identifier = '9060', list_sl_colors = list("SL0173" = "red", "SL0101" = "blue"))
+drawCell(organism_identifier = '9606', list_sl_colors = list("SL0173" = "red", "SL0101" = "blue"))
 ```
 
 
