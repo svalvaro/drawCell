@@ -33,6 +33,5 @@ Suggests:
     spelling
 VignetteBuilder: 
     knitr
-biocViews: SingleCell, Software, Infrastructure,Visualization
 Encoding: UTF-8
 RoxygenNote: 7.2.1
