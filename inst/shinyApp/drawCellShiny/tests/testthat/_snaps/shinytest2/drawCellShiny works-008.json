@@ -1,0 +1,58 @@
+{
+  "input": {
+    "cell_sl_color_rows_all": [
+      1,
+      2
+    ],
+    "cell_sl_color_rows_current": [
+      1,
+      2
+    ],
+    "cell_sl_color_state": [
+      "1667531266560",
+      "0",
+      "10",
+      "",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "TRUE",
+      "",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "TRUE",
+      "",
+      "TRUE",
+      "FALSE",
+      "TRUE"
+    ],
+    "cell_type": "",
+    "clear_color": 0,
+    "colourInput": "#57EDA0",
+    "taxIdInput": "6096"
+  },
+  "output": {
+    "cell_output": {
+      "x": {
+        "input_id": "cell",
+        "organism_identifier": 6096,
+        "sl_ids": "SL0000",
+        "colour_sl": "#56B4E9"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "selected_cell_name": ""
+  },
+  "export": {
+
+  }
+}

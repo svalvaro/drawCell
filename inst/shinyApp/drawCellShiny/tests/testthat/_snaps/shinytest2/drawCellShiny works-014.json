@@ -1,0 +1,152 @@
+{
+  "input": {
+    "cell_click": "SL0041",
+    "cell_sl_color_cell_clicked": {
+
+    },
+    "cell_sl_color_cells_selected": [
+
+    ],
+    "cell_sl_color_columns_selected": null,
+    "cell_sl_color_rows_all": [
+      1,
+      2
+    ],
+    "cell_sl_color_rows_current": 1,
+    "cell_sl_color_rows_selected": null,
+    "cell_sl_color_search": "",
+    "cell_sl_color_state": [
+      "1667531351627",
+      "0",
+      "10",
+      "",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "TRUE",
+      "",
+      "TRUE",
+      "FALSE",
+      "TRUE",
+      "TRUE",
+      "",
+      "TRUE",
+      "FALSE",
+      "TRUE"
+    ],
+    "cell_type": "Fission yeast cell",
+    "clear_color": 0,
+    "colourInput": "#F05881",
+    "taxIdInput": ""
+  },
+  "output": {
+    "cell_output": {
+      "x": {
+        "input_id": "cell",
+        "organism_identifier": 147554,
+        "sl_ids": "SL0000,SL0041",
+        "colour_sl": "#56B4E9,#F05881"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "cell_sl_color": {
+      "x": {
+        "style": "semanticui",
+        "filter": "none",
+        "vertical": false,
+        "container": "<table class=\"ui small compact table\">\n  <thead>\n    <tr>\n      <th>Subcellular Name<\/th>\n      <th>Color<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>",
+        "options": {
+          "searching": false,
+          "paging": false,
+          "info": false,
+          "columnDefs": [
+            {
+              "className": "dt-center",
+              "targets": "_all"
+            }
+          ],
+          "order": [
+
+          ],
+          "autoWidth": false,
+          "orderClasses": false,
+          "ajax": {
+            "type": "POST",
+            "data": "function(d) {\nd.search.caseInsensitive = true;\nd.search.smart = true;\nd.escape = false;\nvar encodeAmp = function(x) { x.value = x.value.replace(/&/g, \"%26\"); }\nencodeAmp(d.search);\n$.each(d.columns, function(i, v) {encodeAmp(v.search);});\n}"
+          },
+          "serverSide": true,
+          "processing": true
+        },
+        "selection": {
+          "mode": "multiple",
+          "selected": null,
+          "target": "row",
+          "selectable": null
+        }
+      },
+      "evals": [
+        "options.ajax.data"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+        {
+          "name": "jquery",
+          "version": "3.6.0",
+          "src": {
+            "href": "jquery-3.6.0"
+          },
+          "meta": null,
+          "script": "jquery-3.6.0.min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        },
+        {
+          "name": "dt-core-semanticui",
+          "version": "1.12.1",
+          "src": {
+            "href": "dt-core-semanticui-1.12.1"
+          },
+          "meta": null,
+          "script": [
+            "js/jquery.dataTables.min.js",
+            "js/dataTables.semanticui.min.js"
+          ],
+          "stylesheet": "css/dataTables.semanticui.min.css",
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": false
+        },
+        {
+          "name": "crosstalk",
+          "version": "1.2.0",
+          "src": {
+            "href": "crosstalk-1.2.0"
+          },
+          "meta": null,
+          "script": "js/crosstalk.min.js",
+          "stylesheet": "css/crosstalk.min.css",
+          "head": null,
+          "attachment": null,
+          "all_files": true
+        }
+      ]
+    },
+    "selected_cell_name": "Fission yeast cell"
+  },
+  "export": {
+
+  }
+}
