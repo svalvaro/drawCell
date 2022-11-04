@@ -23,11 +23,15 @@ function(input, output) {
 
   colors_table <- reactiveVal()
 
-  output$cell_output <- drawCell:::renderDrawCell({
+  drawcell_plot <- reactive({
     drawCell(
       organism_identifier = taxonomy_id(),
       list_sl_colors = subcellular_colours()
     )
+  })
+  
+  output$cell_output <- drawCell:::renderDrawCell({
+    drawcell_plot()
   })
 
   observeEvent(input$cell_click, {
@@ -128,6 +132,7 @@ function(input, output) {
     }
   )
   
+
   observeEvent(input$cell_type, {
     sc_id(NULL)
     req(input$cell_type)
@@ -143,5 +148,37 @@ function(input, output) {
     if (input$cell_type == "Animal spermatozoa cell") subcellular_colours(list("SL0199"  = "white"))
     if (input$cell_type == "Animal egg cell") subcellular_colours(list("SL0540"  = "white"))
   })
+
+  code_copy <- reactive({
+    print(as.character(subcellular_colours()))
+    glue::glue(
+      "library(drawCell)
+      drawCell({taxonomy_id()}, {
+      for (i in subcellular_colours()) {
+        
+      }
+      })"
+    )
+  })
+
+  output$copy_code <- renderUI({
+    rclipboard::rclipButton(
+      inputId = "clipbtn",
+      label = "Copy the code to generate the cell",
+      clipText = code_copy(), 
+      icon = icon("clipboard")
+    )
+  })
+
+  
+  output$download_plot <- downloadHandler(
+    filename = "Shinyplot.png",
+    content = function(file) {
+      png(file)
+      print('hi')
+      drawcell_plot()
+    })
+  
+
 }
 

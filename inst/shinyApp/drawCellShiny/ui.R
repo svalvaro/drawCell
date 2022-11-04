@@ -13,6 +13,7 @@ semanticPage(
       h2("App for creating cell pictures")
     )
   ),
+  rclipboard::rclipboardSetup(),
   div(
     class = "ui attached segments no_box",
     segment(
@@ -84,6 +85,14 @@ semanticPage(
               semantic_DTOutput("cell_sl_color")
             )
           )
+        ),
+        segment(
+          class = "compact padded no_box",
+          uiOutput("copy_code")
+        ),
+        segment(
+          class = "compact padded no_box",
+          downloadButton("download_plot", "Download")
         ),
         segment(
           class = "padded no_box",
