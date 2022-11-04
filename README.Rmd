@@ -24,8 +24,6 @@ knitr::opts_chunk$set(
 
 The goal of drawCell is to easily obtain nice cell pictures in R!
 
-
-
 ## Installation
 
 `drawCell` needs the package [webshot2](https://github.com/rstudio/webshot2), 
@@ -42,22 +40,21 @@ devtools::install_github("svalvaro/drawCell")
 
 ## Examples
 
-
 It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your
 species of interest, and one or multiple SL codes for subcellular locations 
 that will be colored. The SL codes for each subcellular location can be found at
 [Uniprot](https://www.uniprot.org/docs/subcell) and
 [uniprotkb_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
 
-
-
 To generate a cell of Homo sapiens (Taxonomy id: `9606`) with 
 highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets 
 (SL code: `0154`):
 
 ```{r animal_cell,  results='hide', message=F, warning=FALSE, error=F}
+
 library(drawCell)
-drawCell(taxonomy_id = '9606', sl_ids = c('0095','0154'), color = 'yellow')
+
+drawCell(organism_identifier = '9060', list_sl_colors = list("SL0173" = "red", "SL0101" = "blue"))
 ```
 
 
@@ -67,12 +64,8 @@ The taxonomy id for *Quercus ilex* a common tree in the south of Spain is
 
 ```{r plantcell,  results='hide', message=F, warning=FALSE, error=F}
 
-drawCell(taxonomy_id = '58334', sl_ids = '0049', color = 'lightgreen')
+drawCell(organism_identifier = '58334', list_sl_colors = list("SL0049" = 'lightgreen'))
 ```
-
-
-
-
 
 We can also obtain pictures of viruses, yeast, and pretty much everything that
 exists!
@@ -80,14 +73,7 @@ exists!
 For the baker's yeast *Saccharomyces cerevisiae* whose taxonomy id is `4932` 
 we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
-
-
 ```{r sacc2, results='hide', message=F, warning=FALSE, error=F}
-drawCell(taxonomy_id = '4932', sl_ids = c('0191', '0272'), color = 'pink')
+
+drawCell(organism_identifier = '4932', list_sl_colors = list("SL0191" = "pink", "SL0272" = "yellow"))
 ```
-
-
-
-
-
-
