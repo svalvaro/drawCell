@@ -13,13 +13,13 @@ semanticPage(
     )
   ),
   div(
-    class = "ui attached segments",
+    class = "ui attached segments no_box",
     segment(
-      class = "padded",
+      class = "padded no_box",
       div(
-        class = "ui horizontal stackable segments centered_content",
+        class = "ui horizontal stackable segments centered_content no_box",
         segment(
-          class = "compact padded",
+          class = "compact padded no_box min_width_input",
           selectInput(
             inputId = "cell_type",
             label = label(
@@ -32,16 +32,16 @@ semanticPage(
           )
         ),
         segment(
-          class = "compact padded",
+          class = "compact padded no_box",
           div(class = "ui vertical divider", "OR")
         ),
         segment(
-          class = "compact padded",
+          class = "compact padded no_box min_width_input",
           text_input(
             input_id = "taxIdInput",
             label = label(
               class = "big teal pointing below",
-              "Species name/Taxonomy ID"
+              "Species Name/Taxonomy ID"
             ),
             value = "",
             placeholder = "Homo sapiens / 6096"
@@ -53,13 +53,13 @@ semanticPage(
       class = "raised very padded container",
       label(textOutput("selected_cell_name"), class = "big teal top attached"),
       div(
-        class = "ui horizontal stackable segments",
+        class = "ui horizontal stackable segments no_box",
         segment(
-          class = "padded compact",
+          class = "padded compact no_box",
           div(
             class = "ui vertical compact segments",
             segment(
-              class = "compact padded",
+              class = "compact padded no_box",
               colourpicker::colourInput(
                 inputId = "colourInput",
                 label = label(
@@ -78,16 +78,26 @@ semanticPage(
               )
             ),
             segment(
-              class = "compact padded",
+              class = "compact padded no_box",
               semantic_DTOutput("cell_sl_color")
             )
           )
         ),
         segment(
-          class = "padded",
+          class = "padded no_box",
           drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
         )
       )
+    ),
+    segment(
+      class = "compact padded right floated no_box",
+      "Cell Images from ",
+      a(
+        "SwissBioPics API",
+        href = "https://www.swissbiopics.org/",
+        target = "_blank"
+      ),
+      style = "background: transparent;"
     )
   )
 )

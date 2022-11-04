@@ -13,19 +13,7 @@
   display: flex;
 }
 
-.ui.segments {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.ui.horizontal.segments > .ui.segment {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.ui.vertical.segments > .ui.segment {
+.no_box {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border: none !important;
@@ -40,8 +28,8 @@
   margin: 0 0 1em;
 }
 
-#cell_sl_color {
-  min-width: 22rem;
+#cell_sl_color, .min_width_input {
+  min-width: 22rem !important;
 }
 
 .ui.small.compact.table.dataTable.no-footer {
