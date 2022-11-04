@@ -150,15 +150,7 @@ function(input, output) {
   })
 
   code_copy <- reactive({
-    print(as.character(subcellular_colours()))
-    glue::glue(
-      "library(drawCell)
-      drawCell({taxonomy_id()}, {
-      for (i in subcellular_colours()) {
-        
-      }
-      })"
-    )
+    create_code_to_copy(taxonomy_id(), subcellular_colours())
   })
 
   output$copy_code <- renderUI({
@@ -169,16 +161,12 @@ function(input, output) {
       icon = icon("clipboard")
     )
   })
-
   
-  output$download_plot <- downloadHandler(
-    filename = "Shinyplot.png",
-    content = function(file) {
-      png(file)
-      print('hi')
-      drawcell_plot()
-    })
-  
-
+  # output$download_plot <- downloadHandler(
+  #   filename = "Shinyplot.png",
+  #   content = function(file) {
+  #     png(file)
+  #     print('hi')
+  #     drawcell_plot()
+  #   })
 }
-

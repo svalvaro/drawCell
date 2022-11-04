@@ -31,3 +31,23 @@ csl <- function(items) {
 find_sc = function(id) {
   uniprot[which(uniport_sc_ids == id), ]$Name
 }
+
+create_code_to_copy <- function(taxID, list_sl_colours) {
+
+  string_colors = ""
+  
+  for(i in seq_len(length(list_sl_colours))) {
+    string_colors = glue::glue(
+      '{string_colors}, "{names(list_sl_colours[i])}" = "{list_sl_colours[[i]]}"'
+      )
+  }
+  # Remove the first , from the string
+  string_colors <- sub('.', '', string_colors)
+  return(
+    glue::glue(
+      "library(drawCell)
+      drawCell({taxID}, list({string_colors}))
+      "
+    )
+  )
+}
