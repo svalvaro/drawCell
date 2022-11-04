@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.centered_content {
+  justify-content: center;
+  display: flex;
+}
 .ui.segments {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;

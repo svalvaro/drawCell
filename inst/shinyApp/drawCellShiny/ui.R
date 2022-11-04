@@ -17,34 +17,34 @@ semanticPage(
     segment(
       class = "padded",
       div(
-        class = "ui horizontal stackable segments",
-        segment(
-          class = "compact padded",
-          text_input(
-            input_id = "taxIdInput",
-            label = label(
-              class = "teal pointing below",
-              "Introduce the species name or Taxonomy ID (Leave blank when selecting cell type)"
-            ),
-            value = "",
-            placeholder = "Homo sapiens / 6096"
-          )
-        ),
-        segment(
-          class = "compact",
-          div(class = "ui vertical divider", "OR")
-        ),
+        class = "ui horizontal stackable segments centered_content",
         segment(
           class = "compact padded",
           selectInput(
             inputId = "cell_type",
             label = label(
-              class = "teal pointing below",
-              "Select Cell Type (Leave blank when using species name or taxonomy ID)"
+              class = "big teal pointing below",
+              "Cell Type"
             ),
             choices = c("", sort(unique(data$Image.name))),
             selected = "Animal cell",
             type = "big search clearable selection"
+          )
+        ),
+        segment(
+          class = "compact padded",
+          div(class = "ui vertical divider", "OR")
+        ),
+        segment(
+          class = "compact padded",
+          text_input(
+            input_id = "taxIdInput",
+            label = label(
+              class = "big teal pointing below",
+              "Species name/Taxonomy ID"
+            ),
+            value = "",
+            placeholder = "Homo sapiens / 6096"
           )
         )
       )
