@@ -7,6 +7,9 @@ Authors@R: c(person(given = "Alvaro", family = "Sanchez-Villalba",
                     role = c("aut", "cre")),
             person(given = "Greg", family = "Yannes",
                     email = "greg.yannes@gmail.com",
+                    role = "aut"),
+            person(given = "Recle", family = "Vibal",
+                    email = "recle.vibal@appsilon.com",
                     role = "aut"))
 Description: The package drawCell allows the user the fast generation of cell 
                 images with highlighted subcellular components. It works by 
