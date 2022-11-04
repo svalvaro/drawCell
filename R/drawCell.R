@@ -27,8 +27,8 @@ drawCell <- function(organism_identifier, list_sl_colors, width = NULL, height =
   x <- list(
     input_id = "cell",
     organism_identifier = organism_identifier,
-    sl_ids = drawCell:::csl(names(list_sl_colors)),
-    colour_sl = drawCell:::csl(list_sl_colors)
+    sl_ids = csl(names(list_sl_colors)),
+    colour_sl = csl(list_sl_colors)
   )
   # create widget
   htmlwidgets::createWidget(
