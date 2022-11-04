@@ -12,6 +12,9 @@
   justify-content: center;
   display: flex;
 }
+.ui {
+    font-size: 2rem !important;
+}
 
 .no_box {
   -webkit-box-shadow: none !important;
@@ -25,7 +28,13 @@
 
 .ui.input {
   display: grid;
-  margin: 0 0 1em;
+  margin: 0 5em 1em;
+  font-size: 2rem !important;
+}
+
+.ui.form {
+  margin: 0 5em 1em;
+  font-size: 2rem !important;
 }
 
 #cell_sl_color, .min_width_input {
@@ -34,4 +43,27 @@
 
 .ui.small.compact.table.dataTable.no-footer {
   font-size: 1.25rem !important;
+}
+
+#DataTables_Table_0 {
+  font-size: 1.5rem !important;
+}
+
+.ui.table > thead > tr > th {
+	background: #009c95 !important;
+	color: #fff;
+}
+
+.button {
+	color: #009c95 !important;
+	border: 1px solid #009c95 !important;
+}
+.green_box {
+	border: 1px solid #009c95 !important;
+}
+
+.github {
+  display: ;
+  float: right !important;
+  font-size: 80px !important;
 }

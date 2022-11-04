@@ -4,12 +4,13 @@ semanticPage(
   titlePanel(
     title = div(
       class = "ui massive fluid teal right icon label",
-      "drawCell | Easily obtain nice cell pictures in R",
+      "drawCell",
       a(
         icon(class = "big github square"),
         href = "https://github.com/svalvaro/drawCell",
         target = "_blank"
-      )
+      ),
+      h2("App for creating cell pictures")
     )
   ),
   div(
@@ -57,7 +58,7 @@ semanticPage(
         segment(
           class = "padded compact no_box",
           div(
-            class = "ui vertical compact segments",
+            class = "ui vertical compact segments green_box",
             segment(
               class = "compact padded no_box",
               colourpicker::colourInput(
@@ -71,6 +72,7 @@ semanticPage(
                 returnName = TRUE,
                 showColour = c("background")
               ),
+              br(),
               button(
                 input_id = "clear_color",
                 class = "big basic",
