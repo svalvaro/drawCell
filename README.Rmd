@@ -52,7 +52,7 @@ highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets
 
 library(drawCell)
 
-drawCell(organism_identifier = '9060', list_sl_colors = list("SL0173" = "red", "SL0101" = "blue"))
+drawCell(organism_identifier = '9060', list_sl_colors = list("SL0095" = "red", "SL0154" = "blue"))
 ```
 
 The `organism_identifier` for *Quercus ilex* a common tree in the south of Spain is
