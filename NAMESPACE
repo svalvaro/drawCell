@@ -2,6 +2,8 @@
 
 export(drawCell)
 export(drawCellShiny)
+import(DT)
+import(colourpicker)
 import(glue)
 import(htmltools)
 import(htmlwidgets)
