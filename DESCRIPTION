@@ -20,6 +20,7 @@ Description: The package drawCell allows the user the fast generation of cell
 biocViews: SingleCell, Software, Infrastructure,Visualization 
 License: GPL-3
 Imports: 
+    colourpicker,
     glue,
     htmltools,
     htmlwidgets,
