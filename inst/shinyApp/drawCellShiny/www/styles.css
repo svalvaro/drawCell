@@ -44,6 +44,9 @@
 .ui.small.compact.table.dataTable.no-footer {
   font-size: 1.25rem !important;
 }
+.ui.form, .ui.form .field .dropdown, .ui.form .field .dropdown .menu > .item {
+	font-size: 2rem !important;
+}
 
 #DataTables_Table_0 {
   font-size: 1.5rem !important;
