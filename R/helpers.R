@@ -29,7 +29,3 @@ renderDrawCell <- function(expr, env = parent.frame(), quoted = FALSE) {
 csl <- function(items) {
   return(paste(paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), sep = ""))
 }
-
-find_sc <- function(id) {
-  uniprot[which(uniport_sc_ids == id), ]$Name
-}
