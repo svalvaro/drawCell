@@ -12,6 +12,7 @@
   justify-content: center;
   display: flex;
 }
+
 .ui.segments {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -41,4 +42,8 @@
 
 #cell_sl_color {
   min-width: 22rem;
+}
+
+.ui.small.compact.table.dataTable.no-footer {
+  font-size: 1.25rem !important;
 }

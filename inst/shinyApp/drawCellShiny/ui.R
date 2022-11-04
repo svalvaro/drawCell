@@ -4,7 +4,7 @@ semanticPage(
   titlePanel(
     title = div(
       class = "ui massive fluid teal right icon label",
-      "drawCell",
+      "drawCell | Easily obtain nice cell pictures in R",
       a(
         icon(class = "big github square"),
         href = "https://github.com/svalvaro/drawCell",
@@ -63,8 +63,8 @@ semanticPage(
               colourpicker::colourInput(
                 inputId = "colourInput",
                 label = label(
-                  class = "teal pointing below",
-                  "Select subcellular location to highlight then select color"
+                  class = "big teal pointing below",
+                  "Color Subcellular Location"
                 ),
                 "#56B4E9",
                 palette = "square",
@@ -73,7 +73,7 @@ semanticPage(
               ),
               button(
                 input_id = "clear_color",
-                class = "basic",
+                class = "big basic",
                 label = "Clear Colors"
               )
             ),
