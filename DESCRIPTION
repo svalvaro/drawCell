@@ -21,6 +21,7 @@ biocViews: SingleCell, Software, Infrastructure,Visualization
 License: GPL-3
 Imports: 
     colourpicker,
+    DT,
     glue,
     htmltools,
     htmlwidgets,
