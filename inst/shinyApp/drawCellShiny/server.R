@@ -127,4 +127,21 @@ function(input, output) {
         })
     }
   )
+  
+  observeEvent(input$cell_type, {
+    sc_id(NULL)
+    req(input$cell_type)
+    # If the user want's to see a neuron cell, this will be produced by taxID = 6072 and SL = "SL0288",
+    # However, if the user wants to see a muscle cell next, we need to clear the subcellular_colours list
+    # otherwise the SL of the neuron will be there and we will fetch a neuron again.
+    
+    if (input$cell_type == "Animal cell") subcellular_colours(list("SL0073"  = "white"))
+    if (input$cell_type == "Animal neuronal cell") subcellular_colours(list("SL0288"  = "white"))
+    if (input$cell_type == "Animal epithelial cell") subcellular_colours(list("SL0038"  = "white"))
+    if (input$cell_type == "Animal muscle cell") subcellular_colours(list("SL0315"  = "white"))
+    if (input$cell_type == "Animal photoreceptor cell") subcellular_colours(list("SL0458"  = "white"))
+    if (input$cell_type == "Animal spermatozoa cell") subcellular_colours(list("SL0199"  = "white"))
+    if (input$cell_type == "Animal egg cell") subcellular_colours(list("SL0540"  = "white"))
+  })
 }
+
