@@ -4,8 +4,6 @@ linters:
     object_name_linter = object_name_linter(styles = c("snake_case", "symbols", "camelCase"))
   )
 exclusions:
-  list(
-    "vignettes/drawCell.Rmd" = 46L,
-    "inst/rstudio",
-    "inst/templates"
+  c(
+    "vignettes"
   )
