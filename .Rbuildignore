@@ -3,3 +3,10 @@
 ^README\.Rmd$
 ^doc$
 ^Meta$
+^\.git$
+^\.github$
+^\.gitignore$
+^\.lintr$
+^pkgdown$
+^README\.md$
+^vignettes$
