@@ -14,4 +14,3 @@ inst/doc
 drawCellShiny.dcf
 drawCell.dcf
 .DS_Store
-inst/shinyApp/drawCellShiny/tests/testthat/_snaps/
