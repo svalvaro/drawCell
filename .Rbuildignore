@@ -10,3 +10,4 @@
 ^pkgdown$
 ^README\.md$
 inst/htmlwidgets/lib/node_modules/.package-lock.json
+^README_files$

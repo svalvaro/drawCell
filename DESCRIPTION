@@ -30,8 +30,7 @@ Imports:
     taxize,
     webshot2,
     Rcpp,
-    rclipboard,
-    glue
+    rclipboard
 Suggests: 
     BiocStyle,
     knitr,
