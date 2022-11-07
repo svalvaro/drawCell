@@ -4,7 +4,6 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<<<<<<< HEAD
 ```{r options1, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -19,8 +18,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-=======
->>>>>>> feat/add-download-buttons
 # drawCell
 
 <!-- badges: start -->
