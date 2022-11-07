@@ -30,21 +30,21 @@ csl <- function(items) {
   return(paste(paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), sep = ""))
 }
 
-find_sc = function(id) {
+find_sc  <-  function(id) {
   uniprot[which(uniport_sc_ids == id), ]$Name
 }
 
 create_code_to_copy <- function(taxID, list_sl_colours) {
 
-  string_colors = ""
+  string_colors  <-  ""
 
-  for(i in seq_len(length(list_sl_colours))) {
-    string_colors = glue::glue(
+  for (i in seq_len(length(list_sl_colours))) {
+    string_colors <- glue::glue(
       '{string_colors}, "{names(list_sl_colours[i])}" = "{list_sl_colours[[i]]}"'
       )
   }
   # Remove the first , from the string
-  string_colors <- sub('.', '', string_colors)
+  string_colors <- sub(".", "", string_colors)
 
   return(
     glue::glue(
