@@ -40,15 +40,6 @@ jobs:
           # Errors will fail this step automatically.
           tests <- testthat::test_local()
 
-          # Escalate warnings to a failure too.
-          expectations <-
-            lapply(tests, function(test) {
-              lapply(test$results, class)
-            }) |>
-            unlist()
-          warnings_found <- any(grepl("expectation_warning", expectations))
-          quit(status = warnings_found)
-          
       - name: Spell Check
         if : always()
         shell: Rscript {0}
