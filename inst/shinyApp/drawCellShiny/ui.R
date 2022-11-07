@@ -103,7 +103,7 @@ semanticPage(
             ),
             segment(
               class = "compact padded no_box",
-              button(
+              downloadButton(
                 "download_cell",
                 label = "Download Cell",
                 icon = icon("download"),
