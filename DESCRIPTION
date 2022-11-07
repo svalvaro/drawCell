@@ -21,16 +21,27 @@ biocViews: SingleCell, Software, Infrastructure,Visualization
 License: GPL-3
 Encoding: UTF-8
 Imports: 
+    colourpicker,
+    DT,
+    glue,
     htmltools,
-    readr,
-    rmarkdown,
+    htmlwidgets,
+    shiny,
+    shiny.semantic,
     taxize,
     webshot2,
     Rcpp,
-    rclipboard,
-    glue
-RoxygenNote: 7.2.1
+    rclipboard
 Suggests: 
+    BiocStyle,
     knitr,
-    BiocStyle
+    readr,
+    rmarkdown,
+    testthat,
+    lintr,
+    rcmdcheck,
+    spelling,
+    shinytest2
 VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 7.2.1
