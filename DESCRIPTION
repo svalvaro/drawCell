@@ -1,5 +1,5 @@
-Package: drawCell
 Type: Package
+Package: drawCell
 Title: Generation of cell pictures
 Version: 1.0.0.9000
 Authors@R: c(person(given = "Alvaro", family = "Sanchez-Villalba",
@@ -19,7 +19,6 @@ Description: The package drawCell allows the user the fast generation of cell
                 drawCell.
 biocViews: SingleCell, Software, Infrastructure,Visualization 
 License: GPL-3
-Encoding: UTF-8
 Imports: 
     colourpicker,
     DT,
