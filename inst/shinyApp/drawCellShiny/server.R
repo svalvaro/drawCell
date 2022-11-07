@@ -25,7 +25,7 @@ function(input, output) {
     sc_id(NULL)
     req(input$cell_type)
 
-    subcellular_colours(drawCell:::find_unique_subcellular_location(input$cell_type))
+    subcellular_colours(drawCell:::find_unique_sl(input$cell_type))
   })
 
   colors_table <- reactiveVal()
@@ -132,7 +132,7 @@ function(input, output) {
       subcellular_colours(list("SL0000" = "#56B4E9"))
       # This step is necessary. Otherwise, clearing the colors will reset the cell to the
       # default  animal cell
-      subcellular_colours(find_unique_subcellular_location(input$cell_type))
+      subcellular_colours(drawCell:::find_unique_sl(input$cell_type))
       output$cell_sl_color <-
         DT::renderDataTable({
           semantic_DT(

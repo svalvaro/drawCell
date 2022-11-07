@@ -35,7 +35,7 @@ find_sc = function(id) {
 create_code_to_copy <- function(taxID, list_sl_colours) {
 
   string_colors = ""
-  
+
   for(i in seq_len(length(list_sl_colours))) {
     string_colors = glue::glue(
       '{string_colors}, "{names(list_sl_colours[i])}" = "{list_sl_colours[[i]]}"'
@@ -52,7 +52,7 @@ create_code_to_copy <- function(taxID, list_sl_colours) {
   )
 }
 
-find_unique_subcellular_location <- function(cell_type) {
+find_unique_sl <- function(cell_type) {
   switch(cell_type,
          # If the user want's to see a neuron cell, this will be produced by taxID = 6072 and SL =
          # "SL0288", However, if the user wants to see a muscle cell next, we need to clear the
