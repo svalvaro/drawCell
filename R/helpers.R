@@ -30,10 +30,6 @@ csl <- function(items) {
   return(paste(paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), sep = ""))
 }
 
-find_sc  <-  function(id) {
-  uniprot[which(uniport_sc_ids == id), ]$Name
-}
-
 create_code_to_copy <- function(taxID, list_sl_colours) {
 
   string_colors  <-  ""
