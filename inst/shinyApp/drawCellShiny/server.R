@@ -29,7 +29,7 @@ function(input, output) {
       list_sl_colors = subcellular_colours()
     )
   })
-  
+
   output$cell_output <- drawCell:::renderDrawCell({
     drawcell_plot()
   })
@@ -131,7 +131,7 @@ function(input, output) {
         })
     }
   )
-  
+
 
   observeEvent(input$cell_type, {
     sc_id(NULL)
@@ -139,7 +139,7 @@ function(input, output) {
     # If the user want's to see a neuron cell, this will be produced by taxID = 6072 and SL = "SL0288",
     # However, if the user wants to see a muscle cell next, we need to clear the subcellular_colours list
     # otherwise the SL of the neuron will be there and we will fetch a neuron again.
-    
+
     if (input$cell_type == "Animal cell") subcellular_colours(list("SL0073"  = "white"))
     if (input$cell_type == "Animal neuronal cell") subcellular_colours(list("SL0288"  = "white"))
     if (input$cell_type == "Animal epithelial cell") subcellular_colours(list("SL0038"  = "white"))
@@ -150,18 +150,19 @@ function(input, output) {
   })
 
   code_copy <- reactive({
-    create_code_to_copy(taxonomy_id(), subcellular_colours())
+    drawCell:::create_code_to_copy(taxonomy_id(), subcellular_colours())
   })
 
   output$copy_code <- renderUI({
     rclipboard::rclipButton(
       inputId = "clipbtn",
       label = "Copy the code to generate the cell",
-      clipText = code_copy(), 
-      icon = icon("clipboard")
+      clipText = code_copy(),
+      icon = icon("clipboard"),
+      class = "ui basic fluid button"
     )
   })
-  
+
   # output$download_plot <- downloadHandler(
   #   filename = "Shinyplot.png",
   #   content = function(file) {
