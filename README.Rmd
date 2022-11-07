@@ -4,6 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<<<<<<< HEAD
 ```{r options1, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -18,6 +19,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+=======
+>>>>>>> feat/add-download-buttons
 # drawCell
 
 <!-- badges: start -->
@@ -36,17 +39,29 @@ is required.
 devtools::install_github("svalvaro/drawCell")
 ```
 
-## Examples
 
-It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your
+## Usage
+
+You can use drawCell in two ways, one is to use the Web application created with Shiny. We will 
+have this app deployed soon. You can run it locally with:
+
+``` {r shinyApp, eval= FALSE}
+drawCell::drawCellShiny()
+```
+
+If you want to get the cells pictures in your Rmarkdown documents, reports, you just need to use the
+main function `drawCell()`. It requires the [taxonomy id](https://www.ncbi.nlm.nih.gov/taxonomy/) of your
 species of interest, and one or multiple SL codes for subcellular locations 
 that will be colored. The SL codes for each subcellular location can be found at
 [Uniprot](https://www.uniprot.org/docs/subcell) and
 [uniprotkb_sl2go](http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go).
 
-To generate a cell of Homo sapiens (Taxonomy id: `9606`) with
+## Examples
+
+To generate a cell of Homo sapiens (Taxonomy id: `9606`) with 
 highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets 
 (SL code: `0154`):
+
 
 ```{r animal_cell,  results='hide', message=F, warning=FALSE, error=F}
 
@@ -58,7 +73,7 @@ drawCell(organism_identifier = '9606', list_sl_colors = list("SL0173" = "red", "
 The `organism_identifier` for *Quercus ilex* a common tree in the south of Spain is
 `58334` and as an example I will use the SL code of the chloroplast: `0049`.
 
-```{r plantcell,  results='hide', message=F, warning=FALSE, error=F}
+```{r plantcell}
 
 drawCell(organism_identifier = '58334', list_sl_colors = list("SL0049" = 'lightgreen'))
 ```
@@ -69,7 +84,7 @@ exists!
 For the baker's yeast *Saccharomyces cerevisiae* whose `organism_identifier` is `4932` 
 we will highlight the nucleus: `0191` and the vacuole: `0272`.
 
-```{r sacc2, results='hide', message=F, warning=FALSE, error=F}
+```{r sacc2}
 
 drawCell(organism_identifier = '4932', list_sl_colors = list("SL0191" = "pink", "SL0272" = "yellow"))
 ```

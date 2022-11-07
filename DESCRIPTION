@@ -26,7 +26,12 @@ Imports:
     htmltools,
     htmlwidgets,
     shiny,
-    shiny.semantic
+    shiny.semantic,
+    taxize,
+    webshot2,
+    Rcpp,
+    rclipboard,
+    glue
 Suggests: 
     BiocStyle,
     knitr,
@@ -37,7 +42,6 @@ Suggests:
     rcmdcheck,
     spelling,
     shinytest2
-VignetteBuilder: 
-    knitr
+VignetteBuilder: knitr
 Encoding: UTF-8
 RoxygenNote: 7.2.1
