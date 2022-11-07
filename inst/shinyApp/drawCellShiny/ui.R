@@ -87,30 +87,27 @@ semanticPage(
           )
         ),
         segment(
+          class = "padded no_box",
+          drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
+        )
+      ),
+      div(
+        class = "ui horizontal segments no_box",
+        segment(
           class = "compact padded no_box",
           div(
-            class = "ui vertical segments no_box",
+            class = "ui horizontal stackable segments no_box",
             segment(
-              class = "padded no_box",
-              drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
+              class = "compact padded no_box",
+              uiOutput("copy_code")
             ),
             segment(
               class = "compact padded no_box",
-              div(
-                class = "ui horizontal stackable segments no_box",
-                segment(
-                  class = "compact padded no_box",
-                  uiOutput("copy_code")
-                ),
-                segment(
-                  class = "compact padded no_box",
-                  button(
-                    "download_cell",
-                    label = "Download Cell",
-                    icon = icon("download"),
-                    class = "basic"
-                  )
-                )
+              button(
+                "download_cell",
+                label = "Download Cell",
+                icon = icon("download"),
+                class = "basic"
               )
             )
           )

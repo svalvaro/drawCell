@@ -173,11 +173,16 @@ function(input, output) {
     )
   })
 
-  observeEvent(input$download_cell, {
-    shinyscreenshot::screenshot(
-      selector = "#cell_output",
-      scale = 1,
-      filename = paste("cell", taxonomy_id(), format(Sys.time(), "%Y-%b-%d-%H-%M-%S"), collapse = "-")
-    )
+  observeEvent(input$clipbtn,{
+    toast("Code copied to clipboard", class = "center aligned basic", id = "code_copied_message")
   })
+
+
+  # output$download_plot <- downloadHandler(
+  #   filename = "Shinyplot.png",
+  #   content = function(file) {
+  #     png(file)
+  #     print('hi')
+  #     drawcell_plot()
+  #   })
 }
