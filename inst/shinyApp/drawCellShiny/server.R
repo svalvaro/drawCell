@@ -21,13 +21,24 @@ function(input, output) {
 
   subcellular_colours <- reactiveVal(list("SL0000" = "#56B4E9"))
 
+  observeEvent(input$cell_type, {
+    sc_id(NULL)
+    req(input$cell_type)
+
+    subcellular_colours(drawCell:::find_unique_sl(input$cell_type))
+  })
+
   colors_table <- reactiveVal()
 
-  output$cell_output <- drawCell:::renderDrawCell({
+  drawcell_plot <- reactive({
     drawCell(
       organism_identifier = taxonomy_id(),
       list_sl_colors = subcellular_colours()
     )
+  })
+
+  output$cell_output <- drawCell:::renderDrawCell({
+    drawcell_plot()
   })
 
   observeEvent(input$cell_click, {
@@ -119,6 +130,9 @@ function(input, output) {
     {
       sc_id(NULL)
       subcellular_colours(list("SL0000" = "#56B4E9"))
+      # This step is necessary. Otherwise, clearing the colors will reset the cell to the
+      # default  animal cell
+      subcellular_colours(drawCell:::find_unique_sl(input$cell_type))
       output$cell_sl_color <-
         DT::renderDataTable({
           semantic_DT(
@@ -127,21 +141,31 @@ function(input, output) {
         })
     }
   )
-  
-  observeEvent(input$cell_type, {
-    sc_id(NULL)
-    req(input$cell_type)
-    # If the user want's to see a neuron cell, this will be produced by taxID = 6072 and SL = "SL0288",
-    # However, if the user wants to see a muscle cell next, we need to clear the subcellular_colours list
-    # otherwise the SL of the neuron will be there and we will fetch a neuron again.
-    
-    if (input$cell_type == "Animal cell") subcellular_colours(list("SL0073"  = "white"))
-    if (input$cell_type == "Animal neuronal cell") subcellular_colours(list("SL0288"  = "white"))
-    if (input$cell_type == "Animal epithelial cell") subcellular_colours(list("SL0038"  = "white"))
-    if (input$cell_type == "Animal muscle cell") subcellular_colours(list("SL0315"  = "white"))
-    if (input$cell_type == "Animal photoreceptor cell") subcellular_colours(list("SL0458"  = "white"))
-    if (input$cell_type == "Animal spermatozoa cell") subcellular_colours(list("SL0199"  = "white"))
-    if (input$cell_type == "Animal egg cell") subcellular_colours(list("SL0540"  = "white"))
-  })
-}
 
+  code_copy <- reactive({
+    drawCell:::create_code_to_copy(taxonomy_id(), subcellular_colours())
+  })
+
+  output$copy_code <- renderUI({
+    rclipboard::rclipButton(
+      inputId = "clipbtn",
+      label = "Copy the code to generate the cell",
+      clipText = code_copy(),
+      icon = icon("clipboard"),
+      class = "ui basic fluid button"
+    )
+  })
+
+  observeEvent(input$clipbtn,{
+    toast("Code copied to clipboard", class = "center aligned basic", id = "code_copied_message")
+  })
+
+
+  # output$download_plot <- downloadHandler(
+  #   filename = "Shinyplot.png",
+  #   content = function(file) {
+  #     png(file)
+  #     print('hi')
+  #     drawcell_plot()
+  #   })
+}

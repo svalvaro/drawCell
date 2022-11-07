@@ -70,3 +70,14 @@
   float: right !important;
   font-size: 80px !important;
 }
+
+#code_copied_message {
+  font-size: 1.5rem !important;
+	color: #009c95 !important;
+	border: 1px solid #009c95 !important;
+  text-align: center;
+}
+
+#cell_output {
+  min-width: 35rem;
+}
