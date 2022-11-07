@@ -9,50 +9,43 @@ semanticPage(
         icon(class = "big github square"),
         href = "https://github.com/svalvaro/drawCell",
         target = "_blank"
-      )
-    ),
-    tags$li(
-      a(
-        href = "https://github.com/svalvaro/drawCell",
-        icon("power-off"),
-        title = "Close drawCell"
       ),
-      class = "dropdown"
+      h2("App for creating cell pictures")
     )
   ),
   div(
-    class = "ui attached segments",
+    class = "ui attached segments no_box",
     segment(
-      class = "padded",
+      class = "padded no_box",
       div(
-        class = "ui horizontal stackable segments",
+        class = "ui horizontal stackable segments centered_content no_box",
         segment(
-          class = "compact padded",
-          text_input(
-            input_id = "taxIdInput",
-            label = label(
-              class = "teal pointing below",
-              "Introduce the species name or Taxonomy ID (Leave blank when selecting cell type)"
-            ),
-            value = "",
-            placeholder = "Homo sapiens / 6096"
-          )
-        ),
-        segment(
-          class = "compact",
-          div(class = "ui vertical divider", "OR")
-        ),
-        segment(
-          class = "compact padded",
+          class = "compact padded no_box min_width_input",
           selectInput(
             inputId = "cell_type",
             label = label(
-              class = "teal pointing below",
-              "Select Cell Type (Leave blank when using species name or taxonomy ID)"
+              class = "big teal pointing below",
+              "Cell Type"
             ),
             choices = c("", sort(unique(data$Image.name))),
             selected = "Animal cell",
             type = "big search clearable selection"
+          )
+        ),
+        segment(
+          class = "compact padded no_box",
+          div(class = "ui vertical divider", "OR")
+        ),
+        segment(
+          class = "compact padded no_box min_width_input",
+          text_input(
+            input_id = "taxIdInput",
+            label = label(
+              class = "big teal pointing below",
+              "Species Name/Taxonomy ID"
+            ),
+            value = "",
+            placeholder = "Homo sapiens / 6096"
           )
         )
       )
@@ -61,41 +54,52 @@ semanticPage(
       class = "raised very padded container",
       label(textOutput("selected_cell_name"), class = "big teal top attached"),
       div(
-        class = "ui horizontal stackable segments",
+        class = "ui horizontal stackable segments no_box",
         segment(
-          class = "padded compact",
+          class = "padded compact no_box",
           div(
-            class = "ui vertical compact segments",
+            class = "ui vertical compact segments green_box",
             segment(
-              class = "compact padded",
+              class = "compact padded no_box",
               colourpicker::colourInput(
                 inputId = "colourInput",
                 label = label(
-                  class = "teal pointing below",
-                  "Select subcellular location to highlight then select color"
+                  class = "big teal pointing below",
+                  "Color Subcellular Location"
                 ),
                 "#56B4E9",
                 palette = "square",
                 returnName = TRUE,
                 showColour = c("background")
               ),
+              br(),
               button(
                 input_id = "clear_color",
-                class = "basic",
+                class = "big basic",
                 label = "Clear Colors"
               )
             ),
             segment(
-              class = "compact padded",
+              class = "compact padded no_box",
               semantic_DTOutput("cell_sl_color")
             )
           )
         ),
         segment(
-          class = "padded",
+          class = "padded no_box",
           drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
         )
       )
+    ),
+    segment(
+      class = "compact padded right floated no_box",
+      "Cell Images from ",
+      a(
+        "SwissBioPics API",
+        href = "https://www.swissbiopics.org/",
+        target = "_blank"
+      ),
+      style = "background: transparent;"
     )
   )
 )
