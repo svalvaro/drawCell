@@ -57,21 +57,6 @@ create_code_to_copy <- function(taxID, list_sl_colours) {
 
 find_unique_sl <- function(cell_type) {
   switch(cell_type,
-<<<<<<< HEAD
-    # If the user want's to see a neuron cell, this will be produced by taxID = 6072 and SL =
-    # "SL0288", However, if the user wants to see a muscle cell next, we need to clear the
-    # subcellular_colours list otherwise the SL of the neuron will be there and we will fetch a
-    # neuron again.
-    `Animal cell` = list("SL0073" = "white"),
-    `Animal neuronal cell` = list("SL0288" = "white"),
-    `Animal epithelial cell` = list("SL0038" = "white"),
-    `Animal muscle cell` = list("SL0315" = "white"),
-    `Animal photoreceptor cell` = list("SL0458" = "white"),
-    `Animal spermatozoa cell` = list("SL0199" = "white"),
-    `Animal egg cell` = list("SL0540" = "white"),
-    `Cnidocyte cell` = list("SL0177" = "white"),
-    list("SL0000" = "#56B4E9")
-=======
          # If the user want's to see a neuron cell, this will be produced by taxID = 6072 and SL =
          # "SL0288", However, if the user wants to see a muscle cell next, we need to clear the
          # subcellular_colours list otherwise the SL of the neuron will be there and we will fetch a
@@ -85,6 +70,5 @@ find_unique_sl <- function(cell_type) {
          `Animal egg cell` = list("SL0540" = "white"),
          `Cnidocyte cell` = list("SL0177" = "white"),
          list("SL0000" = "#56B4E9")
->>>>>>> master
   )
 }
