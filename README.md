@@ -40,7 +40,7 @@ and
 
 ## Examples
 
-To generate a cell of Homo sapiens (`organism_identifier`: `9606`) with
+To generate a cell of Homo sapiens (Taxonomy id: `9606`) with
 highlighted Endoplasmic Reticulum (SL code: `0095`) and lipid droplets
 (SL code: `0154`):
 
@@ -52,9 +52,9 @@ drawCell(organism_identifier = '9606', list_sl_colors = list("SL0173" = "red", "
 
 ![](README_files/figure-gfm/animal_cell-1.png)<!-- -->
 
-The taxonomy id for *Quercus ilex* a common tree in the south of Spain
-is `58334` and as an example I will use the SL code of the chloroplast:
-`0049`.
+The `organism_identifier` for *Quercus ilex* a common tree in the south
+of Spain is `58334` and as an example I will use the SL code of the
+chloroplast: `0049`.
 
 ``` r
 drawCell(organism_identifier = '58334', list_sl_colors = list("SL0049" = 'lightgreen'))

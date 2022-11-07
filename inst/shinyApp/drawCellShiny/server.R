@@ -6,7 +6,6 @@ function(input, output) {
           sci_com = input$taxIdInput,
           db = "ncbi"
         )
-
         taxonomy_id <- as.numeric(taxonomy_id$ncbi[1])
       } else {
         taxonomy_id <- as.numeric(input$taxIdInput)
@@ -156,7 +155,19 @@ function(input, output) {
     )
   })
 
-  observeEvent(input$clipbtn, {
-    toast("Code copied to clipboard", class = "center aligned basic", id = "code_copied_message")
+  observeEvent(input$clipbtn,{
+    toast("Code copied to clipboard", class = "center aligned basic toast_message", id = "code_copied_message")
   })
+
+  output$download_cell <- downloadHandler(
+    filename = "cell_picture.png",
+    content = function(file) {
+      toast("Preparing your image...", class = "center aligned basic toast_message", id = "cell_image_message")
+
+      temp_png <- tempfile(fileext = ".png")
+      temp_html <- tempfile(fileext = ".html")
+      htmlwidgets::saveWidget(drawcell_plot(), file = temp_html)
+      webshot2::webshot(temp_html,file = temp_png)
+      file.copy(temp_png, file)
+    })
 }

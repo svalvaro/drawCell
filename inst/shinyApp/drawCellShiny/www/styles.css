@@ -71,7 +71,7 @@
   font-size: 80px !important;
 }
 
-#code_copied_message {
+.toast_message {
   font-size: 1.5rem !important;
 	color: #009c95 !important;
 	border: 1px solid #009c95 !important;
@@ -80,4 +80,12 @@
 
 #cell_output {
   min-width: 35rem;
+}
+
+#download_cell {
+  display: block !important;
+	color: #009c95 !important;
+	border: 1px solid #009c95 !important;
+  text-align: center;
+  padding: .78571429em 1.5em .78571429em !important;
 }
