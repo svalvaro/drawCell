@@ -11,23 +11,26 @@ drawCell(organism_identifier, list_sl_colors, width = NULL, height = NULL)
 https://www.ncbi.nlm.nih.gov/taxonomy/}
 
 \item{list_sl_colors}{Named list. The name is the id of the subcellular location, can be found at
-http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour that
-each subcellular location should have
-@param width  Width of the resulting image
-@param height Heigth of the resulting image}
+http://current.geneontology.org/ontology/external2go/uniprotkb_sl2go the value is the colour
+that each subcellular location should have}
+
+\item{width}{Width of the resulting image}
+
+\item{height}{Height of the resulting image}
 }
 \value{
-Generates a vector image of the requested cell by the user with coloured
-subcellular elements.
+Generates a vector image of the requested cell by the user with coloured subcellular
+  elements.
 }
 \description{
 Creates a cell picture
 }
 \examples{
 drawCell(
-   organism_identifier = '9606',
-   list_sl_colors = list(
-   'SL0095' = 'green',
-   'SL0154'='red')
- )
+  organism_identifier = "9606",
+  list_sl_colors = list(
+    "SL0095" = "green",
+    "SL0154" = "red"
+  )
+)
 }

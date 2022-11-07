@@ -14,13 +14,15 @@
 #'
 #' @name drawCell-shiny
 #'
-drawCellOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'drawCell', width, height, package = 'drawCell')
+drawCellOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "drawCell", width, height, package = "drawCell")
 }
 
 #' @rdname drawCell-shiny
 renderDrawCell <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
+  if (!quoted) {
+    expr <- substitute(expr)
+  } # force quoted
   htmlwidgets::shinyRenderWidget(expr, drawCellOutput, env, quoted = TRUE)
 }
 
@@ -28,21 +30,18 @@ csl <- function(items) {
   return(paste(paste(htmltools::htmlEscape(unlist(items)), collapse = ",", sep = ""), sep = ""))
 }
 
-find_sc = function(id) {
-  uniprot[which(uniport_sc_ids == id), ]$Name
-}
-
 create_code_to_copy <- function(taxID, list_sl_colours) {
 
-  string_colors = ""
+  string_colors  <-  ""
 
-  for(i in seq_len(length(list_sl_colours))) {
-    string_colors = glue::glue(
+  for (i in seq_len(length(list_sl_colours))) {
+    string_colors <- glue::glue(
       '{string_colors}, "{names(list_sl_colours[i])}" = "{list_sl_colours[[i]]}"'
       )
   }
   # Remove the first , from the string
-  string_colors <- sub('.', '', string_colors)
+  string_colors <- sub(".", "", string_colors)
+
   return(
     glue::glue(
       "library(drawCell)

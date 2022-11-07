@@ -1,5 +1,5 @@
-Package: drawCell
 Type: Package
+Package: drawCell
 Title: Generation of cell pictures
 Version: 1.0.0.9000
 Authors@R: c(person(given = "Alvaro", family = "Sanchez-Villalba",
@@ -19,18 +19,28 @@ Description: The package drawCell allows the user the fast generation of cell
                 drawCell.
 biocViews: SingleCell, Software, Infrastructure,Visualization 
 License: GPL-3
-Encoding: UTF-8
 Imports: 
+    colourpicker,
+    DT,
+    glue,
     htmltools,
-    readr,
-    rmarkdown,
+    htmlwidgets,
+    shiny,
+    shiny.semantic,
     taxize,
     webshot2,
     Rcpp,
-    rclipboard,
-    glue
-RoxygenNote: 7.2.1
+    rclipboard
 Suggests: 
+    BiocStyle,
     knitr,
-    BiocStyle
+    readr,
+    rmarkdown,
+    testthat,
+    lintr,
+    rcmdcheck,
+    spelling,
+    shinytest2
 VignetteBuilder: knitr
+Encoding: UTF-8
+RoxygenNote: 7.2.1

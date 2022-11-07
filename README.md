@@ -52,9 +52,9 @@ drawCell(organism_identifier = '9606', list_sl_colors = list("SL0173" = "red", "
 
 ![](README_files/figure-gfm/animal_cell-1.png)<!-- -->
 
-The taxonomy id for *Quercus ilex* a common tree in the south of Spain
-is `58334` and as an example I will use the SL code of the chloroplast:
-`0049`.
+The `organism_identifier` for *Quercus ilex* a common tree in the south
+of Spain is `58334` and as an example I will use the SL code of the
+chloroplast: `0049`.
 
 ``` r
 drawCell(organism_identifier = '58334', list_sl_colors = list("SL0049" = 'lightgreen'))
@@ -65,8 +65,9 @@ drawCell(organism_identifier = '58334', list_sl_colors = list("SL0049" = 'lightg
 We can also obtain pictures of viruses, yeast, and pretty much
 everything that exists!
 
-For the baker’s yeast *Saccharomyces cerevisiae* whose taxonomy id is
-`4932` we will highlight the nucleus: `0191` and the vacuole: `0272`.
+For the baker’s yeast *Saccharomyces cerevisiae* whose
+`organism_identifier` is `4932` we will highlight the nucleus: `0191`
+and the vacuole: `0272`.
 
 ``` r
 drawCell(organism_identifier = '4932', list_sl_colors = list("SL0191" = "pink", "SL0272" = "yellow"))

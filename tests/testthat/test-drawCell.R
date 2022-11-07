@@ -1,9 +1,15 @@
-test_that("Generates a picture", {
+test_that("drawCell enerates a picture", {
+  cell_svg <-
+    drawCell(
+      organism_identifier = "9060",
+      list_sl_colors = list("SL0173" = "red", "SL0101" = "blue")
+    )
 
-    drawCell::drawCell(taxonomy_id = '9606', sl_ids = '0101')
+  expect_s3_class(cell_svg, "drawCell")
+  expect_s3_class(cell_svg, "htmlwidget")
+  expect_equal(cell_svg[["x"]][["input_id"]], "cell")
+  expect_equal(cell_svg[["x"]][["organism_identifier"]], "9060")
+  expect_equal(cell_svg[["x"]][["sl_ids"]], "SL0173,SL0101")
+  expect_equal(cell_svg[["x"]][["colour_sl"]], "red,blue")
 
-
-    dir_cell <- paste0(getwd(),'/','cell_pic.png')
-
-    testthat::expect_true(file.exists(dir_cell))
 })
