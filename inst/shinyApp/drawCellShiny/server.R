@@ -163,11 +163,17 @@ function(input, output) {
     )
   })
 
-  # output$download_plot <- downloadHandler(
-  #   filename = "Shinyplot.png",
-  #   content = function(file) {
-  #     png(file)
-  #     print('hi')
-  #     drawcell_plot()
-  #   })
+  output$download_plot <- downloadHandler(
+    filename = paste0(
+      "cell",
+      taxonomy_id(),
+      format(Sys.time(), "%Y-%b-%d-%H:%M:%S"),
+      ".png",
+      collapse = "-"
+    ),
+    content = function(file) {
+      svglite::svglite(file)
+      drawcell_plot()
+      dev.off()
+    })
 }
