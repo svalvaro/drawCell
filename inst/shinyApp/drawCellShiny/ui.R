@@ -104,7 +104,12 @@ semanticPage(
                 ),
                 segment(
                   class = "compact padded no_box",
-                  downloadButton("download_plot", "Download", class = "ui basic button")
+                  button(
+                    "download_cell",
+                    label = "Download Cell",
+                    icon = icon("download"),
+                    class = "basic"
+                  )
                 )
               )
             )

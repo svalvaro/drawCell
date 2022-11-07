@@ -163,17 +163,11 @@ function(input, output) {
     )
   })
 
-  output$download_plot <- downloadHandler(
-    filename = paste0(
-      "cell",
-      taxonomy_id(),
-      format(Sys.time(), "%Y-%b-%d-%H:%M:%S"),
-      ".png",
-      collapse = "-"
-    ),
-    content = function(file) {
-      svglite::svglite(file)
-      drawcell_plot()
-      dev.off()
-    })
+  observeEvent(input$download_cell, {
+    shinyscreenshot::screenshot(
+      selector = "#cell_output",
+      scale = 1,
+      filename = paste("cell", taxonomy_id(),format(Sys.time(), "%Y-%b-%d-%H-%M-%S"), collapse = "-")
+    )
+  })
 }
