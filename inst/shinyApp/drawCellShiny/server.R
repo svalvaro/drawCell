@@ -132,7 +132,7 @@ function(input, output) {
       subcellular_colours(list("SL0000" = "#56B4E9"))
       # This step is necessary. Otherwise, clearing the colors will reset the cell to the
       # default  animal cell
-      subcellular_colours(find_unique_subcellular_location(input$cell_type))
+      subcellular_colours(find_unique_sl(input$cell_type))
       output$cell_sl_color <-
         DT::renderDataTable({
           semantic_DT(
@@ -156,16 +156,7 @@ function(input, output) {
     )
   })
 
-  observeEvent(input$clipbtn,{
+  observeEvent(input$clipbtn, {
     toast("Code copied to clipboard", class = "center aligned basic", id = "code_copied_message")
   })
-
-
-  # output$download_plot <- downloadHandler(
-  #   filename = "Shinyplot.png",
-  #   content = function(file) {
-  #     png(file)
-  #     print('hi')
-  #     drawcell_plot()
-  #   })
 }
