@@ -19,7 +19,7 @@ semanticPage(
     segment(
       class = "padded no_box",
       div(
-        class = "ui horizontal stackable segments centered_content no_box",
+        class = "ui horizontal stackable segments centered_content",
         segment(
           class = "compact padded no_box min_width_input",
           selectInput(
