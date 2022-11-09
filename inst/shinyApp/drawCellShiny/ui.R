@@ -66,10 +66,7 @@ semanticPage(
               class = "compact padded no_box",
               colourpicker::colourInput(
                 inputId = "colourInput",
-                label = label(
-                  class = "big teal pointing below",
-                  "Color Subcellular Location"
-                ),
+                label = "Select subcellular location to color",
                 "#56B4E9",
                 palette = "square",
                 returnName = TRUE,

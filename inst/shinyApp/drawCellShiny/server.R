@@ -65,6 +65,15 @@ function(input, output) {
 
     sc_id(substr(input$cell_click, 3, 6))
 
+    colourpicker::updateColourInput(
+      session = getDefaultReactiveDomain(),
+      inputId = "colourInput",
+      label = paste0(
+        "Add color to ",
+        uniprot[which(uniport_sc_ids == sc_id()), ]$Name
+      )
+    )
+
     list_named_colours <- subcellular_colours()
     list_named_colours[[input$cell_click]] <- input$colourInput
     subcellular_colours(list_named_colours)
