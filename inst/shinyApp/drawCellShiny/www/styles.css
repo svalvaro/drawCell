@@ -46,6 +46,15 @@
   min-width: 20rem !important;
 }
 
+.colourpicker.palette-square {
+  margin-top: 1rem;
+}
+
+.control-label {
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+}
+
 #cell_sl_color, .min_width_input {
   min-width: 22rem !important;
 }
