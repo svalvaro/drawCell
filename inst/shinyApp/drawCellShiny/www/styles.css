@@ -84,8 +84,11 @@
 
 #download_cell {
   display: block !important;
-	color: #009c95 !important;
-	border: 1px solid #009c95 !important;
+  color: white !important;
+	border: 1px solid white !important;
   text-align: center;
-  padding: .78571429em 1.5em .78571429em !important;
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  padding: 0.25rem 0.25rem 0.5rem 0.25rem !important;
 }
