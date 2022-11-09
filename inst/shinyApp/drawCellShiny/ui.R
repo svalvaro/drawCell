@@ -95,9 +95,10 @@ semanticPage(
         accordion_list = list(
           list(
             title = "Code to generate the cell",
-            content = code(textOutput("cell_code"))
+            content = code(verbatimTextOutput("cell_code"))
           )
-        )
+        ),
+        active_title = "Code to generate the cell"
       ),
       div(
         class = "ui horizontal segments no_box",

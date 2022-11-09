@@ -145,7 +145,7 @@ function(input, output) {
     drawCell:::create_code_to_copy(taxonomy_id(), subcellular_colours())
   })
 
-  output$cell_code <- renderText(
+  output$cell_code <- renderPrint(
     code_copy()
   )
 
