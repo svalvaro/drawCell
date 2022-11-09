@@ -57,9 +57,8 @@ semanticPage(
       downloadButton(
         "download_cell",
         label = "",
-        icon = icon("download"),
-        class = "basic",
-        style = "float: right;"
+        icon = icon("small download"),
+        class = "white basic"
       ),
       div(
         class = "ui horizontal stackable segments no_box",
