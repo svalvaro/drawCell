@@ -91,6 +91,14 @@ semanticPage(
           drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
         )
       ),
+      accordion(
+        accordion_list = list(
+          list(
+            title = "Code to generate the cell",
+            content = textOutput("cell_code")
+          )
+        )
+      ),
       div(
         class = "ui horizontal segments no_box",
         segment(
