@@ -2,6 +2,11 @@ function(input, output) {
   observeEvent(input$taxIdInput, {
     if (input$taxIdInput == "") {
       shinyjs::enable("cell_type")
+      updateSelectInput(
+        session = getDefaultReactiveDomain(),
+        inputId = "cell_type",
+        selected = "Animal cell"
+      )
     } else {
       shinyjs::disable("cell_type")
       updateSelectInput(
