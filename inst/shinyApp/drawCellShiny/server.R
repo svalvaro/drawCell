@@ -145,6 +145,10 @@ function(input, output) {
     drawCell:::create_code_to_copy(taxonomy_id(), subcellular_colours())
   })
 
+  output$cell_code <- renderText(
+    code_copy()
+  )
+
   output$copy_code <- renderUI({
     rclipboard::rclipButton(
       inputId = "clipbtn",
