@@ -27,6 +27,7 @@ Imports:
     htmlwidgets,
     shiny,
     shiny.semantic,
+    shinyjs,
     taxize,
     webshot2,
     Rcpp,
