@@ -4,6 +4,7 @@ semanticPage(
   titlePanel(
     title = div(
       class = "ui massive fluid teal right icon label",
+      id = "title_label",
       "drawCell",
       a(
         icon(class = "big github square"),
