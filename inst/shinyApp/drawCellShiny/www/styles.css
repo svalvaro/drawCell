@@ -42,6 +42,10 @@
   font-size: 1.5rem !important;
 }
 
+#cell_type {
+  min-width: 20rem !important;
+}
+
 #cell_sl_color, .min_width_input {
   min-width: 22rem !important;
 }

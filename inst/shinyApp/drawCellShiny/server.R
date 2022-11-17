@@ -1,4 +1,23 @@
 function(input, output) {
+  observeEvent(input$taxIdInput, {
+    if (input$taxIdInput == "") {
+      shinyjs::enable("cell_type")
+      updateSelectInput(
+        session = getDefaultReactiveDomain(),
+        inputId = "cell_type",
+        selected = "Animal cell"
+      )
+    } else {
+      shinyjs::disable("cell_type")
+      updateSelectInput(
+        session = getDefaultReactiveDomain(),
+        inputId = "cell_type",
+        selected = ""
+      )
+    }
+  })
+
+
   taxonomy_id <- reactive({
     if (input$cell_type == "") {
       if (is.na(as.numeric(input$taxIdInput))) {
@@ -157,21 +176,24 @@ function(input, output) {
 
   observeEvent(input$clipbtn, {
     toast("Code copied to clipboard",
-          class = "center aligned basic toast_message",
-          id = "code_copied_message")
+      class = "center aligned basic toast_message",
+      id = "code_copied_message"
+    )
   })
 
   output$download_cell <- downloadHandler(
     filename = "cell_picture.png",
     content = function(file) {
       toast("Preparing your image...",
-            class = "center aligned basic toast_message",
-            id = "cell_image_message")
+        class = "center aligned basic toast_message",
+        id = "cell_image_message"
+      )
 
       temp_png <- tempfile(fileext = ".png")
       temp_html <- tempfile(fileext = ".html")
       htmlwidgets::saveWidget(drawcell_plot(), file = temp_html)
       webshot2::webshot(temp_html, file = temp_png)
       file.copy(temp_png, file)
-    })
+    }
+  )
 }

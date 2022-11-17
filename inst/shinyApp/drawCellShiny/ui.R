@@ -1,5 +1,6 @@
 semanticPage(
   includeCSS("www/styles.css"),
+  shinyjs::useShinyjs(),
   # Application title
   titlePanel(
     title = div(
