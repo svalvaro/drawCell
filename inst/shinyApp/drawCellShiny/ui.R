@@ -56,6 +56,14 @@ semanticPage(
     segment(
       class = "raised very padded container",
       label(textOutput("selected_cell_name"), class = "big teal top attached"),
+      downloadButton(
+        "download_cell",
+        label = "",
+        icon = icon("small download"),
+        class = "basic",
+        "data-tooltip" = "Download cell",
+        "data-variation" = "large"
+      ),
       div(
         class = "ui horizontal stackable segments no_box",
         segment(
@@ -99,15 +107,6 @@ semanticPage(
             segment(
               class = "compact padded no_box",
               uiOutput("copy_code")
-            ),
-            segment(
-              class = "compact padded no_box",
-              downloadButton(
-                "download_cell",
-                label = "Download Cell",
-                icon = icon("download"),
-                class = "basic"
-              )
             )
           )
         )
