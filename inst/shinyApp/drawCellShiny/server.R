@@ -1,4 +1,23 @@
 function(input, output) {
+  observeEvent(input$taxIdInput, {
+    if (input$taxIdInput == "") {
+      shinyjs::enable("cell_type")
+      updateSelectInput(
+        session = getDefaultReactiveDomain(),
+        inputId = "cell_type",
+        selected = "Animal cell"
+      )
+    } else {
+      shinyjs::disable("cell_type")
+      updateSelectInput(
+        session = getDefaultReactiveDomain(),
+        inputId = "cell_type",
+        selected = ""
+      )
+    }
+  })
+
+
   taxonomy_id <- reactive({
     if (input$cell_type == "") {
       if (is.na(as.numeric(input$taxIdInput))) {
@@ -45,6 +64,15 @@ function(input, output) {
     req(input$colourInput)
 
     sc_id(substr(input$cell_click, 3, 6))
+
+    colourpicker::updateColourInput(
+      session = getDefaultReactiveDomain(),
+      inputId = "colourInput",
+      label = paste0(
+        "Selected subcellular location: ",
+        uniprot[which(uniport_sc_ids == sc_id()), ]$Name
+      )
+    )
 
     list_named_colours <- subcellular_colours()
     list_named_colours[[input$cell_click]] <- input$colourInput

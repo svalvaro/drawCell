@@ -1,9 +1,11 @@
 semanticPage(
   includeCSS("www/styles.css"),
+  shinyjs::useShinyjs(),
   # Application title
   titlePanel(
     title = div(
       class = "ui massive fluid teal right icon label",
+      id = "title_label",
       "drawCell",
       a(
         icon(class = "big github square"),
@@ -19,7 +21,7 @@ semanticPage(
     segment(
       class = "padded no_box",
       div(
-        class = "ui horizontal stackable segments centered_content no_box",
+        class = "ui horizontal stackable segments centered_content",
         segment(
           class = "compact padded no_box min_width_input",
           selectInput(
@@ -72,10 +74,7 @@ semanticPage(
               class = "compact padded no_box",
               colourpicker::colourInput(
                 inputId = "colourInput",
-                label = label(
-                  class = "big teal pointing below",
-                  "Color Subcellular Location"
-                ),
+                label = "Select subcellular location to color",
                 "#56B4E9",
                 palette = "square",
                 returnName = TRUE,
@@ -96,7 +95,7 @@ semanticPage(
         ),
         segment(
           class = "padded no_box",
-          drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
+          drawCell:::drawCellOutput("cell_output", height = "auto", width = "200%")
         )
       ),
       div(

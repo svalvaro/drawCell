@@ -12,8 +12,13 @@
   justify-content: center;
   display: flex;
 }
+
+#title_label {
+  font-size: 2.5rem !important;
+}
+
 .ui {
-    font-size: 2rem !important;
+    font-size: 1.25rem !important;
 }
 
 .no_box {
@@ -29,12 +34,27 @@
 .ui.input {
   display: grid;
   margin: 0 5em 1em;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
 }
 
 .ui.form {
   margin: 0 5em 1em;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
+}
+
+#cell_type {
+  min-width: 20rem !important;
+}
+
+.colourpicker.palette-square {
+  margin-top: 1rem;
+}
+
+.control-label {
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  color: #009c95 !important;
+
 }
 
 #cell_sl_color, .min_width_input {
@@ -42,14 +62,14 @@
 }
 
 .ui.small.compact.table.dataTable.no-footer {
-  font-size: 1.25rem !important;
+  font-size: 1rem !important;
 }
 .ui.form, .ui.form .field .dropdown, .ui.form .field .dropdown .menu > .item {
-	font-size: 2rem !important;
+	font-size: 1.5rem !important;
 }
 
 #DataTables_Table_0 {
-  font-size: 1.5rem !important;
+  font-size: 1.25rem !important;
 }
 
 .ui.table > thead > tr > th {
