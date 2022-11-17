@@ -51,8 +51,10 @@
 }
 
 .control-label {
-    font-weight: 600 !important;
-    font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  color: #009c95 !important;
+
 }
 
 #cell_sl_color, .min_width_input {
