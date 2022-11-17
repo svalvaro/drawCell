@@ -87,7 +87,7 @@ semanticPage(
         ),
         segment(
           class = "padded no_box",
-          drawCell:::drawCellOutput("cell_output", height = "100%", width = "100%")
+          drawCell:::drawCellOutput("cell_output", height = "auto", width = "200%")
         )
       ),
       div(
