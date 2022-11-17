@@ -69,7 +69,7 @@ function(input, output) {
       session = getDefaultReactiveDomain(),
       inputId = "colourInput",
       label = paste0(
-        "Add color to ",
+        "Selected subcellular location: ",
         uniprot[which(uniport_sc_ids == sc_id()), ]$Name
       )
     )
