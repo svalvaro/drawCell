@@ -4,6 +4,7 @@ semanticPage(
   titlePanel(
     title = div(
       class = "ui massive fluid teal right icon label",
+      id = "title_label",
       "drawCell",
       a(
         icon(class = "big github square"),
@@ -19,7 +20,7 @@ semanticPage(
     segment(
       class = "padded no_box",
       div(
-        class = "ui horizontal stackable segments centered_content no_box",
+        class = "ui horizontal stackable segments centered_content",
         segment(
           class = "compact padded no_box min_width_input",
           selectInput(
